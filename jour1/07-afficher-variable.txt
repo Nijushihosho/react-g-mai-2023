@@ -23,7 +23,7 @@ qui est un objet qui s'appelle formation qui possède 3 propriétés
     nom = "react"
 dans la partie return 
 <div>
-    <h1>exo 2</h2>
+    <h1>exo 2</h1>
     <p> je suis une formation de 15 jours en react</p>
     <p>j'aime les roses et le lilas <p>
     si test est vrai => afficher "<p>je vais en pause</p>"
