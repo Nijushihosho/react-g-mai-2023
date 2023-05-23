@@ -1,0 +1,1 @@
+créer un nouveau dossier composants dans le dossier src dans le dossier jour1-decouverte 
