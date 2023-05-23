@@ -17,7 +17,10 @@ function Sixieme(){
         {articles.map(function(item, key){
             return <p key={key}>{ item.actif ? JSON.stringify(item) : ""}</p>
         })}
-
+        <h2>solution 3 : map et un opérateur &&</h2>
+        {articles.map(function(item, key){
+            return <p key={key}>{ item.actif && JSON.stringify(item) }</p>
+        })}
     </div>
 }
 
