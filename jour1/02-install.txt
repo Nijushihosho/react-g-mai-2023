@@ -1,0 +1,78 @@
+maintenant que l'on a présenté React, on va voir ensemble comment installer un projet React sur notre ordinateur 
+
+=> il faut OBLIGATOIRE au préalable avoir sur votre ordinateur un outil qui s'appelle NodeJS 
+
+=> pour travailler avec React il faut OBLIGATOIREMENT installer Nodejs sur mon ordinateur 
+
+=> pour tester si vous avez nodejs installé il faut lancer un terminal (outil ne ligne de commande)
+il y a un terminal directement installé dans Visual Studio Code 
+
+=> sur le carré => saisir la commande suivante
+node -v
+
+=> sudo apt install node (sur Linux)
+as tu lancer un terminal et saisit la commande node -v
+
+si vous saisissez la commande node -v ET que votre terminal répond 
+
+=> version ancienne de node version 16 
+OU
+=> que node est une commande inconnue 
+
+=> si vous êtes sur windows 
+allez sur le site internet suivant : 
+allez sur le site internet suivant : https://nodejs.org/en
+il existe 2 versions 
+version 18.16 => LTS (Long Term Service)
+version 20.2 (avec les caractéristiques les plus avancés)
+
+=> la version LTS est suffisante
+
+=> télécharger et installé le fichier .msi 
+=> fermer Visual Studio Code et réouvrir Visual Studio Code 
+
+
+=> pour pouvoir utiliser react il faut au préalable avoir nodejs installé sur votre ordinateur 
+
+
+=> windows => .msi 
+
+=> MacOS =>     brew (gestionnaire de dépendance )
+
+brew install node 
+
+=> Linux => sudo apt install node 
+
+------------------------------
+
+MAINTENANT on peut installer react 
+
+=> il existe 4 manières d'installer react 
+
+=> legacy 
+
+=> npm i -g create-react-app 
+=> create-react-app projet 
+
+=> npx create-react-app projet
+
+=> npm create vite (nous allons utiliser cette manière )
+(vite starter kit )
+
+=> parcel / webpack 
+
+=> je lance un terminal 
+voici la procédure d'installation : 7 étapes 
+
+npm create vite 
+jour1-decouverte Enter 
+sélectionner React 
+sélectionner Javascript 
+
+cd jour1-decouverte
+npm i 
+npm run dev 
+
+http://localhost:5173/
+
+
