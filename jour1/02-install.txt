@@ -76,3 +76,47 @@ npm run dev
 http://localhost:5173/
 
 
+
+suite à la saisie des commandes 
+vous avez un dossier jour1-decouverte 
+contient la structure suivante 
+
+node_modules (dossier)
+ce dossier contient toutes les librairies dont notre projet react a besoin 
+ce dossier ne doit pas être modifié manuellement 
+si vous avez besoin de ajouter / modifier un dossier dans le dossier node_modules 
+vous devez utiliser les lignes de commandes 
+npm i ...
+npm un ... 
+npm update 
+
+public => contient l'ensemble de ressources public que projet 
+image / logo / fichier pdf / font 
+
+src => LE DOSSIER DANS LEQUEL NOUS ALLONS passer 95 % de notre temps 
+c'est dans ce dossier que l'on va créer des fichiers (composants) 
+
+et des fichiers 
+
+.gitignore => fichier de configuration pour réaliser du versionning 
+
+index.html => c'est le SEUL fichier html que vous allez avoir DANS TOUT le projet react  
+
+dans le fichier index.html il y a la balise 
+ <div id="root"></div>  tous les composants (dans le dossier src ) que l'on va écrire vont être injecter (via react) dans cette balise 
+
+package.json / package-lock.json 
+(quelle est la version de react que l'on utilise)
+nous allons nous former sur la version 18.2.0 de react 
+
+vite.config.js fichier de configuration de l'outil vite 
+
+le dossier le plus important src 
+
+2 fichiers .css => mise en plage 
+
+main.jsx 
+    lien entre index.html et le fichier App.jsx 
+App.jsx 
+    c'est le composant racine (root)
+    c'est le composant qui va contenir TOUS les autres composants 

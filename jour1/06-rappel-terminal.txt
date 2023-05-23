@@ -1,0 +1,40 @@
+cette zone dans Visual Studio Code 
+=> terminal 
+
+=> qu'est ce que c'est ??
+logiciel qui permet de lancer d'autre logiciel 
+
+
+pour les logiciels graphiques 
+il suffit de doucle cliquer sur l'icone du logiciel
+pour l'exécuter 
+
+il existe d'autre type de logiciel 
+logiciel en ligne de commande 
+=> npm create vite 
+=> c'est comme si vous étiez en train de cliquer sur un logiciel qui s'appelle npm option create sous option vite
+
+cd jour1-decouverte
+
+ATTENTION pour certaine commande il faut les lancer dans certain dossier 
+
+si je saisis la commande npm run dev SANS faire attention à où je me situe dans l'arborescence 
+
+attention certaines commandes doivent être exécutée dans certain dossier 
+
+npm run dev 
+
+npm i bootstrap 
+
+Elles doivent être exécutée DANS le dossier jour1-decouverte 
+cd jour1-decouverte 
+PUIS vous pouvez 
+npm i bootstrap
+npm run dev 
+
+src/App.jsx 
+ajouter la ligne suivante avant la fonction 
+
+import "bootstrap/dist/css/bootstrap.min.css"
+
+src/App.jsx

@@ -1,0 +1,17 @@
+// sélectionner tout le contenu du fichier App.jsx
+// supprimer tout 
+// à la place du code précédent 
+// je viens de créer un composant 
+// dans un composant vous avez 2 parties principales 
+// 1ère partie fonction javascript classique 
+// nom de la fonction 1ère lettre en Majuscule 
+// () 
+// {}
+// dans les accolades le minimum return 
+// juste après le return <div>Bonjour</div>
+// <div>Bonjour</div> ce n'est pas du html  
+// ce n'est pas une string javascript 
+// c'est jsx => combinaison de html javascript et xml 
+
+// 2ème et dernière partie le composant si je veux pouvoir l'utiliser dans un autre fichier .jsx 
+// je dois l'exporter 

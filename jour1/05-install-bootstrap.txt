@@ -1,0 +1,27 @@
+// afin de faire un projet joli (bien mis en forme)
+// en plus de React nous allons installer la librairies css bootstrap
+// librairie css qui permet de facilement mettre en forme une page html 
+
+// utilise très bien avec React 
+
+// pour installer Bootstrap => google.fr
+
+// sur le terminal vous allez stopper le serveur local
+Ctrl + C 
+puis O (facultatif)
+npm i bootstrap (attention il y a deux t dans bootstrap)
+
+une fois que la librairie est installée => 
+npm run dev 
+relancer le serveur de développement
+attention npm run dev doit être lancé en tâche de fond pendant la phase de développement (la phase de création des composants )
+
+dans le fichier src/App.jsx
+
+ajouter la ligne suivante 
+
+Cas pratique (exo)
+1 Pouvez vous créer un nouveau composant qui s'appelle Deuxieme
+2 ce composant retourne le jsx suivant <h2>je suis exo 2</h2>
+3 exécuter le composant Deuxieme dans App.jsx 
+4 mettre ce composant à côté du composant Premier

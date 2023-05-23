@@ -1,34 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+// sélectionner tout le contenu du fichier App.jsx
+// supprimer tout 
+// à la place du code précédent 
+// je viens de créer un composant 
+// dans un composant vous avez 2 parties principales 
+// 1ère partie fonction javascript classique 
+// nom de la fonction 1ère lettre en Majuscule 
+// () 
+// {}
+// dans les accolades le minimum return 
+// juste après le return <div>Bonjour</div>
+// <div>Bonjour</div> ce n'est pas du html  
+// ce n'est pas une string javascript 
+// c'est jsx => combinaison de html javascript et xml 
 
-function App() {
-  const [count, setCount] = useState(0)
+// 2ème et dernière partie le composant si je veux pouvoir l'utiliser dans un autre fichier .jsx 
+// je dois l'exporter 
+import "bootstrap/dist/css/bootstrap.min.css"; // ajouter la librairie dans votre projet react
+import Premier from "./composants/Premier";
 
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+function App(){
+    return <div className="row">
+        <section className="col-4">
+          Bonjour
+        </section>
+        <section className="col-4">
+          <Premier /> {/** Premier() */}
+        </section>
+    </div> 
 }
 
-export default App
+export default App ; 
+// commentaire js
+// <!-- --> commentaire en html
+// {/** */ } commentaire en jsx 
+// toutes les notes de cours sont sur github.com
+// https://github.com/webdevproformation/react-g-mai-2023
+// si vous comprenez html css et javascript => react 
+
+
