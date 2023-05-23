@@ -19,6 +19,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // ajouter la librairie dans votr
 import Premier from "./composants/Premier";
 import Deuxieme from "./composants/Deuxieme";
 import Troisieme from "./composants/Troisieme";
+import Quatrieme from "./composants/Quatrieme";
 
 function App(){
     return <div className="row">
@@ -33,6 +34,9 @@ function App(){
         </section>
         <section className="col-4">
           <Troisieme />
+        </section>
+        <section className="col-4">
+          <Quatrieme />
         </section>
     </div> 
 }
