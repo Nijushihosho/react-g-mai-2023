@@ -19,6 +19,15 @@ password : fb  (fb en minuscule)
 
 => enfin toutes les notes de cours (qui sont écrites dans l'ordinateur du prof ) vont être partagées sur github 
 
-=> 
+=> je vais le créer tout de suite (le dépôt github)
 
+https://github.com/webdevproformation/react-g-mai-2023
 
+donc 2 adresses internet => 
+
+support : https://formation.webdevpro.net/react/
+login : react 
+password : fb 
+
+note de cours => 
+https://github.com/webdevproformation/react-g-mai-2023
