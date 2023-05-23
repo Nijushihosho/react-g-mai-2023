@@ -22,7 +22,7 @@ function Troisieme(){
             <li>{ e.nom }</li>
             {/**  il n'est pas possible d'afficher directement la variable e car il s'agit d'un objet */}
             <li>{ JSON.stringify(e) }</li>
-            {/** si j'ai besoin d'afficher une objet sans passer par ses propriétés => je vais utiliser une fonction native de javascript 
+            {/** si j'ai besoin d'afficher un objet sans passer par ses propriétés => je vais utiliser une fonction native de javascript 
              * JSON.stringify(e) 
              */}
             <li>{ JSON.stringify(d) }</li>

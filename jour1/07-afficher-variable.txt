@@ -12,3 +12,20 @@ document.querySelector("p").innerHTML = a ;  // afficher dans le DOM
 // maintenant nous allons voir comment afficher une variable un composant 
 
 // créer le composant Troisieme
+
+// exo créer le composant Quatrieme 
+dans ce composant il y a 3 variables 
+qui s'appelle test = true 
+qui est un tableau qui s'appelle fleurs qui contient 3 valeurs = rose , jasmin , lilas 
+qui est un objet qui s'appelle formation qui possède 3 propriétés 
+    duree = 15 
+    unite = "jours"
+    nom = "react"
+dans la partie return 
+<div>
+    <h1>exo 2</h2>
+    <p> je suis une formation de 15 jours en react</p>
+    <p>j'aime les roses et le lilas <p>
+    si test est vrai => afficher "<p>je vais en pause</p>"
+    si test est fausse => afficher "<p>je travaille</p>"
+</div>
