@@ -1,0 +1,24 @@
+Malik HARRIZ
+malik.h@webdevpro.net (mail pro si vous avez une question)
+
+Nous allons suivre ensemble une formation sur React 
+
+formation sur React :
+je vous ai préparé un support de cours à l'adresse suivante :
+
+https://formation.webdevpro.net/react/ (à saisir directement dans la barre d'adresse du navigateur)
+et le site va vous demander de saisir des identifiants :
+login : react  (en minuscule)
+password : fb  (fb en minuscule)
+
+=> pouvez essayer d'accéder à ce site internet 
+
+=> TOUT ce que l'on va voir ensemble est DEJA noté dans ce site 
+
+=> oui prenez des notes mais sachez que tout est noté sur le site !! 
+
+=> enfin toutes les notes de cours (qui sont écrites dans l'ordinateur du prof ) vont être partagées sur github 
+
+=> 
+
+
