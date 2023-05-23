@@ -1,0 +1,96 @@
+Présentation de React ???
+
+=> Quant React a été créé ?? => 2011 par Facebook 
+
+=> Qu'est ce que c'est que React ? => librairie javascript 
+                            => fichier qui contient PLEIN de fonctions 
+                            => qui permet de créer des SITES INTERNET 
+                            => (aussi appelé ) application front 
+
+                            => en 2023 c'est LA librairie javascript la plus utilisée pour créer des sites internet 
+
+                            => le site internet officiel (dispose d'une version français )
+                            reactjs.org (version officielle anglaise)
+                            fr.reactjs.org
+fr.reactjs.org (adresse connue en janvier 2023)  => 
+redirection (changement d'adresse internet) qui permet de garder le SEO  
+https://fr.legacy.reactjs.org/
+
+
+=> Vocabulaire de base ? 
+
+
+=> question : quel est l'élement de base d'une base html ?? 
+BALISE html => <h1> <p> <a> <ul> ....
+
+=> sur React l'élément de base => COMPOSANT 
+=> il s'agit de l'élement de base 
+
+=> lors de cette formation vous allez apprendre à créer des COMPOSANTS 
+
+=> comment les créer ?? comment les faire communiquer les uns avec les autres ? comment les mettre en forme ??? 
+
+=> si je dois définir un composant en quelques mots 
+=> il s'agit d'un élément GRAPHIQUE que l'on peut voir à l'écran 
+
+par exemple => 
+site intenret qui contient 
+
+React permet de créer des sites internet à base de COMPOSANTS 
+
+les COMPOSANTS ressemblent BEAUCOUP aux balises html 
+
+si vous avez compris le html => vous conprendrez React 
+
+pour créer un composant il existe 2 manières 
+
+=> manières legacy => class javascript 
+
+=> nouvelle manière => fonction  
+
+
+exemple => je veux créer un composant Menu 
+
+
+méthod légacy 
+import { Component } from "react"
+class Menu extends Component{
+    render(){
+        return <nav></nav>
+    }
+}
+export default Menu 
+
+nouvelle manière 
+function Menu (){
+    return <nav></nav>
+}
+export default Menu 
+
+=> React est TRES apprécié parce que  :
+=> si vous comprenez html et javascript => vous allez comprendre vite 
+=> utilise React créer des applications RAPIDES => charge rapidement 
+  ET qui se modifie rapidement 
+  grâce au VIRTUAL DOM 
+
+    DOM (de base)
+  document.querySelector("h1").innerHTML = "bonjour" ;  
+
+  elle est rapide si vous avez une petite par html (mois de 20000 lignes)
+
+  si vous avez un site internet supérieur à 20000 lignes > 
+  document.querySelector("h1").innerHTML = "bonjour" ;  peut être lent 
+
+  React a mis en place VIRTUAL DOM 
+
+
+=> React => Facebook 
+=> Angular => Google 
+=> VueJS => Ex développeur de Google 
+
+=> https://javascript.developpez.com/actu/306503/Quels-sont-les-frameworks-JavaScript-que-vous-aimeriez-apprendre-en-2020-Voici-quelques-propositions-qui-sont-tributaires-des-cas-d-utilisations/
+
+=> fin de la présentation 
+
+
+

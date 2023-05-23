@@ -31,3 +31,18 @@ password : fb
 
 note de cours => 
 https://github.com/webdevproformation/react-g-mai-2023
+
+=> avec Philippe vous avez vu Javascript 
+=> logique => boucle variable condition tableau objet fonction 
+           => .map()
+           => la syntaxe ES6 (ECMAScript version 6) 
+           () => {}
+           ...
+           destructuration 
+
+=> pas encore vue : AJAX / asynchrone 
+
+=> Avant de se lancer dans la découverte de React 
+=> je vais d'abord présenter React ???? 
+
+
