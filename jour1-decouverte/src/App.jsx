@@ -18,6 +18,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"; // ajouter la librairie dans votre projet react
 import Premier from "./composants/Premier";
 import Deuxieme from "./composants/Deuxieme";
+import Troisieme from "./composants/Troisieme";
 
 function App(){
     return <div className="row">
@@ -29,6 +30,9 @@ function App(){
         </section>
         <section className="col-4">
           <Deuxieme />
+        </section>
+        <section className="col-4">
+          <Troisieme />
         </section>
     </div> 
 }

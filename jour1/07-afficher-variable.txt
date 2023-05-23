@@ -1,0 +1,14 @@
+en javascript 
+
+
+lorsque vous voulez afficher une variable 
+
+const a = "texte" ; // créer variable a
+
+console.log(a);  // afficher dans la console
+
+document.querySelector("p").innerHTML = a ;  // afficher dans le DOM 
+
+// maintenant nous allons voir comment afficher une variable un composant 
+
+// créer le composant Troisieme
