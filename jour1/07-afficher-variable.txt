@@ -29,3 +29,15 @@ dans la partie return
     si test est vrai => afficher "<p>je vais en pause</p>"
     si test est fausse => afficher "<p>je travaille</p>"
 </div>
+
+
+// pause rdv dans 15 min => 15h40 
+// juste parès la pause boucle / condition 
+// evenement en jsx 
+
+
+// map()
+// filter()
+// reduce()
+
+
