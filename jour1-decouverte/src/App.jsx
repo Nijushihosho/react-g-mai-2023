@@ -21,6 +21,7 @@ import Deuxieme from "./composants/Deuxieme";
 import Troisieme from "./composants/Troisieme";
 import Quatrieme from "./composants/Quatrieme";
 import Cinquieme from "./composants/Cinquieme";
+import Sixieme from "./composants/Sixieme";
 
 function App(){
     return <div className="row">
@@ -41,6 +42,9 @@ function App(){
         </section>
         <section className="col-4">
           <Cinquieme />
+        </section>
+        <section className="col-4">
+          <Sixieme />
         </section>
     </div> 
 }
