@@ -24,6 +24,7 @@ import Cinquieme from "./composants/Cinquieme";
 import Sixieme from "./composants/Sixieme";
 import Septieme from "./composants/Septieme";
 import Event from "./composants/Event";
+import EventSuite from "./composants/EventSuite";
 
 function App(){
     return <div className="row">
@@ -53,6 +54,9 @@ function App(){
         </section>
         <section className="col-4">
           <Event />
+        </section>
+        <section className="col-4">
+          <EventSuite />
         </section>
     </div> 
 }
