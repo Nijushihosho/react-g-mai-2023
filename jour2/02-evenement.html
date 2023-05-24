@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- en html si vous voulez lancer des traitements suite à une action du visiteur 
+    il existe plusieurs manières -->
+
+    <button class="btn1">Action</button>
+    <p class="p1"></p>
+    <script>
+        // si je clique que le bouton btn1 => je veux remplir le paragraphe p1 avec le texte => j'ai cliqué sur le bouton 1
+        document.querySelector(".btn1").addEventListener("click", function(){
+            document.querySelector(".p1").innerHTML = "j'ai cliqué sur le bouton 1"
+        })
+    </script>
+    <!-- ancienne méthode (que l'on va utiliser sur React)-->
+    <button class="btn2" onclick="action2()">Action 2</button>
+    <p class="p2"></p>
+    <script>
+        function action2 (){
+            document.querySelector(".p2").innerHTML = "j'ai cliqué sur le bouton 2"
+        }
+
+
+        // a => variable 1 "" [] {}
+        // b() // fonction que j'exécute
+
+        function c(){}
+        const toto = function(){}
+        const tutu = function(a, b){}
+        const titi = () => {}
+
+        const d = c ; // stocker dans la variable d le contenu de la variable c sans l'exécuter => stocker dans d une référence à la fonction c 
+
+        d() ; // ==== c()
+        
+        document.querySelector(".btn2").addEventListener("click" , c)
+        document.querySelector(".btn2").addEventListener("click" , function(){})
+        document.querySelector(".btn2").addEventListener("click" , function(){
+            tutu(1,2)
+        })
+    </script>
+</body>
+</html>
