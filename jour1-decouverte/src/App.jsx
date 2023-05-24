@@ -25,9 +25,24 @@ import Sixieme from "./composants/Sixieme";
 import Septieme from "./composants/Septieme";
 import Event from "./composants/Event";
 import EventSuite from "./composants/EventSuite";
+import Compteur from "./composants/Compteur";
 
 function App(){
     return <div className="row">
+        <section className="col-4">
+          <Compteur />
+          <Compteur /> {/** chaque composant dispose d'un state qui est autonome par rapport aux autres composants 
+           * et est modifié tout seul / sans impacter les autres composants Compteur
+           * vous êtes en train d'utiliser le Virtual DOM 
+           * https://www.youtube.com/watch?v=V8G0ILBE-Ok&list=PLjwdMgw5TTLWom67YfZuha-1iYzIirwJR&index=2
+           */}
+          <Compteur />
+          <Compteur />
+          <Compteur />
+          <Compteur />
+          <Compteur />
+          <Compteur />
+        </section>
         <section className="col-4">
           Bonjour
         </section>
