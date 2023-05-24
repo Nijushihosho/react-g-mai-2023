@@ -1,0 +1,21 @@
+
+
+créer un nouveau fichier html 13-exo.html 
+dans ce fichier vous avez une balise div suivi d'une base script 
+dans la balise script vous allez réaliser une requête ajax vers l'adresse internet 
+suivante : https://dummyjson.com/quotes
+
+une fois avez récupérer les données 
+ <article>
+    <p>la citation</p>
+    <p>nom auteur</p>
+ </article>
+  <article>
+    <p>la citation</p>
+    <p>nom auteur</p>
+ </article>
+  <article>
+    <p>la citation</p>
+    <p>nom auteur</p>
+ </article> => pour les 29 citations => injecter ce html dans la balise div 
+ ne pas hésiter à utiliser css pour mettre en forme votre projet 
