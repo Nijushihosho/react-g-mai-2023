@@ -1,0 +1,17 @@
+Event dans le DOM et dans React 
+    2 manières : 
+    <button onclick="" ></button>
+    document.querySelector("button").addEventListener("click", function(){})
+
+    2 manières :
+    <button onClick={function(){}} ></button>
+
+    function toto(){}
+    <button onClick={toto} ></button>
+
+destructuration sur les objets et les tableaux 
+rappel sur les fonctions 
+    fonctions fléchées
+    fonction expression const a = function(){}
+    fonction déclaration function b () {}
+
