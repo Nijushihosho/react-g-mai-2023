@@ -5,7 +5,7 @@ par défaut la valeur compteur = 0
 
 dans la vue de composant vous allez afficher : 
 
-<button>diminuer</button> => si vous cliquez sur le bouton diminuer => diminuer de -1 la compteur 
+<button>diminuer</button> => si vous cliquez sur le bouton diminuer => diminuer de -1 le compteur 
 {compteur}
 <button>augmenter</button> => si vous cliquez sur le bouton augmenter => augmenter de +5 le compteur 
 

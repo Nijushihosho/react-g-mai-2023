@@ -26,9 +26,13 @@ import Septieme from "./composants/Septieme";
 import Event from "./composants/Event";
 import EventSuite from "./composants/EventSuite";
 import Compteur from "./composants/Compteur";
+import Exo1 from "./composants/Exo1";
 
 function App(){
     return <div className="row">
+      <section className="col-4">
+        <Exo1 />
+      </section>
         <section className="col-4">
           <Compteur />
           <Compteur /> {/** chaque composant dispose d'un state qui est autonome par rapport aux autres composants 
