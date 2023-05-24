@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // destructuration est une technique qui a été introduire dans le langage javascript à partir de sa version 6 (2015)
+        // cette technique est a utiliser sur les tableaux et les objets 
+
+        const formation = {
+            nom : "Dev web",
+            duree : 6 ,
+            unite : "semaine",
+            sommaire : { 
+                semaine1 : "html",
+                semaine2 : "css" ,
+                semaine3 : "javascript"
+            }
+        }
+
+        // écrire dans la console le texte suivant 
+        // je suis une formation en Dev web avec du javascript
+        // méthode classique 
+        const texte = `je suis une formation en ${formation.nom} avec du ${formation.sommaire.semaine3}`
+        console.log(texte);
+        // dans cette manière de faire il faut utiliser formation.nom puis formation.sommaire 
+        // la destructuration permet d'enlever le mot formation 
+
+        // deuxieme technique AVANT la destructuration 
+        const {nom , sommaire} = formation ; // récupérer dans l'objet (variable) formation sa propriété nom et sommaire 
+        // à partir de maintenant on peut utiliser nom au lieu de formation.nom
+        const texte2 = `je suis une formation en ${nom} avec du ${sommaire.semaine3}`
+        console.log(texte2);
+
+
+        //  const {nom , sommaire} = formation ; 
+
+        //  équivalent à écrire les deux instructions suivantes 
+        //  const nom = formation.nom
+        //  const sommaire = formation.sommaire
+
+        const etudiant = {
+            nom : "Alain",
+            adresse : {
+                rue : "40 rue de Lille",
+                ville : "Montpellier"
+            }
+        }
+        const {ville} = etudiant.adresse ; 
+
+
+        const prix = [560, 240] ; 
+        // 560 prixPS4
+        // 240 prixNintendoDS 
+        /* const prixPS4 = prix[0]
+        const prixNintendoDS = prix[1]  */
+
+        const [prixPS4, prixNintendoDS ] = prix ; 
+        // attention à l'ordre des variables dans la  destructuration avec tableau 
+        
+        // sucre syntaxique => compacter le code en 1 ligne au lieu de plusieurs 
+
+        function useState(){
+            return [ 10 , function(){ console.log("element 2")} ]
+        }
+
+        /* const resultat = useState();
+        console.log(resultat[0]) ; 
+        resultat[1]() */
+
+        const [data , setData] = useState();  // useState fonction qui retourne un tableau qui aura toujours 2 valeurs 
+        // utilisera directement la destructuration dès l'exécution de useState()
+        console.log(data); // 10
+        setData(); 
+
+        // manière 1
+        function Article(contenu){ // prend comme paramètre contenu qui est un objet 
+            console.log(`<h1>${contenu.titre}</h1><p>${contenu.body}</p>`)
+        }
+
+
+        Article({titre : "decouvrir js" , body : "lorem ipsum"})
+        Article({titre : "créer un portfolio" , body : "lorem ipsum sed"})
+
+        const toto = {titre : "decouvrir js2" , body : "lorem ipsum"}
+        const toto2 = {titre : "decouvrir js44" , body : "lorem ipsum"}
+        Article(toto)
+        Article(toto2)
+
+        // manière 2 en destructurant le paramètre de la fonction
+        // communiquer des composants l'un avec les autres 
+        function Article2({titre, body}){ // prend comme paramètre contenu qui est un objet 
+            console.log(`<h1>${titre}</h1><p>${body}</p>`)
+        }
+
+        Article2({titre : "react vs angular", body : "lorem"});
+        Article2({titre : "react vs vue js", body : "lorem"});
+
+    </script>
+</body>
+</html>
+<!-- 
+    créer une fichier 05-exo.html 
+    dans ce fichier vous avez la variable suivante : 
+    data c'est un objet 
+    {   "id":1,
+        "title":"iPhone 9",
+        "description":"lorem" , 
+        commentaires : [
+        { id : 1 , email : "toto@yahoo.fr" , message : "super produit"},
+        { id : 2 , email : "toto2@yahoo.fr" , message : "cool"},
+        { id : 3 , email : "toto3@yahoo.fr" , message : "produit à éviter"},
+        ] 
+    }
+    // en utilisant la destructructuration écrire dans le navigateur le html suivant 
+    <h1>iPhone 9 </h1>
+    <p>lorem</p>
+    <ul>
+           <li> toto@yahoo.fr - super produit </li>
+           <li> toto2@yahoo.fr - cool </li>
+           <li> toto3@yahoo.fr - produit à éviter </li>
+    </ul>
+
+
+
+-->
