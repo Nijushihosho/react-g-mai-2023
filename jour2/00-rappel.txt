@@ -50,18 +50,20 @@ question 5 => à quoi sert la fonction JSON.stringify()
 
 exo de reprise 
 
-dans le projet jour1-decourverte
+dans le projet jour1-decouverte
 1 démarrer le projet 
 2 créer un nouveau composant Septieme
-3 contient un tableau d'objet => collection 
+3 contient un tableau d'objets => collection 
 [
     {title :	"iPhone 9", price :	549 , stock :	94},
     {title :	"iPhone 10", price :	1000 , stock :	60},
     {title :	"Nokia", price :	50 , stock :	20},
 ]
-afficher dans la vue du composant le jsx suivant 
+afficher dans la vue du composant, le jsx suivant : 
 <div>
     <h1>produits disponibles dont le stock est supérieur à 50</h1>
     <p>iPhone 9 - 549 euros</p>
     <p>iPhone 10 - 1000 euros</p>
 </div>
+
+[].filter(function(item){}).map(function(item, key){})
