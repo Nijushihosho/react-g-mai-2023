@@ -1,0 +1,47 @@
+Avant de reprendre aujourd'hui 
+quelques rappels 
+
+=> question 1 => comment installer React ??? 
+
+1 il faut installer nodejs sur mon ordinateur
+2 lancer un terminal 
+3 la commande => npm create vite 
+
+=> question 2 => quel est élément de base d'une application React ?? 
+
+=> composant 
+=> un composant React c'est une fonction javascript 
+=> c'est un élément graphique dans la page web 
+=> ça rappelle les balises html 
+
+créer un fichier Menu.jsx 
+
+function Menu(){
+    // au minimum un composant doit retourner du jsx 
+    return <div>logo</div>
+}
+
+export default Menu ; 
+
+
+=> question 3 => comment faire des boucles le jsx ??? 
+
+en utilisant les méthodes des tableaux javascript 
+
+[1,2,3].map()
+{[1,2,3].map(function(item, key){
+    return <p key={key}>{item}</p>
+})}
+
+=> question 4 => comment afficher de manière conditionnelle une partie d'un jsx ??? 
+
+[1,2,3].filter().map()
+
+[1,2,3].map(function(){
+    return condition ? "vrai" : "faux"
+})
+
+[1,2,3].map(function(){
+    return condition && "vrai"
+})
+
