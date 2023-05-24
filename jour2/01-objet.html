@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="exemple1"></p>
+    <p class="exemple2"></p>
+    <pre class="exemple3"></pre>
+    <script>
+        const etudiant = {
+            nom : "Céline",
+            age : 23 ,
+            adresse : {
+                rue : "75 rue de Paris",
+                cp : 75000,
+                ville : "Marseille"
+            },
+            competences : ["js", "ajax", 'react']
+        }
+        document.querySelector(".exemple1").innerHTML = `${etudiant.nom} ${etudiant.age} ${etudiant.adresse.rue} ${etudiant.adresse.cp} ${etudiant.adresse.ville} ${etudiant.competences[0]}`
+        document.querySelector(".exemple2").innerHTML = JSON.stringify(etudiant)
+        document.querySelector(".exemple3").innerHTML = JSON.stringify(etudiant , " " , "\n")
+    </script>
+</body>
+</html>

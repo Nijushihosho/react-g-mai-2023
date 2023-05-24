@@ -45,3 +45,5 @@ en utilisant les méthodes des tableaux javascript
     return condition && "vrai"
 })
 
+question 5 => à quoi sert la fonction JSON.stringify()
+=> ça permet d'afficher dans la page web le contenu intégral d'un objet 
