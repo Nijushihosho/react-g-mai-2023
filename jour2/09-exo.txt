@@ -1,0 +1,12 @@
+créer le composant Exo1 
+
+dans ce composant vous allez utiliser le hook useState 
+par défaut la valeur compteur = 0 
+
+dans la vue de composant vous allez afficher : 
+
+<button>diminuer</button> => si vous cliquez sur le bouton diminuer => diminuer de -1 la compteur 
+{compteur}
+<button>augmenter</button> => si vous cliquez sur le bouton augmenter => augmenter de +5 le compteur 
+
+
