@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // il existe 3 manières de créer des fonctions 
+
+        function a(){  // function declaration
+            console.log("a")
+        }
+
+        const b = function(){ // function expression = variable qui stocke une fonction anonyme
+            console.log("b")
+        }
+
+        const c = () => { // fonction flechée
+            console.log("c")
+        }
+         a();
+         b();
+         c();
+         const e = a ;
+         const f = b ;
+         const g = c ;
+
+        /*  const h = [10] 
+         h(); // erreur  */
+
+        [1, 2].map(function(){}); // la méthode map() => fonction de 1ère ordre
+        // fonction qui prend comme paramètre une fonction anonyme OU sa référence comme paramètre 
+        
+        [1, 2].map(a);
+        [1, 2].map(b);
+        [1, 2].map(c)
+        // curring 
+
+        // event
+        // useState 
+        // ajax useEffect
+
+        function aaa(){
+            return bbb
+        }
+
+        function bbb(){
+            return ccc
+        }
+
+        function ccc(){
+            console.log("bonjour")
+        }
+        aaa()()() ; 
+    </script>
+</body>
+</html>
