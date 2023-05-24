@@ -27,9 +27,13 @@ import Event from "./composants/Event";
 import EventSuite from "./composants/EventSuite";
 import Compteur from "./composants/Compteur";
 import Exo1 from "./composants/Exo1";
+import MultiState from "./composants/MultiState";
 
 function App(){
     return <div className="row">
+      <section className="col-4">
+        <MultiState />
+      </section>
       <section className="col-4">
         <Exo1 />
       </section>

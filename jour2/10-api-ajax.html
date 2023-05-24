@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- dans react / comme dans html (javascript)
+        on peut créer des variables qui contiennent plusieurs valeurs 
+        => ces variables ceux sont des tableaux ou des objets 
+    -->
+    <script>
+        const etudiants = [
+            { id : 1, nom : "a" , age : 22},
+            { id : 2, nom : "b" , age : 21},
+            { id : 3, nom : "c" , age : 19},
+            { id : 4, nom : "d" , age : 22},
+            { id : 5, nom : "e" , age : 30}
+        ]
+        // créer une collection c'est très bien 
+        // mais c'est limité 
+        // quelles sont les deux limites des collections ??? 
+        // Maintenance dans le temps => difficile de faire vivre une variable comme une collection si il y a très régulièrement des modifications : ajouter de lignes / modifier des lignes 
+        // problème en terme de SECURITE => il difficile de mettre ses mots de passe dans une collection / numéro de carte bleue / donnée médicale 
+
+        // au lieu d'utiliser des collections => Base  de données 
+        // classiquer interroger via un langage => SQL 
+
+        // MAIS dans le cadre de React (dans les projet javascript) base de données sont emballées dans API (Application Program Interface )
+
+        // on va interroger les bases de données via Requete HTTP 
+
+        // React va faire de requete ajax => API => Base de donnée 
+
+        // à partir de la version 6 de javascript (depuis 2015)
+        // javascript dispose d'une nouvelle fonction fetch() qui permet de faire des requête http / requête ajax 
+
+        // requete ajax / requete http 
+        // return new Promise()
+        fetch("https://dummyjson.com/products")
+            .then( function(reponse){ return reponse.json()  } )
+            .then( function(produit) {  console.log(produit)});
+
+        // requete SQL 
+        // SELECT * FROM produits
+
+        fetch("https://dummyjson.com/products/1")
+            .then( function(reponse){ return reponse.json()  } )
+            .then( function(blabla) {  console.log(blabla)});
+
+         // requete SQL 
+        // SELECT * FROM produits WHERE id = 1
+
+
+    </script>
+</body>
+</html>
