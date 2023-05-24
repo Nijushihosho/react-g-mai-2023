@@ -1,0 +1,25 @@
+// jusqu'à maintenant on a créé des composants comme ça :
+import { useState } from "react" ; // 
+// useState ce n'est pas une fonction native de javascript (elle n'existe )
+// il faut OBLIGATOIREMENT l'importer depuis la librairie React 
+// nous allons utiliser de nombreuses fonctions de React => elles commencent toujours par le prefix use... => useState / useEffect / useMemo useCallback / useRef 
+// use .... => ça vient de React et ça ne peut être utilisé hors d'un React 
+// tout ce que l'on a vu jusqu'à maintenant était uilisable dans REACT et en js de base 
+
+function A(){
+    // à partir de maintenant nous allons ajouter dans la partie logique du composant avant le return des fonctionnalités propres à React 
+    // pour utiliser ces fonctionnalités nous allons devoir import des fonctions depuis la librairie react 
+
+    // avant le return du composant 
+    // ajouté des variables 
+    const produits = [{}, {}, {}]
+    function calcul(){}
+    // avant le return du composant => ajouté de la logique
+    // qui va modifier la vue
+
+    // à part le jsx 
+    // c'est QUASIMENT comme du javascript  classique 
+    return <div onClick={calcul}>{produit[0].id}</div>
+}
+
+export default A ;
