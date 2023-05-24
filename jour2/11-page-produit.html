@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre></pre>
+    <div></div>
+    <script>
+        fetch("https://dummyjson.com/products")
+            .then( function(reponse){ return reponse.json()  } )
+            .then( function({products}) { 
+                // document.querySelector("pre").innerHTML = JSON.stringify(products , null , "   ")
+                let  html = products.map(function(item){
+                    return `<article>
+                            <h2>${item.title}</h2>
+                            <img src="${item.thumbnail}" alt="" >
+                            <p>${item.description}</p>
+                            <ul>
+                                <li>${item.price}</li>
+                                <li><button>acheter</button></li>
+                            </ul>
+                        </article>`
+                }).join("")
+                document.querySelector("div").innerHTML = html 
+            });
+    </script>
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            gap : 10px;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        img{
+            max-width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0; 
+        }
+    </style>
+</body>
+</html>
