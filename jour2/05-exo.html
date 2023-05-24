@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="reponse1"></div>
+    <div class="reponse2"></div>
+    <div class="reponse3"></div>
+    <script>
+        const data = {   
+            "id":1,
+            "title":"iPhone 9",
+            "description":"lorem" , 
+            commentaires : [
+                { id : 1 , email : "toto@yahoo.fr" , message : "super produit"},
+                { id : 2 , email : "toto2@yahoo.fr" , message : "cool"},
+                { id : 3 , email : "toto3@yahoo.fr" , message : "produit à éviter"},
+            ] 
+        }
+        let html1 = `<h1>${data.title}</h1>
+                        <p>${data.description}</p>
+                        <ul>`;
+        for(let i = 0 ; i < data.commentaires.length ; i++){
+            html1 += `<li>${data.commentaires[i].email} - ${data.commentaires[i].message}</li>`
+        }
+        html1 += "</ul>";
+        document.querySelector(".reponse1").innerHTML = html1; 
+
+        const {title, description, commentaires} = data ;
+
+        let html2 = `<h1>${title}</h1>
+                        <p>${description}</p>
+                        <ul>`;
+        /* for(let i = 0 ; i < commentaires.length ; i++){
+            html2 += `<li>${commentaires[i].email} - ${commentaires[i].message}</li>`
+        } */
+        html2 += commentaires.map(function(item){
+            return `<li>${item.email} - ${item.message}</li>`
+        }).join("")
+        html2 += "</ul>";
+        document.querySelector(".reponse2").innerHTML = html2;
+
+
+        document.querySelector(".reponse3").innerHTML = `<h1>${title}</h1>
+                        <p>${description}</p>
+                        <ul>
+                            ${commentaires.map(function(item){
+                                return `<li>${item.email} - ${item.message}</li>`
+                            }).join("")}
+                        </ul>`
+
+    </script>
+</body>
+</html>
