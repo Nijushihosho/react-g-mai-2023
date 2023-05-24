@@ -1,0 +1,40 @@
+import { useState } from "react"
+
+// useState fonction de React 
+// qui permet au composant de stocker un "state"
+// state = donnée locale du composant (propre UNIQUE au composant)
+// qui ne peuvent être partagée avec aucun autre composants 
+// useState => c'est aussi ce que l'on appelle un hook (crochet) =>
+// en utilisant useState() vous utilisez des fonctionnalités profondes de React 
+// vous devez OBLIGATOIREMENT execute useState dans le composant AVANT le return
+// elle retourne un tableau avec deux valeurs 
+// [ state , SetterState ]
+// state => valeur locale au composant 
+// SetterState => fonction qui permet de modifier le state 
+
+function A (){
+
+    let  compteur = 0 ; 
+    function setCompteur(){
+        compteur = compteur + 1 ; 
+        document.querySelector("div").innerHTML = compteur ;
+    }
+
+    const [compteur , setCompteur ] = useState(0)
+    // compteur => state local 
+    // setCompteur => fonction qui permet de modifier le compteur (local state)
+    // 0  => c'est la valeur initiale de compteur (local state)
+    
+    // ce que je veux c'est afficher le state 
+    return <div>
+        {compteur}  {/* afficher le state */}
+        <button onClick={ function(){ setCompteur(compteur + 1) } }>augmenter le state de + 1</button>
+        {/* modifier la valeur du state ET je n'ai pas besoin de dire à React Où dans le composant modifier
+        modifie la valeur de compteur 
+        ET 
+        réexécute le composant A => ce que entraine la mise à jour de la vue 
+         */}
+    </div>
+}
+
+export default A
