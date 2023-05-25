@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // ici je vais faire le requête ajax
+        // solution 1 
+        fetch("http://localhost:5500/jour3/04-data.json")
+            .then(function(reponse){ return reponse.json()})
+            .then(function( data){ 
+                // récupérer TOUT le contenu du fichier 04-data.json
+                console.log(data) 
+                 // maintenant  ce que je veux c'est récupérer uniquement le nom du dernier etudiant 
+                 console.log(data.etudiants[1].nom) // céline
+                 // et récupérer le 3ème matière dans le sommaire 
+                 console.log(data.sommaire[2]) // angular
+            }) 
+        // solution 2 => en utilisant la destructuration 
+        fetch("http://localhost:5500/jour3/04-data.json")
+            .then(function(reponse){ return reponse.json()})
+            .then(function({ etudiants, sommaire }){ 
+                console.log(etudiants[1].nom)
+                console.log(sommaire[2])
+             })
+        
+       
+
+    </script>
+</body>
+</html>

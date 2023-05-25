@@ -1,0 +1,7 @@
+{ 
+    "sommaire" : [ "js" , "ajax" , "angular" , "node" , "react" ] ,
+    "etudiants" : [
+        { "id" : 1 , "nom" : "Alain" },
+        { "id" : 2 , "nom" : "Céline" }
+    ]
+}
