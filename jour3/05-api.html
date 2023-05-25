@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // vous pouvez aussi utiliser des adresses internet spéciales au lieu de créer vous même un fichier .json 
+        // ces adresses internet spéciales => on les appelle des API 
+        // un exemple d'api 
+        // si vous allez sur le site internet suivant : https://dummyjson.com/
+        fetch("https://dummyjson.com/products")
+            .then(function(reponse){return reponse.json()})
+            .then(function(data){ 
+                console.log(data) 
+                console.log(data.products) // le tableau de 30 produits
+                console.log(data.products[0])
+            })
+
+        // appeler une api et destructurer le résultat reçu 
+        fetch("https://dummyjson.com/products")
+            .then(function(reponse){return reponse.json()})
+            .then(function({products}){  
+                console.log(products) // le tableau de 30 produits
+                console.log(products[0])
+            })
+
+    </script>
+</body>
+</html>
