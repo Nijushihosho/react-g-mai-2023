@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://dummyjson.com/products")
+            .then(function(reponse){ return reponse.json()})
+            .then( function({products}){ 
+                const resultat = products.map(function(item){
+                    return { 
+                        title : item.title ,
+                        thumbnail : item.thumbnail ,
+                        price : item.price
+                     }
+                })
+                console.log(resultat); 
+             } )
+    </script>
+</body>
+</html>
