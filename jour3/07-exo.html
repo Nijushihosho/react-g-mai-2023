@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="root"></div>
     <script>
         fetch("https://dummyjson.com/products")
             .then(function(reponse){ return reponse.json()})
@@ -18,7 +19,19 @@
                         price : item.price
                      }
                 })
-                console.log(resultat); 
+                // remplir la balise div qui a l'id root avec le contenu de ma variable resultat que je viens récupérer depuis une api 
+                // si on est sur du html => la concaténation ET .innerHTML 
+                let html = "";
+                for(let i = 0 ; i < resultat.length ; i++){
+                    html += `
+                        <article>
+                            <h2>${resultat[i].title}</h2>
+                            <img src="${resultat[i].thumbnail}" alt="">
+                            <p>${resultat[i].price}</p>
+                        </article>
+                    `
+                }
+                document.querySelector("#root").innerHTML = html
              } )
     </script>
 </body>
