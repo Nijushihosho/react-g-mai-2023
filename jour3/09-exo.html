@@ -8,6 +8,7 @@
 </head>
 <body>
     <input type="text" placeholder="rechercher" id="search">
+    <input type="text" placeholder="rechercher region" id="region">
     <div id="root"></div>
     <script>
 
@@ -20,15 +21,22 @@
                 return item.name.common.toLowerCase().includes(e.target.value.toLowerCase())
             })
             render(recherche);
-            const pays = [ "france" , "BELGIQUE" , "allemagne" ]
+            /* const pays = [ "france" , "BELGIQUE" , "allemagne" ]
             // récupére la liste de toutes les pays qui contiennent la lettre a
-            /* const r = pays.filter(function(item){
+            const r = pays.filter(function(item){
                 return item.includes("a")
-            }) */
+            })
             const r = pays.filter(function(item){
                 return item.toLowerCase().includes(e.target.value.toLowerCase())
             })
-            console.log(r);
+            console.log(r); */
+        })
+
+        document.querySelector("#region").addEventListener("input", function(e){
+
+            render(resultat.filter(function(item){
+                return item.region.toLowerCase().includes(e.target.value.toLowerCase())
+            })); 
         })
 
         // dans le projet en cours 
