@@ -82,7 +82,32 @@
           article.titre
           const { titre } = genererArticle(); 
 
-          
+          // créer le fichier 02-exo.html
+
+          // créer une variable 
+          // qui s'appelle article et qui contient la valeur suivante
+
+          const article2 = {
+            titre : "Article 1",
+            contenu : "lorem ipsum",
+            auteur : {
+                nom : "Alain",
+                role : "admin"
+            },
+            commentaires : [
+                { id : 1 , email : "toto@yahoo.fr" , message : "merci" },
+                { id : 2 , email : "toto@yahoo.fr" , message : "salut" },
+                { id : 3 , email : "toto2@yahoo.fr" , message : "à bientôt" },
+                { id : 4 , email : "toto3@yahoo.fr" , message : "lorem ipsum" }
+            ]
+          }
+          // en utilisant la destructuration récupérer le nom de l'auteur 
+          // en utilisant la destructuration récupérer le email du 2ème commentaire
+          // en utilisant la destructuration récupérer le message du dernier  commentaire
+          // en utilisant la destructuration récupérer le titre de l'article
+
+
+
     </script>
 </body>
 </html>
