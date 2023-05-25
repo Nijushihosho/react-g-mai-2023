@@ -1,0 +1,9 @@
+{
+    "articles" : [
+        { "id" : 1 , "titre" : "article 1" },
+        { "id" : 2 , "titre" : "article 2" }
+    ],
+    "users" : [
+        { "id" : 1 , "email" : "toto@yahoo.fr"}
+    ]
+}
