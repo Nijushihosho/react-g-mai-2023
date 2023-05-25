@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // en javascript il existe 5 types de valeurs que l'on stocker dans des variables 
+        // string (texte)
+        const a = "bonjour";
+        // number 
+        const b = 10 ;
+        // boolean 
+        const c = false ;
+
+        // valeurs primitives => 1 variable on stocke 1 valeur 
+
+        // valeurs complexes => array et objet 
+
+        const d = [1,2,3]; // dans la variable d on stocke 3 number 
+
+        const e = { largeur : 20 , hauteur : 10 } // dans la variable e on stocke 2 valeurs
+
+        // de manière classique si je veux accéder à une valeur dans une tableau 
+
+        const largeur2 = d[0] // je peux récupérer le chiffre 1
+        const duree  = d[1] // je peux récupérer le chiffre 2
+        const prix = d[2] // je peux récupérer le chiffre 3 
+
+        // à partir de la version 6 de javascript 
+        // il existe une manière de réaliser les 3 instructions précédentes en 1 seule instruction 
+
+        const [largeur1, duree1, prix1 ] = d ; 
+        // exactement le même résultat que les 3 instructions 
+
+        // dans React il existe des fonctions qui retourne des tableaux
+
+        function note (){
+            return [10, 2, 20, 15];
+        }
+
+          const [js , ajax, react , angular] =  note()
+          const [,,foo] =  note()
+          console.log(foo)
+          //const [js , ajax, react , angular] =  [10, 2, 20, 15]
+
+          const resultat = note();
+          const js1 = resultat[0]
+          const ajax1 = resultat[1]
+          const react1 = resultat[2]
+          const angular1 = resultat[3]
+
+          const [premier , ...reste ] = note(); 
+
+          console.log(premier) // 10  
+          console.log(reste)   // [2,20,15]
+
+
+          const table = { 
+            largeur : 20 ,
+            hauteur : 40 ,
+            proprietaire : "Alain",
+            disponibilite : true 
+          }
+          const largeur = table.largeur
+          const disponibilite3 = table.disponibilite
+          // destruction de l'objet table 
+          // récupérer la propriété largeur mais étant donné que j'ai déjà la variable largeur qui a été créée précédemment 
+          // et je renomme la variable issue de la destructuration largeur en toto
+          const {largeur : toto  , disponibilite} = table ;
+          function genererArticle(){
+            return { 
+                titre : "article 1",
+                contenu : "lorem ipsum"
+            }
+          }
+          console.log(toto)
+          const article = genererArticle(); 
+          article.titre
+          const { titre } = genererArticle(); 
+
+          
+    </script>
+</body>
+</html>
