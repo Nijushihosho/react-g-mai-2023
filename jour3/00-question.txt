@@ -1,0 +1,16 @@
+Aurore vient de me pauser une question sur github ??
+
+est ce que l'on va le voir un peu ensemble ????
+
+la réponse est OUI car je vais en avoir besoin pour mettre en ligne un projet que nous allons réaliser sur React
+
+
+=> il existe deux hébergeurs gratuits dans lesquels vous devez au préalable avoir un compte github pour réaliser le déploiement
+
+=> les deux hébergeurs sont  :
+Netlify : https://www.netlify.com/
+Vercel : https://vercel.com/
+
+=> dans le support de cours je décris la procédure de déploiement au chapitre 14 Déploiement 
+
+on fera cette manipulation dans 2 semaines ensemble 
