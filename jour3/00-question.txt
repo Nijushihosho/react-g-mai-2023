@@ -1,4 +1,4 @@
-Aurore vient de me pauser une question sur github ??
+Aurore vient de me pauser une question sur git /  github ??
 
 est ce que l'on va le voir un peu ensemble ????
 
@@ -14,3 +14,12 @@ Vercel : https://vercel.com/
 => dans le support de cours je décris la procédure de déploiement au chapitre 14 Déploiement 
 
 on fera cette manipulation dans 2 semaines ensemble 
+
+
+Des questions sur ce l'on a vu hier ?????? 
+
+rappel sur la destructuration 
+
+rappel sur fetch 
+
+=> je vais faire des rappels sur la destructuration et sur fetch vu hier ensemble . 
