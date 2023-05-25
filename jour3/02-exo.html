@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const article2 = {
+            titre : "Article 1",
+            contenu : "lorem ipsum",
+            auteur : {
+                nom : "Alain",
+                role : "admin"
+            },
+            commentaires : [
+                { id : 1 , email : "toto@yahoo.fr" , message : "merci" },
+                { id : 2 , email : "toto@yahoo.fr" , message : "salut" },
+                { id : 3 , email : "toto2@yahoo.fr" , message : "à bientôt" },
+                { id : 4 , email : "toto3@yahoo.fr" , message : "lorem ipsum" }
+            ]
+          }
+          // en utilisant la destructuration récupérer le nom de l'auteur 
+          // article2.auteur.nom 
+          const {nom} = article2.auteur ;
+          console.log(nom)
+          // en utilisant la destructuration récupérer le email du 2ème commentaire
+          article2.commentaires[1].email
+           const {email} = article2.commentaires[1] ;
+          console.log(email);
+
+         /*  const {email} = article2.commentaires.find(function(item){
+            // recherche dans le tableau commentaires si il y a un commentaire qui a id === 2
+            return item.id === 2
+          })
+          console.log(email); */
+
+          // en utilisant la destructuration récupérer le message du dernier  commentaire
+          article2.commentaires[3].message
+          article2.commentaires[article2.commentaires.length - 1 ].message
+
+          const {message} = article2.commentaires[article2.commentaires.length - 1 ]
+          console.log(message)
+          // en utilisant la destructuration récupérer le titre de l'article
+          article2.titre
+          const {titre } = article2 ;
+          console.log(titre)
+          // en utilisant la destructuration récupérer le premier commentaire (id, email, message)
+
+          article2.commentaires[0]
+          const [premierCommentaire] = article2.commentaires ;
+          console.log(premierCommentaire)
+    </script>
+</body>
+</html>
