@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="rechercher" id="search">
+    <div id="root"></div>
+    <script>
+
+        let resultat = [] ; // closure 
+        // ça permet de pouvoir utiliser les résultats dans plusieurs fonctions 
+
+        document.querySelector("#search").addEventListener("input" , function(e){
+
+            const recherche = resultat.filter(function(item){
+                return item.name.common.toLowerCase().includes(e.target.value.toLowerCase())
+            })
+            render(recherche);
+            const pays = [ "france" , "BELGIQUE" , "allemagne" ]
+            // récupére la liste de toutes les pays qui contiennent la lettre a
+            /* const r = pays.filter(function(item){
+                return item.includes("a")
+            }) */
+            const r = pays.filter(function(item){
+                return item.toLowerCase().includes(e.target.value.toLowerCase())
+            })
+            console.log(r);
+        })
+
+
+
+        function render(resultat){
+            let html = "";
+            for(let i = 0 ; i < resultat.length ; i++){
+                html += `
+                    <article>
+                        <h2>${resultat[i].name.common}</h2>
+                        <img src="${resultat[i].flags.png}" alt="">
+                        <ul>
+                            <li>capitale : ${resultat[i].capital ? resultat[i].capital : "aucune capitale" }</li>
+                            <li>population : ${resultat[i].population}</li>
+                            <li>region : ${resultat[i].region}</li>
+                        </ul>
+                    </article>
+                `
+            }
+            document.querySelector("#root").innerHTML = html
+        }
+
+        fetch("https://restcountries.com/v3.1/all")
+            .then(function(reponse){return reponse.json()})
+            .then(function(data){
+                console.log(data)
+                resultat = data.map(function({capital, region , population , flags , name}){
+                    return {capital ,region  ,population ,flags ,name }
+                })
+                render(resultat) ; 
+
+                // bravo !!! 
+                // ajouter une couche de complexité à notre projet 
+                // je veux ajouter dans la page web un formulaire dans lequel je vais pouvoir rechercher et filtrer 
+                // je veux pouvoir rapidement rechercher parmis tous les noms des pays tous ceux qui contiennent la lettre a 
+                // je vous propose de créer un nouveau fichier 09-exo.html
+                // directement copier coller tout le contenu du projet 08-exo.html 
+                // et le coller dedans 
+            })
+    </script>
+    <style>
+        #root{
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap : 10px
+        }
+        article {
+            border : 1px solid black;
+            padding: 10px;
+            border-radius:  5px;
+        }
+        img{
+            max-width: 100%;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>  
+</body>
+</html>
