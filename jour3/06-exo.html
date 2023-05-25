@@ -36,7 +36,6 @@
                 { flag : "br" , name: {common : "Bermude"} },
                 { capitale : ["london"] , flag : "en" , name: {common : "Angleterre"} },
             ]
-
             const resultat = data.map(function(pays){
                 return {
                     capitale : pays.capitale ? pays.capitale[0] : "none",
@@ -51,3 +50,13 @@
     </script>
 </body>
 </html>
+<!--
+    exo créer le fichier 07-exo.html
+    dans ce fichier vous allez réaliser une requête ajax vers l'api suivante 
+    https://dummyjson.com/products
+
+    une fois que vous avez récupérer les valeurs 
+    mapper uniquement les colonnes title / price / thumbnail
+    afficher le resultat dans la console du navigateur 
+
+-->
