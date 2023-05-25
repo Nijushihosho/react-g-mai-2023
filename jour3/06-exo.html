@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        fetch("https://restcountries.com/v3.1/all")
+            .then(function(reponse){ return reponse.json()})
+            .then(function(data){console.log(data)})
+
+        // moi ce que je veux c'est récupérer uniquement sur chaque pays
+        // uniquement drapeau / capitale / name
+
+        fetch("https://restcountries.com/v3.1/all")
+            .then(function(reponse){ return reponse.json()})
+            .then(function(data){
+                const resultat = data.map(function(pays){ // enlever toutes les props 
+                    return { 
+                        flag : pays.flag , 
+                        capitale : pays.capital ? pays.capital[0] : "none" , 
+                        name : pays.name
+                    }
+                })
+                console.log( resultat.filter(function(item){
+                    return item.capitale === "Paris"
+                })); 
+            })
+
+
+            const data = [
+                { capitale : ["paris"] , flag : "fr" , name: {common : "France"} },
+                { flag : "br" , name: {common : "Bermude"} },
+                { capitale : ["london"] , flag : "en" , name: {common : "Angleterre"} },
+            ]
+
+            const resultat = data.map(function(pays){
+                return {
+                    capitale : pays.capitale ? pays.capitale[0] : "none",
+                    flag : pays.flag,
+                    name : pays.name
+                }
+            })
+            console.log(resultat.filter(function(item){
+                return item.capitale === "paris"
+            })); 
+
+    </script>
+</body>
+</html>
