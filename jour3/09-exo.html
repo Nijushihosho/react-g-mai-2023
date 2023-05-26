@@ -7,55 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" placeholder="rechercher" id="search">
-    <input type="text" placeholder="rechercher region" id="region">
-    <div id="root"></div>
+    <div class="container">
+        <input type="text" placeholder="rechercher" id="search">
+        <input type="text" placeholder="rechercher region" id="region">
+    </div>
+    <div id="root" class="container"></div>
     <script>
 
         let resultat = [] ; // closure 
+        
+        let filtres = {
+            nom : "",
+            region : ""
+        }
         // ça permet de pouvoir utiliser les résultats dans plusieurs fonctions 
-
-        document.querySelector("#search").addEventListener("input" , function(e){
-
+        
+        function filtrage(){
             const recherche = resultat.filter(function(item){
-                return item.name.common.toLowerCase().includes(e.target.value.toLowerCase())
+                return item.region.toLowerCase().includes(filtres.region) && item.name.common.toLowerCase().includes(filtres.nom)
             })
             render(recherche);
-            /* const pays = [ "france" , "BELGIQUE" , "allemagne" ]
-            // récupére la liste de toutes les pays qui contiennent la lettre a
-            const r = pays.filter(function(item){
-                return item.includes("a")
-            })
-            const r = pays.filter(function(item){
-                return item.toLowerCase().includes(e.target.value.toLowerCase())
-            })
-            console.log(r); */
-        })
-
-        document.querySelector("#region").addEventListener("input", function(e){
-
-            render(resultat.filter(function(item){
-                return item.region.toLowerCase().includes(e.target.value.toLowerCase())
-            })); 
-        })
+        }
 
         // dans le projet en cours 
         // pouvez vous ajouter un nouveau input dans lequel l'utilisateur va pouvoir saisir le nom d'une région du monde 
         // et les pays en dessous vont se filtrer 
 
 
-
         function render(resultat){
-            let html = "";
+            let html = `<article>nb de pays affichés : ${resultat.length}</article>`;
             for(let i = 0 ; i < resultat.length ; i++){
                 html += `
                     <article>
-                        <h2>${resultat[i].name.common}</h2>
-                        <img src="${resultat[i].flags.png}" alt="">
+                        <h2 title="${resultat[i].name.common}">${resultat[i].name.common}</h2>
+                        <span>
+                            <img src="${resultat[i].flags.png}" alt="">
+                        </span>
                         <ul>
-                            <li>capitale : ${resultat[i].capital ? resultat[i].capital : "aucune capitale" }</li>
-                            <li>population : ${resultat[i].population}</li>
-                            <li>region : ${resultat[i].region}</li>
+                            <li>capitale : <br>${resultat[i].capital ? resultat[i].capital : "aucune capitale" }</li>
+                            <li>population : <br>${new Intl.NumberFormat('FR-fr').format(resultat[i].population)}</li>
+                            <li>region : <br> ${resultat[i].region}</li>
                         </ul>
                     </article>
                 `
@@ -63,14 +54,33 @@
             document.querySelector("#root").innerHTML = html
         }
 
+        document.querySelector("#search").addEventListener("input" , function(e){
+            filtres.nom = e.target.value.toLowerCase();
+            filtrage()
+        })
+
+        document.querySelector("#region").addEventListener("input", function(e){
+            filtres.region = e.target.value.toLowerCase();
+            filtrage()
+        })
+
         fetch("https://restcountries.com/v3.1/all")
             .then(function(reponse){return reponse.json()})
             .then(function(data){
-                console.log(data)
+                
                 resultat = data.map(function({capital, region , population , flags , name}){
-                    return {capital ,region  ,population ,flags ,name }
+                    return {capital , region  ,population ,flags ,name }
                 })
-                render(resultat) ; 
+                render(resultat.sort(function (a, b) {
+                    if (a.name.common < b.name.common) {
+                        return -1;
+                    }
+                    if (a.name.common > b.name.common) {
+                        return 1;
+                    }
+                    return 0;
+                   
+                })) ; 
 
                 // bravo !!! 
                 // ajouter une couche de complexité à notre projet 
@@ -82,10 +92,23 @@
             })
     </script>
     <style>
+        .container{
+            max-width: 1200px;
+            width: 100%;
+            margin: 20px auto;
+        }
         #root{
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
-            gap : 10px
+            grid-template-columns: repeat(6, 15%);
+            gap : 10px;
+            
+        }
+        h2{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 0 0.2em 0;
         }
         article {
             border : 1px solid black;
@@ -94,8 +117,19 @@
         }
         img{
             max-width: 100%;
-            height: 100px;
+            height: 80px;
             object-fit: cover;
+            border: 1px solid blue;
+        }
+        li{
+            word-break: break-all;
+        }
+        span{
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            padding-left: 15px;
         }
     </style>  
 </body>
