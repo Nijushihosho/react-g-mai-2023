@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Compteur({nb, couleur , id , augmenter}) {
+function Compteur({nb, couleur , id , augmenter , diminuer}) {
 
   return (
     <div>
@@ -9,6 +9,9 @@ function Compteur({nb, couleur , id , augmenter}) {
             style={ { background : couleur }}
             onClick={() => augmenter(id)}
         >augmenter</button>
+        <button onClick={() => diminuer(id)}>
+          diminuer
+        </button>
         {/* <pre>{JSON.stringify(props , null , "   ")}</pre> */}
     </div>
   )

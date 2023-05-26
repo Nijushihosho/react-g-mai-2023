@@ -23,6 +23,16 @@ function Sommaire() {
        setCompteurs(cloneCompteurs); // à besoin d'un tableau qui a une reférence mémoire différente pour être exécutée  
     }
 
+    function diminuer(id){
+      const cloneCompteurs = structuredClone(compteurs);
+      const compteurAModifier = cloneCompteurs.find(function(item){
+        return item.id === id
+      })
+      const index = cloneCompteurs.indexOf(compteurAModifier);
+      cloneCompteurs[index].nb-- ;
+      setCompteurs(cloneCompteurs); 
+    }
+
   return (
     <div>
         <h2>Sommaire</h2>
@@ -33,6 +43,7 @@ function Sommaire() {
                             key={key} 
                             id={id}
                             augmenter={augmenter}
+                            diminuer={diminuer}
                             />
         })}
         
