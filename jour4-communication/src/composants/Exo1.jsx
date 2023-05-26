@@ -19,15 +19,28 @@ function Exo1() {
 
     function ajouterPanier(produit){
         const clonePanier = structuredClone(panier);
-        clonePanier.push(produit);
+
+        const produitAAjouter = clonePanier.find(function(item){
+            return item.title === produit.title
+        })
+
+        if(produitAAjouter){
+            const index = clonePanier.indexOf(produitAAjouter);
+            clonePanier[index].qte++
+        }else {
+            clonePanier.push({...produit, qte : 1});
+        }
+
         setPanier(clonePanier); 
     }
 
     function supprimerProduitduPanier(title){
         const clonePanier = structuredClone(panier);
+        
         const produitASupprimerPanier = clonePanier.find(function(item){
             return item.title === title
         })
+        
         const index = clonePanier.indexOf(produitASupprimerPanier)
         clonePanier.splice(index, 1)
         setPanier(clonePanier);
