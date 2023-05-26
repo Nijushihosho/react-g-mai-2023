@@ -4,6 +4,7 @@ import Produit from './Produit'
 
 function Exo1() {
     const [data, setData] = useState([])
+    const [panier, setPanier] = useState([])
     useEffect(function(){
         fetch("https://dummyjson.com/products")
             .then(function(reponse){ return reponse.json()})
@@ -14,13 +15,27 @@ function Exo1() {
                 setData(produitsMappe); 
              })
     } , [])
+
+    function ajouterPanier(produit){
+        const clonePanier = structuredClone(panier);
+        clonePanier.push(produit);
+        setPanier(clonePanier); 
+    }
+
   return (
     <div>Exo1
-        {/* <pre>{JSON.stringify(data , null , "  ")}</pre> */}
+        {<pre>{JSON.stringify(panier , null , "  ")}</pre>}
         <section className='exo1'>
         { data.map(function(  {title , description , price , thumbnail}, key){
             return (
-                <Produit title={title} description={description} price={price} thumbnail={thumbnail} key={key}/>
+                <Produit 
+                    title={title} 
+                    description={description} 
+                    price={price} 
+                    thumbnail={thumbnail} 
+                    key={key} 
+                    ajouterPanier={ajouterPanier}
+                />
             )
             
         })}
