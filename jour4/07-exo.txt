@@ -14,3 +14,4 @@ dans la partie vue du composant vous allez afficher le contenu du state data
     <p>description</p>
     <p>prix</p>
 </article>
+malik.h@webdevpro.net 
