@@ -1,0 +1,66 @@
+api => Application Program Interface 
+
+base de données hébergé sur un serveur ET accessible via une requête ajax réalisable via le fonction fetch 
+
+fetch("www")
+    .then(function( reponse){ return reponse.json() })
+    .then(function( data ){  data   })
+
+souvent data est un objet 
+
+https://dummyjson.com/products  data = { products : [] , total : "" , skip : "" }
+
+fetch("www")
+    .then(function( reponse){ return reponse.json() })
+    .then(function( {products} ){  products   })
+
+[{id , nom},{id , nom}].map(function(item , key){
+
+})
+
+[{id , nom},{id , nom}].map(function({id , nom} , key){
+    return <p key={key}>{id}</p>
+})
+
+// en html 
+
+fetch("www")
+    .then(function( reponse){ return reponse.json() })
+    .then(function( {products} ){ 
+            // traitement sur les données 
+            // .map() filtrer sur les colonnes
+            // filter() // enlever de lignes
+            // .... 
+         
+            // injecter le contenu des données récupérer 
+            // dans la vue 
+            // document.querySelector("div").innerHTML = "du html" 
+
+            setData(products)  
+    })
+
+// créer un nouveau projet react 
+// npm create vite (attention cette commande doit être exécutée à la racine du projet A COTE de jour1-decouverte) cd ..
+// jour4-communication
+// react 
+// javascript 
+cd jour4-communication
+  npm install 
+    (créer le dossier node_modules du projet jour4-communication
+    cette commande dure maximum 1 min)
+  npm run dev
+
+    http://localhost:5173/
+
+reset (supprimer les fichiers / dossiers qui ne servent à rien )
+
+tout est dans le dossier src 
+
+supprimer les fichiers suivants 
+index.css
+App.css 
+supprimer le dossier assets (peut être devoir stopper npm run dev )
+
+main.jsx => commenter la ligne // import './index.css'
+
+App.jsx 
