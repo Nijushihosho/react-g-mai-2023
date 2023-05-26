@@ -1,0 +1,18 @@
+Dans le support de cours 
+
+=> https://formation.webdevpro.net/react
+login : react 
+password : fb
+
+les applications React sont des applications organisées en 3 parties 
+
+=> front / client => React => ça correspond à la partie visuel de l'application qui est en contact direct avec les utilisateurs 
+=> le rôle de réact est d'afficher le plus vite possible une interface graphique 
+=> si on a besoin de données => React va la demander à un Back End 
+
+=> lien entre front et le back => requêtes ajax réalisé en javascript via 
+fetch()
+
+=> back End => recevoir des requêtes ajax et de les transférer vers une base de données 
+
+=> Base de données => stocker des informations de la manière la plus optimale

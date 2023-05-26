@@ -13,7 +13,12 @@ function Ajax() {
             .then(function(reponse){ return reponse.json() })
             .then(function(data){  setTimeout(function(){
                 console.log("data reçue")
-                setResultat(data)
+                const resultat = data.map(function({name, flag}){
+                    return {
+                        name : name.common, 
+                        flag}
+                })
+                setResultat(resultat)
             } , 2000) })
     }, []); 
 
@@ -25,7 +30,17 @@ function Ajax() {
 
   return (
     <div>Ajax
-        <pre>{JSON.stringify(resultat , null , "  ")}</pre>
+        {/* <pre>{JSON.stringify(resultat , null , "  ")}</pre> */}
+        <div style={{ display : "grid" , gridTemplateColumns : "repeat(5,1fr)" }}>
+        { resultat.length === 0 
+            ? 
+            <p>en attente du données</p> 
+            : 
+            <>{resultat.map(function({name, flag} , key){
+               return <p key={key}>{name} {flag}</p>
+            })}</>
+        }
+        </div>
     </div>
 
   )

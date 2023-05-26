@@ -1,0 +1,21 @@
+Dans react , je veux réaliser si je veux réaliser une requête ajax
+
+il faut l'exécuter lorsque le composant est monté 
+ET il faut l'exécuter 1 seule fois 
+ET il faut que le resultat de la requête soit stockée dans le state du composant 
+
+const [resultat , setResultat] = useState([])
+
+useEffect( function(){
+    fetch("www")
+        .then(function(reponse){ return reponse.json()})
+        .then(function(data){  
+            // traitement .map ()
+            // filter ()
+            setResultat(data);
+
+         })
+}, [])
+
+return <div>
+</div>
