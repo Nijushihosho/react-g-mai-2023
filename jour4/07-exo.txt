@@ -1,0 +1,16 @@
+créer un nouveau composant Exo1 
+
+dans ce composant vous allez importer useState et useEffect 
+
+dans le useState créer un état local qui s'appelle data 
+dans le useEffect vous allez exécuter une requête ajax vers l'api suivante
+https://dummyjson.com/products
+uniquement lorsque le composant est mounted 
+
+dans la partie vue du composant vous allez afficher le contenu du state data 
+<article>
+    <h2>title</h2>
+    <img src="thumbnail" alt="">
+    <p>description</p>
+    <p>prix</p>
+</article>
