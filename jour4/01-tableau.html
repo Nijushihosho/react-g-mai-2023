@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const a = [1, 2 , 33, 20]
+
+        // quel est la position du chiffre 33 dans le tableau a 
+        console.log(a.indexOf(33)) ; // 2
+
+        const b = [ 
+            {nom : "Alain" , age : 22},
+            {nom : "Céline" , age : 12}, // 1
+            {nom : "Zorro" , age : 44},
+        ]
+
+        // quelle est la position dans le tableau b de la personne qui a 12 ans  ?? 
+        const personneQuiA12Ans = b.find(function(item){
+            return item.age === 12
+        })
+        console.log(b.indexOf(personneQuiA12Ans)); // 1
+        const index = b.indexOf(personneQuiA12Ans) ; 
+
+        b[index].age += 2
+        
+        console.log(b); 
+
+</script>
+</body>
+</html>

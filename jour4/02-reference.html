@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const etudiants = ["Alain" , "Zorro"] ;  // crée un tableau
+
+        //const formateurs =  etudiants  ; // copie par référence du  tableau dans un autre tableau
+        // copie par valeur du tableau 
+        // méthode 1
+        const formateurs1 = structuredClone( etudiants ) ;  // 2021
+        const formateurs2 = [ ...etudiants ] ; // 2015 copie ce tableau dans un autre tableau
+        const formateurs3 = JSON.parse(JSON.stringify(etudiants))  ; // 1998
+        const formateurs4 = _.cloneDeep(etudiant)  ; // librairie https://lodash.com/docs/#cloneDeep
+        
+        formateurs[0] = "Céline" ; // modifier l'autre tableau 
+
+        // normalement seul l'autre tableau est modifié
+
+        console.log("etudiants" , etudiants); // ["Alain" , "Zorro"] 
+                                              // ???? [ "Céline", "Zorro" ]
+        console.log("formateurs" , formateurs); // ["Céline" , "Zorro"]
+
+    </script>
+</body>
+</html>
