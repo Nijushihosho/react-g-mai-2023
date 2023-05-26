@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react'
 import "./Exo1.css"
 import Produit from './Produit'
+import Panier from './Panier'
 
 function Exo1() {
     const [catalogue, setCatalogue] = useState([])
@@ -21,9 +22,20 @@ function Exo1() {
         clonePanier.push(produit);
         setPanier(clonePanier); 
     }
+
+    function supprimerProduitduPanier(title){
+        const clonePanier = structuredClone(panier);
+        const produitASupprimerPanier = clonePanier.find(function(item){
+            return item.title === title
+        })
+        const index = clonePanier.indexOf(produitASupprimerPanier)
+        clonePanier.splice(index, 1)
+        setPanier(clonePanier);
+    }
   return (
     <div>Exo1
-        {<pre>{JSON.stringify(panier , null , "  ")}</pre>}
+        <Panier  panier={panier} supprimerProduitduPanier={supprimerProduitduPanier}/>
+        {/* {<pre>{JSON.stringify(panier , null , "  ")}</pre>} */}
         <section className='exo1'>
         { catalogue.map(function(  {title , description , price , thumbnail}, key){
             return (
