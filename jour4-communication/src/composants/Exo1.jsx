@@ -3,7 +3,7 @@ import "./Exo1.css"
 import Produit from './Produit'
 
 function Exo1() {
-    const [data, setData] = useState([])
+    const [catalogue, setCatalogue] = useState([])
     const [panier, setPanier] = useState([])
     useEffect(function(){
         fetch("https://dummyjson.com/products")
@@ -12,7 +12,7 @@ function Exo1() {
                 const produitsMappe = products.map(function({title , description , price , thumbnail}){
                     return {title , description , price , thumbnail}
                 })
-                setData(produitsMappe); 
+                setCatalogue(produitsMappe); 
              })
     } , [])
 
@@ -21,12 +21,11 @@ function Exo1() {
         clonePanier.push(produit);
         setPanier(clonePanier); 
     }
-
   return (
     <div>Exo1
         {<pre>{JSON.stringify(panier , null , "  ")}</pre>}
         <section className='exo1'>
-        { data.map(function(  {title , description , price , thumbnail}, key){
+        { catalogue.map(function(  {title , description , price , thumbnail}, key){
             return (
                 <Produit 
                     title={title} 
