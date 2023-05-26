@@ -1,9 +1,12 @@
 // imrs
 import React, { useState } from 'react';
+import Sommaire from './composants/Sommaire';
 
 // ffc
 function App() {
-  return ( <div>bonjour</div> );
+  return ( <div>
+    <Sommaire />
+  </div> );
 }
 
 export default App;
