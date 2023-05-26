@@ -1,0 +1,22 @@
+pour pouvoir réaliser des requêtes ajax correctement dans React il faut au préalable compte le Cycle de vie d'une composant
+
+un composant dispose de 3 étapes dans son cycle de vie 
+
+=> Mounted => la phase où le composant se lancer et va se synchroniser avec le DOM 
+
+=> Update => le composant est synchronisé avec le DOM ET props ou son state est modifié 
+
+=> Unmounted => le composant est supprimé du DOM 
+
+=> React dispose d'un hook qui permet d'exécuter des traitements à chaque étape du cycle de vie du composant 
+
+=> le hook concernée => useEffect() => ça vient de l'anglais side effect (médicament à un side effect => effet secondaire )
+
+import {useEffect} from "react"
+
+useEffect( function(){ }, [] ) // prend 2 paramètres
+
+// callback ==> fonction anonyme 
+// contient les traitements à effectuer 
+// [] => tableau des dépendances en fonction du contenu de ce tableau 
+// CONDITION d'exécution du 1 er paramètres
