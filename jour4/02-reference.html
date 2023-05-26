@@ -14,7 +14,8 @@
         // copie par valeur du tableau 
         // méthode 1
         const formateurs1 = structuredClone( etudiants ) ;  // 2021
-        const formateurs2 = [ ...etudiants ] ; // 2015 copie ce tableau dans un autre tableau
+        const formateurs2 = [ ...etudiants ] ; // 2015 shallow copie
+                                               // copie superficielle 
         const formateurs3 = JSON.parse(JSON.stringify(etudiants))  ; // 1998
         const formateurs4 = _.cloneDeep(etudiant)  ; // librairie https://lodash.com/docs/#cloneDeep
         

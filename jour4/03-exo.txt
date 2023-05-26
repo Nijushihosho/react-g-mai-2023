@@ -1,0 +1,4 @@
+Cas pratique
+
+Ajouter dans chaque compteur un bouton "diminuer"
+si vous cliquez sur le bouton diminuer ça doit réduire de -1 la valeur du nb concernée

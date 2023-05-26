@@ -20,7 +20,7 @@ function Sommaire() {
        // modification => augmentation 
        cloneCompteurs[index].nb++;
        // efectue la mise à jour du state 
-       setCompteurs(cloneCompteurs);
+       setCompteurs(cloneCompteurs); // à besoin d'un tableau qui a une reférence mémoire différente pour être exécutée  
     }
 
   return (
