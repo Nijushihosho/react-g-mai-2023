@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>titre</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, exercitationem.</p>
+        <p>Autem accusamus aspernatur magnam, corporis sit perspiciatis possimus totam est?</p>
+        <p>Consequuntur quia nam, esse libero blanditiis doloremque veniam perspiciatis quasi!</p>
+        <p>Quaerat sapiente mollitia culpa necessitatibus voluptates? Placeat amet deleniti sequi!</p>
+        <p>Molestiae aliquid consequatur ab omnis natus esse assumenda reprehenderit dignissimos!</p>
+    </div>
+    <style>
+        div{
+            display: grid ;
+            grid-template-columns: repeat(4 , 1fr);
+            /* je veux l'application QUE sur les p pas sur le h1 */
+        }
+        p{
+            border:1px solid red; 
+            margin: 0;
+        }
+        h1{
+            border:1px solid purple; 
+            margin: 0;
+            /*ajouter une règle sur la balise h1 qui lui dit à lui 
+            enfait tu es biendans un une grille MAIS ta largeur = 3 colonnes */
+            /* grid-column: span 3; */
+            /* grid-column: 1/4; */
+            grid-column: 1/-1;
+        }
+    </style>
+</body>
+</html>

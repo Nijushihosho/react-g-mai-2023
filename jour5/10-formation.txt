@@ -1,0 +1,7 @@
+apprendre en détail display flex et grid 
+
+https://cssgrid.io/ 
+https://flexbox.io/ 
+
+Exo 
+Refaire le design suivant en utilisant html / css et display grid 

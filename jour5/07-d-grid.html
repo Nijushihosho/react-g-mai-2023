@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, pariatur.</p>
+        <p>Eligendi nesciunt ea dolorem libero reiciendis doloribus magni inventore asperiores.</p>
+        <p>Eveniet, ratione! Tempore deserunt ducimus quod vitae, accusamus voluptatum! Quisquam.</p>
+        <p>Vel perferendis animi commodi eligendi, molestias quaerat exercitationem voluptatibus numquam.</p>
+        <p>Iure natus omnis aut, sit ea ratione ipsa illo! Eius?</p>
+    </div>
+    <style>
+        div{
+            display: grid;
+            /* je veux créer une grille qui a 3 colonnes de largeur identiques quelques soit la largeur de l'écran */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: calc( (100% - 20px -2) / 3)  calc( (100% - 20px) / 3) calc( (100% - 20px) / 3) ; */
+            grid-template-columns: repeat(3,1fr) ; 
+            /* 1000 - 20px * 2 = 960px / 3 = 1fr   */
+            gap : 20px; 
+        }
+
+        p{
+            border: 1px solid maroon;
+            margin: 0;
+        }
+
+    </style>
+</body>
+</html>

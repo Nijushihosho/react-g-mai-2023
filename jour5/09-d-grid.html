@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p class="une">titre à la une  Lorem ipsum dolor sit amet consectetur adipisicing elit. At cupiditate nostrum, aspernatur quae quas qui suscipit, accusamus nam earum pariatur nobis. Eligendi repellendus totam ipsa unde, odio laborum modi autem.</p>
+        <p class="article2">article 2 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam magnam eaque molestias deleniti! Repellendus ipsum voluptas saepe, necessitatibus sit vero.</p>
+        <p class="article3">article 3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam magnam eaque molestias deleniti! Repellendus ipsum voluptas saepe, necessitatibus sit vero.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, facere.</p>
+        <p>Modi, dicta placeat sunt quae error esse explicabo cupiditate dolor!</p>
+        <p>Itaque porro pariatur cum laborum, ipsum hic voluptatem? Qui, praesentium?</p>
+        <p>Aliquid natus, id nisi exercitationem dolores unde rem nobis ex.</p>
+    </div>
+    <style>
+        div{
+            display: grid ;
+            gap:20px; 
+        }
+        @media screen and (min-width: 700px) {
+            div{
+                grid-template-columns: repeat(4,1fr);
+                grid-template-rows: repeat(3,100px);
+            }
+            .une{
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .article2 , .article3{
+                grid-column: span 2;
+            }
+        }
+        
+        p{
+            border:1px solid black;
+            margin: 0;
+            padding: 10px;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, quisquam!</p>
+        <p>Magnam, explicabo aut. Temporibus dolorem blanditiis tempora, sunt quam quo!</p>
+        <p>Numquam velit tempore ipsam facilis commodi fugit quisquam, non at?</p>
+        <p>Debitis expedita illo quas magnam dolorum molestiae excepturi facere veniam.</p>
+        <p>Dicta aperiam eius maiores blanditiis adipisci quod vel velit earum.</p>
+    </div>
+    <style>
+        div{
+            display: grid;
+            /*grid-template-columns: 200px 200px 200px;*/
+            /* équivalent de la ligne css précédente
+            attention la fonction css repeat() ne doit être utilisée QUE avec la propriété grid-template-columns */
+            grid-template-columns: repeat(3,200px); 
+            gap : 20px; 
+        }
+        p{
+            border:1px solid red;
+            margin: 0;
+        }
+    </style>
+</body>
+</html>

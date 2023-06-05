@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, similique.</p>
+        <p>Quidem illum et esse incidunt voluptatem? Itaque dolorem in iusto!</p>
+        <p>Laboriosam veniam, porro quam ab voluptate deleniti non maiores? Assumenda.</p>
+        <p>Odit rerum illo reiciendis nihil esse earum iste unde fugiat?</p>
+        <p>Excepturi temporibus quis repellat cumque nam reiciendis, repellendus explicabo id.</p>
+    </div>
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: 150px 1fr 200px 50px; /* 1fr => largeur du parent - largeur fixe 
+            1000px - 150px => 850px === 1fr 
+            600px  -150px => 450px === 1fr 
+            px % rem em => fr uniquemnt pour les grilles 
+            */
+            gap : 20px; 
+            /* 
+            1000 - 150 -200 -50 - 3 * 20  === 1fr 
+            */
+        }
+        p{
+            border:1px solid green;
+            margin: 0;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,17 @@
+float : left / right => 
+
+display flex => permet d'aligner des élements l'un à côté des autres
+            => idéal pour mis en page sur une ligne 
+            
+display grid  => permet d'aligner des éléments dans une grille
+            => idéal pour mise en page horizontal ET verticale
+
+// consolidation => exo ensemble 
+
+// Menu => librairie react-router-dom => Navigation dans vos applications React 
+
+// useContext / createContext 
+
+// CRUD => Base données 
+
+// useRef // useReducer 

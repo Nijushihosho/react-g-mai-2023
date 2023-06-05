@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ab.</p>
+        <p>Iure eligendi ut nesciunt, quod inventore sint tenetur labore veritatis!</p>
+        <p>Illo harum mollitia error fugit dicta ipsum, rerum voluptatibus perspiciatis!</p>
+        <p>Ipsam, voluptate ducimus. Placeat cupiditate mollitia ratione unde rerum perspiciatis?</p>
+        <p>Tenetur maiores laudantium fugiat mollitia dolore eveniet, nisi minus tempore?</p>
+    </div>
+    <style>
+        /* pour utiliser display grid il faut sélectionner la balise qui est le parent direct des balises que l'on veut mettre en forme 
+            je dois utiliser div qui est le parent direct des p
+        */
+        div{
+            display: grid; /*créer une grille qui a 1 seule colonne */
+            grid-template-columns: 300px 600px 20px;
+            /* en fonction de nombre de valeur que vous allez écrire détermine le nombre de colonne de la grille et la largeur de chaque colonne de la grille*/
+            gap:20px 50px;  
+            /* permet de mettre des espaces entre les colonnes de la grille */
+        }
+        p{
+            border:1px solid blue; 
+            margin: 0;
+        }
+    </style>
+</body>
+</html>
