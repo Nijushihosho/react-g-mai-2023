@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const etudiants = {
+            etudiant1 : {nom : "Alain"},
+            etudiant2 : {nom : "Céline"}
+        }
+
+        etudiants.etudiant1.nom
+
+        const id = "etudiant1";
+        etudiants[id].nom
+
+        for(let i = 1 ; i <=2 ; i++){
+            etudiants["etudiant"+i].nom
+        }
+
+        const cocktails = [
+            {
+                ingrediant1 : "rhum",
+                ingrediant2 : "fruit de la passion"
+            },
+            {
+                ingrediant1 : "pomme",
+                ingrediant2 : "banane"
+            },
+        ]
+
+        for(let cocktail of cocktails){
+            for(let i = 1 ; i <= 2 ; i++){
+                console.log(cocktail["ingrediant"+i])
+            }
+        }
+
+    </script>
+</body>
+</html>
