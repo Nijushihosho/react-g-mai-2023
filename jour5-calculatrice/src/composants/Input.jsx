@@ -1,10 +1,12 @@
 import React from 'react'
-function Input({label , setNb, nb , id}) {
+function Input({label , modifNb, nb , id}) {
     function recupSaisie(e){
         // attention les chiffres saisies dans un formulaire
         // sont transformés en string 1234 => "1234"
         // console.log( Number( e.target.value) ) // "1234" => 1234
-        setNb( Number( e.target.value) ); 
+        // setNb( Number( e.target.value) ); 
+        
+        modifNb({ id : id , nb : Number( e.target.value) })
     } 
   return (
     <div>
