@@ -4,6 +4,8 @@ import Input from './composants/Input'
 import Button from './composants/Button'
 
 function App() {
+  // Attention il est FORTEMENT déconseillé d'utiliser 
+  // document.querySelector().addEventListener() dans un composant React 
   const [nb1, setNb1] = useState(0);
   const [nb2, setNb2] = useState(0);
   const [resultat, setResultat] = useState("");
