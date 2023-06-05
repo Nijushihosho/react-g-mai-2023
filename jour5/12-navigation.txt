@@ -1,0 +1,37 @@
+jusqu'à maintenant nous avez réaliser des applications React monopage 
+
+vous lancez React => votre application est contenue dans une seule page 
+
+=> l'objectif est de mettre en place une barre de navigation 
+
+faire un petit projet React dans lequel nous allons mettre une barre de menu 
+qui contient les liens suivants  :
+
+Accueil
+Formulaire de Contact 
+liste d'articles 
+    un seul article 
+formulaire authentification 
+
+=> site internet avec 5 pages 
+
+=> Attention par défaut React ne dispose pas de fonctionnalité native facile à utiliser pour mettre en place une navigation 
+nous allons ajouter une librairie qui s'appelle react-router-dom 
+
+cd .. (retour à la racine du projet)
+npm create vite 
+jour5-navigation
+React 
+Javascript 
+cd jour5-navigation
+npm install react-router-dom
+npm install 
+npm run dev 
+
+jusqu'à maintenant => App > contenir tous les composants que l'on va afficher à écran 
+
+=> créer un composant <Menu /> => stocker tous les liens vers les différentes pas du site 
+
+=> router : c'est un objet qui associe adresse internet <====> Composant 
+
+=> <Outlet /> => le lieu dans la page OU on veut que le composant soit affiché 
