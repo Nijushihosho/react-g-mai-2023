@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+        .container{
+            margin: 0 auto;
+            width: 1000px;
+            display: grid;
+            gap:20px;
+        }
+        header{
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap:10px;
+        }
+        header .image{
+            grid-column: span 2;
+            grid-row: span 2;
+            background: url("https://picsum.photos/1200/1000?random=11");
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        header h1, header p{
+            color : white; 
+            background: #000;
+        }
+        header .prix{
+            background: yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        header .prix h2{
+            font-size: 3rem;
+            margin: 0;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: repeat(5 , 1fr);
+            gap : 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul li{
+            background: yellow;
+            padding: 10px;
+            text-align: center;
+        }
+        section{
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+            gap : 10px;
+            text-align: center;
+        }
+        section article{
+            background: paleturquoise;
+            padding: 20px;
+        }
+        .une{
+            display: grid;
+            grid-template-columns: 40% 1fr;
+            gap : 10px ;
+            align-items: center;
+            padding: 20px;
+            background: paleturquoise; 
+        }
+        .une h3{
+            margin: 0;
+        }
+        .galerie{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap : 5px; 
+        }
+        .galerie h2{
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+        }
+        .galerie h2::before {
+        content:"";
+        display: block;
+        height:5px;
+        background: linear-gradient( 90deg ,transparent , yellow) ;
+        margin-right: 10px;
+        }
+
+        .galerie h2::after {
+            content:"";
+            display: block;
+            height:5px;
+            background: linear-gradient( 90deg , yellow ,transparent ) ;
+            margin-left: 10px;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="image">
+                <div>
+                    <h1>nom boutique</h1>
+                    <p>slogan boutique</p>
+                </div>
+            </div>
+            <div class="prix">
+                <h2>10 €</h2>
+                <p>produit 1</p>
+            </div>
+            <div class="prix">
+                <h2>20 €</h2>
+                <p>produit 2</p>
+            </div>
+        </header>
+        <ul>
+            <li>Lorem.</li>
+            <li>Quaerat.</li>
+            <li>Ipsum?</li>
+            <li>Perspiciatis?</li>
+            <li>Aspernatur?</li>
+        </ul>
+        <!-- emojipedia -->
+        <section>
+            <article>
+                <p>🔥</p>
+                <h3>Lorem, ipsum.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus, inventore?</p>
+            </article>
+            <article>
+                <p>🔥</p>
+                <h3>Omnis, laborum.</h3>
+                <p>Obcaecati reiciendis laborum dicta officia non dolores unde est eveniet.</p>
+            </article>
+            <article>
+                <p>🔥</p>
+                <h3>Illo, magnam.</h3>
+                <p>Reiciendis numquam necessitatibus repudiandae eos accusantium exercitationem fugit fuga cupiditate?</p>
+            </article>
+            <article>
+                <p>🔥</p>
+                <h3>Impedit, debitis?</h3>
+                <p>Iure dicta odit repudiandae magnam. Vero quod natus blanditiis adipisci.</p>
+            </article>
+        </section>
+        <article class="une">
+            <img src="https://picsum.photos/600/200?random=1" alt="">
+            <div>
+                <h3>Lorem ipsum dolor sit.</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est?</p>
+                <p>Enim, odit modi tempore tenetur neque soluta laudantium velit!</p>
+                <a href="">learn more </a>
+            </div>
+        </article>
+        <div class="galerie">
+            <h2>Galerie</h2>
+            <img src="https://picsum.photos/300/300?random=1" alt=""><img src="https://picsum.photos/300/300?random=2" alt=""><img src="https://picsum.photos/300/300?random=3" alt=""><img src="https://picsum.photos/300/300?random=4" alt=""><img src="https://picsum.photos/300/300?random=5" alt=""><img src="https://picsum.photos/300/300?random=6" alt=""><img src="https://picsum.photos/300/300?random=7" alt=""><img src="https://picsum.photos/300/300?random=8" alt=""><img src="https://picsum.photos/300/300?random=9" alt=""><img src="https://picsum.photos/300/300?random=10" alt="">
+
+            <!-- img[src="https://picsum.photos/300/300?random=$"]*10 -->
+        </div>
+    </div>
+</body>
+</html>
