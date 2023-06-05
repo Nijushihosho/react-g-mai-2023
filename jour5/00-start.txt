@@ -1,0 +1,72 @@
+fetch()
+
+tableau 
+
+objet 
+
+=> 3 concepts viennent du langage Javascript ( pas propre à React )
+
+function fetch(){
+
+}
+for(){}
+
+fetch() fonction native de javascript 
+
+fetch("url")
+    .then(function(response){ return reponse.json() })
+    .then(function(data){ console.log(data) })
+
+en javascript (et enPHP / Python / C++)
+
+// variable simple => variable contient une valeur 
+const a = "bonjour"
+const b = 1234 ;
+const c = false ; 
+
+// variables complexes => 1 variable contient PLUSIEURS VALEURS 
+const d = ["hello", "les", "amis"] ; 
+const e = {
+    largeur : 20 ,
+    hauteur : 30 ,
+    unite : "km"
+}
+
+// => permet de rassembler des concepts dans 1 seule variable 
+
+
+url => http://exemple.com/data.json 
+[
+    {id : 1 , nom : "rose"},
+    {id : 2 , nom : "tulipe"}
+]
+
+fetch("http://exemple.com/data.json")
+    .then(function(response){ return reponse.json() })
+    .then(function(data){ console.log(data[0].nom) })
+
+
+url => http://exemple.com/etudiant.json 
+{
+    id : 1 ,
+    nom : "Pierre",
+    age : 22
+}
+
+fetch("http://exemple.com/etudiant.json")
+    .then(function(response){ return reponse.json() })
+    .then(function(data){ console.log(data.nom) })
+
+fetch("http://exemple.com/etudiant.json")
+    .then(function(response){ return reponse.json() })
+    .then(function({nom}){ console.log(nom) })
+
+Quels sont les composants dans un application React ?
+
+=> sur React CHAQUE élément graphique est potentiellement un composant 
+
+=> il faut trouver les éléments qui se REPETE visuellement => c'est un composant 
+
+npm create vite
+
+nettoyage 
