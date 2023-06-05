@@ -3,10 +3,8 @@ import Input from './composants/Input'
 import Resultat from './composants/Resultat'
 
 function App() {
-
-  const [resultat, setResultat] = useState([]) 
-  const [filtre, setFiltre] = useState(""); 
-
+  const [resultat, setResultat] = useState([]) // remplir via une requête ajax 
+  const [filtre, setFiltre] = useState("");  // remplir via le texte écran dans l'input 
   useEffect( function(){
     fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
       .then(function(reponse){ return reponse.json()})
@@ -17,7 +15,6 @@ function App() {
     <div>
       <h1>Rechercher un cocktail</h1>
         <Input setFiltre={setFiltre}/>
-      
         <Resultat resultat={resultat} filtre={filtre}/>
     </div>
   )
