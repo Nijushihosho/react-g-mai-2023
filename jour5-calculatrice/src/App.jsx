@@ -34,8 +34,8 @@ function App() {
     <div>
       <h1>Calculatrice</h1>
       <p>{resultat}</p>
-      <Input label={'number 1'} setNb={setNb1} nb={nb1}/>
-      <Input label={'number 2'} setNb={setNb2} nb={nb2}/>
+      <Input label={'number 1'} setNb={setNb1} nb={nb1} id={1}/>
+      <Input label={'number 2'} setNb={setNb2} nb={nb2} id={2}/>
       <Button nom={'addition'} action={addition} disabled={nb1 !==0 && nb2 !== 0 ? false : true}/>
       <Button nom={'multiplication'} action={multiplication} disabled={nb1 !==0 && nb2 !== 0 ? false : true}/>
       <Button nom={'reset'} action={reset} disabled={false}/>

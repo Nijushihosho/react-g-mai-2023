@@ -1,5 +1,5 @@
 import React from 'react'
-function Input({label , setNb, nb}) {
+function Input({label , setNb, nb , id}) {
     function recupSaisie(e){
         // attention les chiffres saisies dans un formulaire
         // sont transformés en string 1234 => "1234"
@@ -8,11 +8,11 @@ function Input({label , setNb, nb}) {
     } 
   return (
     <div>
-        <label htmlFor="element">{label} : </label>
+        <label htmlFor={`element${id}`}>{label} : </label>
         {/* <input type="text" id="element" onInput={function(e){
             console.log(e.target.value)
         }} /> */}
-        <input type="text" id="element" onInput={recupSaisie} value={nb === 0 ? "" : nb} />
+        <input type="text" id={`element${id}`} onInput={recupSaisie} value={nb === 0 ? "" : nb} />
     </div>
   )
 }
