@@ -1,6 +1,6 @@
 import React , {useEffect, useState} from 'react'
 import { useParams , Link } from "react-router-dom"
-import "./ProduitSingle.css"; 
+import "../assets/ProduitSingle.css"; 
 
 function ProduitSingle() {
     const {id} = useParams() ; // permet de récupérer la partie variable dans l'url :id/:title définis dans le router 
@@ -24,7 +24,7 @@ function ProduitSingle() {
   return (
     <div>
         { lightBox.show && <div className='light-box' onClick={hideLightBox}>
-            <button >fermer</button>
+            <button>fermer</button>
             <img src={lightBox.img} alt="" />
         </div>  }
     { Object.keys(produit).length > 0 && <div className='container'>

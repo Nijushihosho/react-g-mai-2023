@@ -1,0 +1,20 @@
+avant de mettre en place le bouton ajouter au panier dans le composant <ProduitSingle />
+
+1 il faut déjà comprendre comment faire des formulaires 
+
+2 il faut savoir comment utiliser une $_SESSION
+dans React on appelle une $_SESSION => Context
+
+=> pour présenter les formulaires 
+je vous propose d'allez ajouter dans la Composant 
+<NousContacter />
+
+ajouter dedans un formulaire qui contient 3 champs 
+=> 1er champ dans lequel la personne va saisir son email
+=> 2ème champ dans lequel la personne va saisir le sujet 
+=> 3ème champ un champ dans lequel l'utilisateur va pouvoir mettre un commentaire 
+=> bouton de validation 
+
+nous allons utiliser bootstrap pour rapidement créer ce type de formulaire 
+
+=> 
