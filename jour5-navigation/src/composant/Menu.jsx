@@ -11,6 +11,9 @@ function Menu() {
             <Link to="/" className='nav-link'>Accueil</Link>
           </li>
           <li className='nav-item'>
+            <Link to="/produits" className='nav-link'>Produits</Link>
+          </li>
+          <li className='nav-item'>
             <Link to="/contacter" className='nav-link'>Nous Contacter</Link>
           </li>
         </ul>
