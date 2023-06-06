@@ -19,7 +19,7 @@ function Accueil() {
            {item.tags.map(function(tag, cle){
             return <span key={cle} className='badge bg-warning mx-2'>{tag}</span>
            })}
-           <p>nb commentaire {item.reactions}</p> 
+           <p>nb commentaire{item.reactions > 1 && "s"} : {item.reactions}</p> 
            <hr />
         </article>
       })}
