@@ -1,8 +1,11 @@
 import React from 'react'
 import Joi from "joi"; // zod // yup
+// npm i react-toastify
+import { toast , ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
 
 function NousContacter() {
-  const dataForm = { email : "", sujet : "" , commentaire : ""  }
+  let dataForm = { email : "", sujet : "" , commentaire : ""  }
 
   function formData(e){
     dataForm[e.target.name] = e.target.value ;
@@ -32,14 +35,27 @@ function NousContacter() {
       commentaire : Joi.string().min(3).max(1000).required(),
     })
     // la variable schema contient 13 vérifications 
-
-    const resultat = schema.validate(dataForm, {abortEarly :false})
+    console.log(schema.validate(dataForm, {abortEarly :false}))
+    const {error} = schema.validate(dataForm, {abortEarly :false})
+    if(!error){
+      console.log("insert dans la base de donnée");
+      // afficher dans la console
+      // par la suite => INSERT dans une base de données 
+      // vider le formulaire 
+      e.target.reset();
+      dataForm = { email : "", sujet : "" , commentaire : ""  }
+      // afficher une bandeau en haut du formulaire qui dit "merci pour le message on revient vers vous au plus vite "
+      // nous allons utiliser une librairie react-toastify
+      // npm i react-toastify
+      //
+      toast.success("merci pour le message on revient vers vous au plus vite" )
+    } else {
+      // si c'est pas correct => non 
+      for(let msg of error.details){
+        toast.error( msg.message )
+      }
+    }
     console.log(resultat); 
-    // si c'est pas correct => non 
-    // afficher dans la console
-    // par la suite => INSERT dans une base de données 
-    // vider le formulaire 
-    // afficher une bandeau en haut du formulaire qui dit "merci pour le message on revient vers vous au plus vite "
   }
 
   
@@ -47,6 +63,7 @@ function NousContacter() {
     <div className='container'>
       <h1>Nous Contacter</h1>
       <p>Vous avez des questions, nous avons les réponses !</p>
+      <ToastContainer />
       <form onSubmit={submit}>
         <div className='form-floating mb-3'>
           <input type="email" className='form-control' id="email" placeholder='votre@email.fr' onChange={formData} name="email"/>
