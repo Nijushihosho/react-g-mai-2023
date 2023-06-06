@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+        }
         img{
             max-width: 100%;
         }
         .container{
-            margin: 0 auto;
+            margin: 20px auto;
             max-width: 1000px;
             width: 100%;
             padding: 0 20px;
@@ -19,10 +23,18 @@
             gap:20px;
         }
         header{
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 200px);
-            gap:10px;
+            display: grid;
+            gap:10px; 
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 200px);
+        }
+
+        @media screen and (min-width:700px){
+            header{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, 200px);  
+            }
+            
         }
         header .image{
             grid-column: span 2;
@@ -33,9 +45,11 @@
             align-items: center;
             padding: 20px;
         }
+        
         header h1, header p{
             color : white; 
             background: #000;
+            padding: 0.25em ;
         }
         header .prix{
             background: yellow;
@@ -50,11 +64,16 @@
         }
         ul{
             display: grid;
-            grid-template-columns: repeat(5 , 1fr);
+            grid-template-columns: repeat(auto-fit , minmax(100px,1fr));
             gap : 10px;
             margin: 0;
             padding: 0;
             list-style: none;
+        }
+        @media screen and (min-width:700px) {
+            ul{
+                order:-1;
+            }
         }
         ul li{
             background: yellow;
@@ -63,7 +82,7 @@
         }
         section{
             display: grid;
-            grid-template-columns: repeat(4 , 1fr);
+            grid-template-columns: repeat(auto-fill , minmax(200px, 1fr));
             gap : 10px;
             text-align: center;
         }
@@ -71,13 +90,18 @@
             background: paleturquoise;
             padding: 20px;
         }
+
         .une{
             display: grid;
-            grid-template-columns: 40% 1fr;
             gap : 10px ;
             align-items: center;
-            padding: 20px;
+            padding: 50px 20px;
             background: paleturquoise; 
+        }
+        @media screen and (min-width:600px) {
+            .une{
+                grid-template-columns: 40% 1fr;
+            }
         }
         .une h3{
             margin: 0;
@@ -107,7 +131,7 @@
             height:5px;
             background: linear-gradient( 90deg , yellow ,transparent ) ;
             margin-left: 10px;
-            }
+        }
 
     </style>
 </head>
@@ -171,7 +195,12 @@
         <div class="galerie">
             <h2>Galerie</h2>
             <img src="https://picsum.photos/300/300?random=1" alt=""><img src="https://picsum.photos/300/300?random=2" alt=""><img src="https://picsum.photos/300/300?random=3" alt=""><img src="https://picsum.photos/300/300?random=4" alt=""><img src="https://picsum.photos/300/300?random=5" alt=""><img src="https://picsum.photos/300/300?random=6" alt=""><img src="https://picsum.photos/300/300?random=7" alt=""><img src="https://picsum.photos/300/300?random=8" alt=""><img src="https://picsum.photos/300/300?random=9" alt=""><img src="https://picsum.photos/300/300?random=10" alt="">
-
+            <img src="https://picsum.photos/300/300?random=1" alt=""><img src="https://picsum.photos/300/300?random=2" alt=""><img src="https://picsum.photos/300/300?random=3" alt=""><img src="https://picsum.photos/300/300?random=4" alt=""><img src="https://picsum.photos/300/300?random=5" alt=""><img src="https://picsum.photos/300/300?random=6" alt=""><img src="https://picsum.photos/300/300?random=7" alt=""><img src="https://picsum.photos/300/300?random=8" alt=""><img src="https://picsum.photos/300/300?random=9" alt="">
+            <img src="https://picsum.photos/300/300?random=10" alt="">
+            <img src="https://picsum.photos/300/300?random=12" alt="">
+            <img src="https://picsum.photos/300/300?random=13" alt="">
+            <img src="https://picsum.photos/300/300?random=14" alt="">
+            <img src="https://picsum.photos/300/300?random=15" alt="">
             <!-- img[src="https://picsum.photos/300/300?random=$"]*10 -->
         </div>
     </div>

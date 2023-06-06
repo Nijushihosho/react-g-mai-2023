@@ -1,0 +1,38 @@
+hier en fin de journée
+on a créé un nouveau projet 
+jour5-navigation 
+
+=> pour l'installation on a utilisé la commande
+
+npm create vite 
+et avant de lancer la commande 
+
+npm run dev 
+
+on ajouté la commande 
+npm install react-router-dom 
+
+react-router-dom est un librairie facultative
+qui permet de gérer la navigation (le fait de changer d'url => changement de page )
+
+le fait de changer d'url va entrainer une modification de la page 
+
+une partie fixe => <Menu /> => présent dans toutes les pages (quelque soit l'url)
+
+une partie variable => 
+http://localhost:5173/ => <Accueil />
+http://localhost:5173/contacter => <NousContacter />
+http://localhost:5173/login => <Login />
+
+=> la nouvelle manière de gérer la partie variable dans la page est d'utiliser le composant 
+<Outlet /> => composant qui vient de la librairie react-router-dom 
+il est à écrire dans le composant <App /> 
+
+<Menu />
+<Outlet />  => devient le composant que le composant <Accueil /> / <NousContacter /> / <Login /> en fonction de ce que l'on a spécifié dans le Router 
+
+=> la documentation officielle de cette librairie est disponible à l'adresse suivante 
+
+https://reactrouter.com/en/main
+
+

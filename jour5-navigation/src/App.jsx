@@ -2,7 +2,7 @@ import React from 'react'
 import Menu from './composant/Menu'
 import { Outlet } from 'react-router-dom'
 
-function App() {
+function App() { // Layout 
   return (
     <div>
       <Menu />

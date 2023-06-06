@@ -1,8 +1,10 @@
-import React from 'react'
+import React  from 'react'
 
 function Accueil() {
   return (
-    <div>Accueil</div>
+    <div>Accueil
+     
+    </div>
   )
 }
 
