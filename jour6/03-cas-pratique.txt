@@ -1,0 +1,14 @@
+dans le composant <Login />
+insérer dedans un formulaire 
+contenant 2 champs 
+input type texte => saisir un login
+input type password => saisir un password
+et un bouton de soumission
+une fois que vous avez soumis le formulaire 
+vous devez récupérer les valeurs saisies dans les 2 champs
+
+vérifier que le champ input du login n'est pas vide / contient un minimum de 3 lettres et max de 255
+vérifier que le champ input du password n'est pas vide / contient un minimum de 3 lettres et max de 255
+
+=> si c'est ok => toast message => welcome
+=> si ko => toast message => liste les erreurs 

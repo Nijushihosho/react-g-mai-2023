@@ -35,7 +35,7 @@ function NousContacter() {
       commentaire : Joi.string().min(3).max(1000).required(),
     })
     // la variable schema contient 13 vérifications 
-    console.log(schema.validate(dataForm, {abortEarly :false}))
+   
     const {error} = schema.validate(dataForm, {abortEarly :false})
     if(!error){
       console.log("insert dans la base de donnée");
@@ -52,7 +52,7 @@ function NousContacter() {
     } else {
       // si c'est pas correct => non 
       for(let msg of error.details){
-        toast.error( msg.message )
+        toast.error( msg.message + " 😒")
       }
     }
     console.log(resultat); 
@@ -76,6 +76,9 @@ function NousContacter() {
         <div className='form-floating mb-3'>
           <textarea name="commentaire" id="commentaire" className='form-control' placeholder='le commentaire' style={{ height : "150px" }} onChange={formData} ></textarea>
           <label htmlFor="commentaire">votre commentaire</label>
+        </div>
+        <div>
+          <input type="file" className='form-control mb3' />
         </div>
         <div className='mb-3 d-flex justify-content-end'>
           <input type="submit" className='btn btn-info' value="Envoyer la demande d'information"/>
