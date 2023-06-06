@@ -10,10 +10,28 @@ function ProduitSingle() {
             .then(function( data ){ setProduit(data)})
     } , [])
   return (
-    <div>ProduitSingle {id}, {title}
-        <pre>{ JSON.stringify(produit , null , "  ")}</pre> 
-        
-    </div>
+    <div>
+    { Object.keys(produit).length > 0 && <div className='container'>
+    <section className="row mt-4">
+        <figure className="col-4">
+            <img src={produit.thumbnail} alt="" className='img-fluid mb-3' />
+            <div className="row">
+                {produit.images && produit.images.map(function(item, key){
+                    return <div className='col-3'  key={key}>
+                        <img src={item} alt=""  className='mw-100 border border-primary' />
+                    </div>
+                }) }
+            </div>
+        </figure>
+        <div className="col-8">
+            <h1>{produit.title}</h1>
+            <p>{produit.description}</p>
+            <p>{new Intl.NumberFormat("fr-FR", { style: 'currency', currency: 'EUR' }).format(produit.price)  }</p>
+            <p>{produit.brand}</p>
+        </div>
+    </section>
+</div>}
+</div>
   )
 }
 
