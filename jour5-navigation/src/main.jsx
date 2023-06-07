@@ -8,6 +8,7 @@ import Login from './page/Login'
 import Produits from './page/Produits'
 import ProduitSingle from './page/ProduitSingle'
 import Dashboard from './page/Dashboard'
+import AppDashboard from './composant/AppDashboard'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -22,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           </Route>
           <Route path="contacter" element={<NousContacter />} />
           <Route path="login" element={<Login />} />
-          <Route path="admin">
+          <Route path="admin" element={<AppDashboard />}>
             <Route index element={<Dashboard />} />
           </Route>
         </Route>

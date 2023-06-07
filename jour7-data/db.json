@@ -1,0 +1,9 @@
+{
+    "users" : [
+        { "id" : 1 , "login" : "toto" , "password" : "Azerty1234" }
+    ],
+    "articles" : [
+        { "id" : 1 , "titre" : "article 1" , "body" : "lorem ipsum" }, 
+        { "id" : 2 , "titre" : "article 2" , "body" : "sed dolorem" } 
+    ]
+}

@@ -1,0 +1,43 @@
+stopper le projet jour5-navigation Ctrl + C
+cd ..
+npm create vite 
+jour7-bdd 
+cd jour7-bdd 
+npm i 
+npm run dev 
+
+deux terminaux = 1 pour le client (React) / 2 pour le serveur (API === Base de données)
+
+sur le 2ème terminal => 
+npm i -g json-server
+
+=> outil json-server => API Rest ET Base de données JSON 
+
+sudo npm i -g json-server
+attention dans la commande que l'on vient de saisir il y a le flag -g 
+le dossier dans lequel la commande est exécuté n'a aucune importance
+
+npm i 
+npm i -g 
+npm i -D 
+
+dans le 2ème terminal =>
+cd jour7-data
+json-server --watch db.json --port 4200
+
+npm init --yes (permet de créer le fichier package.json)
+npm i json-server (permet de créer le dossier node_modules et télécharger la librairie et modifier le fichier package.json )
+
+npx json-server --watch db.json --port 4200
+(etant donné que la librairie est dans le dossier node_modules npx avant la commande permet de dire à npm où il doit chercher le librairie )
+
+
+sur Firefox => http://localhost:5173/
+cd jour7-data 
+npm run dev
+
+sur Firefox => http://localhost:4200/articles
+cd jour7-bdd
+json-server --watch db.json --port 4200
+npx json-server --watch db.json --port 4200
+// 
