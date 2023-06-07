@@ -2,8 +2,10 @@ import React  from 'react'
 import "./Login.css"
 import Joi from "joi"
 import {toast, ToastContainer} from "react-toastify"
+import { useNavigate } from "react-router-dom"
 
 function Login() {
+  const navigation = useNavigate()
   let  credentials = {login : "" , password : ""} ;
   function getFormData(e){
     credentials[e.target.name] = e.target.value
@@ -13,7 +15,7 @@ function Login() {
 
     // vérifier que les données saisies sont confirmes aux attendus
     const schema = Joi.object({
-      login : Joi.string().min(3).max(255).required() , 
+      login : Joi.string().alphanum().min(3).max(255).required() , 
       password : Joi.string().regex(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/).required().messages({
         "string.pattern.base" : "le password doit contenir 8 lettres avec des Majuscules, des minuscules et des chiffres"
       } )
@@ -22,9 +24,10 @@ function Login() {
     const {error} = schema.validate(credentials , {abortEarly: false})
 
     if(!error){
-      toast.success("bienvenu");
+      //toast.success("bienvenu");
       e.target.reset();
       credentials = {login : "" , password : ""} ;
+      navigation("/admin"); // redirection vers le composant <Dashboard />
     } else {
       for(let msg of error.details){
         toast.error( msg.message + " 😒")

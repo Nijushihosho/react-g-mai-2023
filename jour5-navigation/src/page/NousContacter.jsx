@@ -29,6 +29,8 @@ function NousContacter() {
     // npm run dev
 
     // vérifier qu'elles sont correctes 
+    // bonjour@yahoo
+    // bonjour@yahoo.fr
     const schema = Joi.object({
       email : Joi.string().min(3).max(255).email({tlds:{allow: false}}).required().messages({
         "string.min" : "email doit contenir au minimun 3 lettres",
