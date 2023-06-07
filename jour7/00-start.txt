@@ -1,0 +1,15 @@
+je vous invite à aller jeter un coup d'oeil à la librairie 
+https://react-hook-form.com 
+=> TOUS les traitements sur un formulaire dans React 
+
+=> https://formik.org/
+
+=>  https://react-bootstrap.github.io/
+
+=> projet pro ( code tout à la main ?? formik /react-hook-form )
+
+=> librairie qui fait quasi tout 
+
+--------------------------
+
+

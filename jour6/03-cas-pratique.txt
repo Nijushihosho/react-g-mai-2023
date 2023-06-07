@@ -12,3 +12,8 @@ vérifier que le champ input du password n'est pas vide / contient un minimum de
 
 => si c'est ok => toast message => welcome
 => si ko => toast message => liste les erreurs 
+
+---------------------
+
+=> Dashboard => (page d'accueil de la partie privée du site internet)
+=> si l'utilisateur a rempli correctement le formulaire dans Login 
