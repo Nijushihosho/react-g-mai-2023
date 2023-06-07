@@ -1,10 +1,12 @@
-import React  from 'react'
+import React  , {useRef , useEffect} from 'react'
 import "./Login.css"
 import Joi from "joi"
 import {toast, ToastContainer} from "react-toastify"
 import { useNavigate } from "react-router-dom"
+import Test from '../composant/Test'
 
 function Login() {
+  const refLogin = useRef();
   const navigation = useNavigate()
   let  credentials = {login : "" , password : ""} ;
   function getFormData(e){
@@ -35,18 +37,23 @@ function Login() {
     }
   }
 
+  useEffect( function(){
+    refLogin.current.focus()
+  }, [])
+
 
   return (
     <div className='container'>
       <h1 className='text-center my-5'>Login</h1>
       <form className='grid-form' onSubmit={submit}>
-          <input type="text" name="login" placeholder='votre login' className='form-control me-3' onChange={getFormData}/>
+          <input type="text" name="login" placeholder='votre login' className='form-control me-3' onChange={getFormData} ref={refLogin}/>
           <input type="password" name="password" placeholder='votre password' className='form-control' onChange={getFormData} />
         <div>
           <input type="submit" className='btn btn-outline-dark'/>
         </div>
       </form>
       <ToastContainer />
+      {/* <Test /> */}
     </div>
   )
 }
