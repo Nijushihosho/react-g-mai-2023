@@ -10,7 +10,7 @@ function App() {
       <h1>App</h1>
       <main className='app'>
         <FormArticle setUpdateListe={setUpdateListe}/>
-        <ListeArticle updateListe={updateListe}/>
+        <ListeArticle updateListe={updateListe} setUpdateListe={setUpdateListe}/>
       </main>
     </div>
   )

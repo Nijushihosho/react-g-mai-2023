@@ -8,19 +8,9 @@
   ],
   "articles": [
     {
-      "id": 1,
-      "titre": "article 1",
-      "body": "lorem ipsum"
-    },
-    {
       "id": 2,
       "titre": "article 2",
       "body": "sed dolorem"
-    },
-    {
-      "titre": "bonjour les amis",
-      "body": "voici un peu de texte",
-      "id": 4
     },
     {
       "titre": "nouveau test",
@@ -28,24 +18,9 @@
       "id": 5
     },
     {
-      "titre": "final",
-      "body": "TEst",
-      "id": 6
-    },
-    {
-      "titre": "final",
-      "body": "TEst",
-      "id": 7
-    },
-    {
       "titre": "coucou les amis",
       "body": "comment allez vous maintenant ??",
       "id": 8
-    },
-    {
-      "titre": "nouvel article",
-      "body": "un peu de texte ",
-      "id": 9
     },
     {
       "titre": "blablabla",

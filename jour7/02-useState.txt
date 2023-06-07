@@ -1,0 +1,13 @@
+
+
+const [nb , setNb] = useState(0)
+
+function augmenter(){
+    setNb(nb + 1)
+
+}
+
+function augmenter(){
+    setNb(function(nb){ return nb + 1})
+
+}
