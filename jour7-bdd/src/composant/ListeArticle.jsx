@@ -33,7 +33,7 @@ function ListeArticle({updateListe , setUpdateListe}) {
     }
 
     function changeData(e , id){
-        const clonePosts = [...posts];
+        const clonePosts = structuredClone(posts);
         const postAModifier = clonePosts.find(function(item){
             return item.id === id
         })
