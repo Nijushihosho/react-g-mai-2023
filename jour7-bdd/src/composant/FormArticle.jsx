@@ -1,6 +1,6 @@
 import React from 'react'
 import "./FormArticle.css"
-function FormArticle() {
+function FormArticle({setUpdateListe}) {
     let formulaireArticle = {titre : "" , body : ""}
     function change(e){
         formulaireArticle[e.target.name] = e.target.value
@@ -25,7 +25,12 @@ function FormArticle() {
         }
         fetch("http://localhost:4200/articles" , option)
             .then(function(reponse){ return reponse.json()})
-            .then(function(data){console.log(data)})
+            .then(function(){
+                e.target.reset();
+                formulaireArticle = {titre : "" , body : ""}
+                alert("votre article a bien été ajouté en BDD");
+                setUpdateListe(function(update){ return !update})
+            })
     }
 
   return (

@@ -52,3 +52,16 @@ Cas Pratique :
 
 // récupérer les valeurs saisies dans une variable formulaireArticle 
 
+
+Cas pratique créer un nouveau composant 
+ListeArticle 
+dans ce composant vous allez effectuer une requête ajax vers l'url suivant
+"http://localhost:4200/articles"
+
+remplir le composant avec le jsx suivant 
+
+<article>
+    <h2>article 1</h2>
+    <p>lorem ipsum</p>
+</article>
+

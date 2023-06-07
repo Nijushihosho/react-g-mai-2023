@@ -18,9 +18,6 @@
       "body": "sed dolorem"
     },
     {
-      "id": 3
-    },
-    {
       "titre": "bonjour les amis",
       "body": "voici un peu de texte",
       "id": 4
@@ -29,6 +26,41 @@
       "titre": "nouveau test",
       "body": "coucou les amis !!\navec un saut de \nligne",
       "id": 5
+    },
+    {
+      "titre": "final",
+      "body": "TEst",
+      "id": 6
+    },
+    {
+      "titre": "final",
+      "body": "TEst",
+      "id": 7
+    },
+    {
+      "titre": "coucou les amis",
+      "body": "comment allez vous maintenant ??",
+      "id": 8
+    },
+    {
+      "titre": "nouvel article",
+      "body": "un peu de texte ",
+      "id": 9
+    },
+    {
+      "titre": "blablabla",
+      "body": "coucoucoucouc",
+      "id": 10
+    },
+    {
+      "titre": "nouveau test",
+      "body": "encore un test pour effectuer l'insert",
+      "id": 11
+    },
+    {
+      "titre": "coucou",
+      "body": "hello World !!",
+      "id": 12
     }
   ]
 }
