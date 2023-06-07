@@ -35,7 +35,7 @@ function FormArticle({setUpdateListe}) {
 
   return (
     <div>
-        <form  onSubmit={submit}>
+        <form  onSubmit={submit} className='form-add'>
             <div>
                 <input type="text" placeholder='titre' name="titre" onChange={change}/>
             </div>

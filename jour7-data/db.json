@@ -9,13 +9,13 @@
   "articles": [
     {
       "id": 2,
-      "titre": "article 2",
-      "body": "sed dolorem"
+      "titre": "article 2 modifié coucou salut",
+      "body": "Lorem ipsum \navec \ndes sauts de lignes"
     },
     {
-      "titre": "nouveau test",
-      "body": "coucou les amis !!\navec un saut de \nligne",
-      "id": 5
+      "id": 5,
+      "titre": "nouveau test modification",
+      "body": "coucou les amis !!\navec un saut de \nligne"
     },
     {
       "titre": "coucou les amis",
@@ -36,6 +36,16 @@
       "titre": "coucou",
       "body": "hello World !!",
       "id": 12
+    },
+    {
+      "titre": "nouvel ",
+      "body": "article",
+      "id": 13
+    },
+    {
+      "titre": "coucou",
+      "body": "article 2\n\nsed dolorem",
+      "id": 14
     }
   ]
 }
