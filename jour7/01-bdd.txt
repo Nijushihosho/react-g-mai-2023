@@ -40,4 +40,15 @@ sur Firefox => http://localhost:4200/articles
 cd jour7-bdd
 json-server --watch db.json --port 4200
 npx json-server --watch db.json --port 4200
-// 
+
+Cas Pratique : 
+// dans le nouveau projet dans le dossier qui contient le React 
+// 1 faire un nettoyage => fichier .css 
+// 2 créer un composant FormArticle 
+//   de composant contient 2 champs de saisis 
+        input du type text => titre 
+        textarea => body 
+     bouton de soumission 
+
+// récupérer les valeurs saisies dans une variable formulaireArticle 
+

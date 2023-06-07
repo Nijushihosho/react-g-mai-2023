@@ -1,9 +1,34 @@
 {
-    "users" : [
-        { "id" : 1 , "login" : "toto" , "password" : "Azerty1234" }
-    ],
-    "articles" : [
-        { "id" : 1 , "titre" : "article 1" , "body" : "lorem ipsum" }, 
-        { "id" : 2 , "titre" : "article 2" , "body" : "sed dolorem" } 
-    ]
+  "users": [
+    {
+      "id": 1,
+      "login": "toto",
+      "password": "Azerty1234"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "titre": "article 1",
+      "body": "lorem ipsum"
+    },
+    {
+      "id": 2,
+      "titre": "article 2",
+      "body": "sed dolorem"
+    },
+    {
+      "id": 3
+    },
+    {
+      "titre": "bonjour les amis",
+      "body": "voici un peu de texte",
+      "id": 4
+    },
+    {
+      "titre": "nouveau test",
+      "body": "coucou les amis !!\navec un saut de \nligne",
+      "id": 5
+    }
+  ]
 }
