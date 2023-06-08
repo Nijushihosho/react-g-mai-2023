@@ -80,7 +80,7 @@ function Liste({update , setUpdate}) {
       <h2>Listes des tâches </h2>
       <ol>
       {taches.map(function(item , key){
-        return <li key={key}>
+        return <li key={key} draggable={true}>
           { item.id === id ? <form className='d-flex' onSubmit={function(e) { submit(e, item)}}>
             <input type="submit" value="go" disabled={traitementUpdate} />
             <input type="text" value={item.titre} onChange={function(e){ change(item, e) }} name="titre" />

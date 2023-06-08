@@ -107,3 +107,6 @@ créer un dossier jour8-bdd => mettre dedans un fichier db.json qui contient les
 => hyper Bonus => double cliquez sur la nom d'une tâche => <p>apprendre React</p>  
                                                            <del>apprendre React</del>
 => super hyper Bonus => réorganiser l'ordre 
+
+
+https://www.youtube.com/watch?v=jfYWwQrtzzY
