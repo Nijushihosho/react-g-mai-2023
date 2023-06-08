@@ -110,3 +110,19 @@ créer un dossier jour8-bdd => mettre dedans un fichier db.json qui contient les
 
 
 https://www.youtube.com/watch?v=jfYWwQrtzzY
+
+---------------
+
+const [variable , setVariable ] = useState(false) => state 
+
+setVariable( "bonjour" )
+
+const largeur = 10 ;
+setVariable( largeur )
+
+setVariable( cloneVariableArray )
+
+setVariable(function(){ return !variable  })
+
+[1,2].map(function(item){ })
+

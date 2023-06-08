@@ -1,7 +1,7 @@
 {
   "todo": [
     {
-      "titre": "Apprendre Javascript",
+      "titre": "Apprendre Javascript version E6",
       "status": true,
       "id": 2
     },
@@ -12,13 +12,38 @@
     },
     {
       "titre": "dernier test modification",
-      "status": false,
+      "status": true,
       "id": 7
     },
     {
       "titre": "ajouter une nouvelle",
       "status": true,
       "id": 9
+    },
+    {
+      "titre": "coucou",
+      "status": false,
+      "id": 10
+    },
+    {
+      "titre": "tester finaux",
+      "status": false,
+      "id": 11
+    },
+    {
+      "titre": "tutu chapeau pointu",
+      "status": false,
+      "id": 12
+    },
+    {
+      "titre": "blabal",
+      "status": false,
+      "id": 13
+    },
+    {
+      "titre": "non barré",
+      "status": true,
+      "id": 14
     }
   ]
 }

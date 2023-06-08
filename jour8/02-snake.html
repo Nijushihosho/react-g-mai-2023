@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas width="400" height="400"></canvas>
+  <script>
+
+   const canv = document.querySelector("canvas")
+   const ctx = canv.getContext("2d");
+
+   document.addEventListener("keydown", action)
+   setInterval(game , 1000/15)
+
+   let  px = py = 10; // position de la tête du serpent
+   let  gs = tc = 20; 
+   //                     gs => grid size 20 * 20 = 400
+   //                     tc => tile count nombre de tuile / carreau
+   let  ax = ay = 15 ; // position de la pomme / apple 
+   let  vx = vy = 0 ; // déplacement en x et y du serpent  / velocity
+   let  trail = []; // position de chaque point du serpent => piste / trainée
+   let  tail = 5 ; // taille du serpent
+
+    function action(e){
+      switch(e.key){
+        case "ArrowLeft" : // 37
+           vx=-1
+           vy=0
+          break;
+        case "ArrowUp" : // 38
+           vx=0
+           vy=-1
+          break;
+        case "ArrowRight" : // 39
+           vx=1
+           vy=0
+          break;
+        case "ArrowDown" : // 40
+           vx=0
+           vy=1
+          break;
+      }
+    }
+
+    function game(){
+        px += vx
+        py += vy
+
+        if(px<0){
+          px = tc -1
+        }
+        if(px>tc-1){
+          px = 0
+        }
+        if(py < 0){
+          py = tc -1
+        }
+        if(py>tc-1){
+          py = 0
+        }
+        // fond du canvas
+        ctx.fillStyle="black";
+        ctx.fillRect(0,0, canv.width , canv.height)
+
+        // fond du serpent + game over 
+        ctx.fillStyle="lime";
+        for(let i = 0; i < trail.length ; i++){
+          ctx.fillRect(trail[i].x*gs,trail[i].y * gs, gs -2 , gs -2)
+          if(trail[i].x == px && trail[i].y == py){
+            tail = 5 // game over
+          }
+        }
+        // c'est ça qui fait déplacer le serpent
+        trail.push({x: px , y :py}) // ajouter à la fin de trail
+        while(trail.length > tail){
+            trail.shift() // supprimer le 1er élément de trail
+        }
+
+        // fond de la pomme (apple)
+        if(ax==px && ay==py){
+            tail++;
+            ax=Math.floor(Math.random()*tc)
+            ay=Math.floor(Math.random()*tc)
+        }
+
+        ctx.fillStyle="red";
+        ctx.fillRect(ax*gs,ay * gs, gs -2 , gs -2)
+        //console.log(trail)
+        //requestAnimationFrame(game)
+      }
+      //game()
+  </script>
+</body>
+</html> 
