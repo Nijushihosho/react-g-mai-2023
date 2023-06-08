@@ -1,7 +1,10 @@
 import React from 'react'
 import "./FormArticle.css"
+
 function FormArticle({setUpdateListe}) {
+
     let formulaireArticle = {titre : "" , body : ""}
+    
     function change(e){
         formulaireArticle[e.target.name] = e.target.value
     }

@@ -84,3 +84,22 @@ DELETE => DELETE
 fetch("url/id" , { method : "DELETE" })
 .then()
 .then()
+
+Cas pratique : créer un nouveau projet jour8-exo => créer un projet react 
+Nettoyage 
+créer un dossier jour8-bdd => mettre dedans un fichier db.json qui contient les valeurs suivantes 
+
+{
+    "todo" : [
+        {"id" : 1 , titre : "apprendre React" , status : true}
+    ]
+}
+
+// démarrer le serveur / la base  de données json-server --watch db.json --port 4200 
+
+// créer un formulaire qui permet de créer un nouvelle tâche 
+// à la droite du formulaire de tous les tâches 
+=> Bonus supprimer une tâche
+=> SUper Bonus => modifier 
+=> hyper Bonus => double clique que la nom d'une tâche => <p>apprendre React</p>  
+                                                          <del>apprendre React</del>

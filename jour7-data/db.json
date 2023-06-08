@@ -18,9 +18,9 @@
       "body": "coucou les amis !!\navec un saut de \nligne\nfoezihfzoeuh"
     },
     {
-      "titre": "coucou les amis",
-      "body": "comment allez vous maintenant ??",
-      "id": 8
+      "id": 8,
+      "titre": "coucou les amis tutu",
+      "body": "comment allez vous maintenant ??"
     },
     {
       "titre": "blablabla",
@@ -46,6 +46,11 @@
       "id": 14,
       "titre": "coucou",
       "body": "article 2\n\nsed dolorem"
+    },
+    {
+      "titre": "nouvelle journée",
+      "body": "Présentation d'une API Rest",
+      "id": 15
     }
   ]
 }
