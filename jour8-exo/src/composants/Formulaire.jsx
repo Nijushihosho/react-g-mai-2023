@@ -48,7 +48,7 @@ function Formulaire({setUpdate}) {
         <br />
         <input type="submit" value={'ajouter une nouvelle tâche'}/>
       </form>
-      <p>{traitement && <p className='loader'>traitement en cours</p>}</p>
+      <div>{traitement && <p className='loader'>traitement en cours</p>}</div>
     </div>
   )
 }

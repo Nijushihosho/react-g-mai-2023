@@ -1,0 +1,43 @@
+on vient de voir que :
+
+react qui va demander (CREATE / Read / UPdate / Delete ) des informations à une API 
+via une requête Ajax 
+les données affichées à l'écran sont stockées dans la RAM 
+si jamais vous réaliser un refresh du navigateur => les données sont effacées
+
+-----------------
+
+API base de données => dont le rôle stocker de manière permanente les données 
+=> les données sont PERSISTEES 
+
+-----------------
+
+intermédiaire => données qui dépendent de ce que vous avez fait dans votre navigateur 
+
+=> lorsque vous réalisez dans un site e commerce créer un panier 
+=> lorsque vous réaliser une authentification sur un site internet 
+
+vous avez besoin d'information dans la base de données 
+ET 
+vous avez besoin de stocker aussi des informations dans la navigateur 
+
+=> SESSION => localStorage 
+permet de persister des informations dans la navigateur 
+
+
+=> SESSION => GLOBAL Context (Redux)
+
+=> créer un nouveau projet 
+=> jour8-session
+
+
+créer un composant <Menu />
+Créer un composant <Accueil /> 
+créer un composant <Formulaire /> 
+
+le composant <Menu/> est "l'oncle" du composant <Formulaire /> 
+
+l'objectif du Context / session est d'agir sur le formulaire => modifier le <Menu/> bien qu'il n'ait pas de relation parent / enfant 
+
+=> dans le composant <Formulaire /> 
+formulaire avec 2 champs et un bouton 
