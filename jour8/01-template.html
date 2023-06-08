@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grille{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .droite{
+            text-align: right;
+        }
+        article{
+            border: 1px solid red;
+        }
+        /* .flex-droite{
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            border: 1px solid blue;
+        } */
+        .a-droite{
+            display: grid;
+            grid-template-columns: 1fr auto;
+        }
+        .a-droite::before{
+            content: "";
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="grille">
+        <article>
+            <h1 class="droite">titre 1</h1>
+            <div class="a-droite">
+                <ul>
+                    <li >item1</li>
+                    <li >item2</li>
+                    <li >item3</li>
+                </ul>
+            </div>
+            
+        </article>
+        <article>
+            <h2>titre 2</h2>
+        </article>
+    </div>
+</body>
+</html>
