@@ -1,10 +1,24 @@
-import React , {useState, useEffect} from 'react'
+import React , {useState, useEffect , useRef} from 'react'
 import "./ListeArticle.css"
 
+function getArticles (){
+    return new Promise(function(resolve){
+        setTimeout( function(){
+            fetch("http://localhost:4200/articles")
+            .then(function(reponse){ return reponse.json()})
+                .then(function(data){
+                    resolve(data)
+                })
+        }, 2000)
+    })
+}
+
 function ListeArticle({updateListe , setUpdateListe}) {
-    const [posts , setPosts] = useState([])
+    //throw Promise.resolve()
+    const refTitre = useRef()
     const [id, setId] = useState(0); 
-    useEffect( function(){
+    const [posts , setPosts] = useState([])
+    /*useEffect( function(){
         //console.log("exécution fetch")
         fetch("http://localhost:4200/articles")
         .then(function(reponse){ return reponse.json()})
@@ -12,7 +26,10 @@ function ListeArticle({updateListe , setUpdateListe}) {
                 setPosts(data)
             })
         
-    } , [updateListe])
+    } , [updateListe]) */
+    getArticles ().then(function(data){
+        setPosts(data)
+    }) ;
 
     function supprimer(id){
         const verif = confirm("être vous sur de vouloir supprimer l'article num " + id);
@@ -29,7 +46,6 @@ function ListeArticle({updateListe , setUpdateListe}) {
 
     function modifier(id){
         setId(id);
-        setUpdateListe(function(update){ return !update})
     }
 
     function changeData(e , id){
@@ -61,9 +77,14 @@ function ListeArticle({updateListe , setUpdateListe}) {
             })
     }
 
+    useEffect( function(){
+        refTitre.current.innerHTML = "coucou"
+        document.querySelector("#toto").innerHTML = "tutu"
+    }, [])
+
   return (
     <div className='articles'>
-        <h2>ListeArticle</h2>
+        <h2 ref={refTitre} id="toto">ListeArticle</h2>
         { posts.map(function(item, key){
            return (
             <>{ id === item.id 
@@ -78,7 +99,7 @@ function ListeArticle({updateListe , setUpdateListe}) {
                     <input type="submit" value="ok"/>
                 </form> 
             : 
-            <article key={key}>
+            <article key={key} onDoubleClick={function(){ modifier(item.id) }}>
                 <h2>{item.titre}</h2>
                 <p>{item.body}</p>
                 <button className='me-3' onClick={ function(){ modifier(item.id) }}>modifier</button>

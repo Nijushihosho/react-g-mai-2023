@@ -1,0 +1,86 @@
+
+
+hier après midi nous avons ENFIN vu React en action avec une base de données 
+
+=> 1ère remarque => pour un projet REACT
+il y a DEUX SERVEURS 
+
+=> SERVEUR => client / site internet / UI / front end 
+=> SERVEUR => serveur / API / Back End / Bac Office 
+
+=> remarque => role client afficher les informations / demandes 
+            => role du serveur traiter des demandes / stocker la base /
+            restituer les données à un client 
+
+Architecture Client / Serveur  
+
+=> comment faire communiquer le serveur client avec le serveur serveur 
+
+fetch() => via de l'AJAX 
+
+=> il existe 4 verbes / mots clé 
+
+GET => demande au servur pour récupérer des données 
+POST => je veux INSERT (ajouter) de nouvelles données dans le serveur 
+PUT (PATCH) => je veux mettre à jour un enresigistrement qui est dans la base de données 
+DELETE => supprimer une ligne / un enresigistrement dans la base de données 
+
+=> API Rest
+
+SELECT * FROM users 
+INSERT INTO 
+UPDATE user SET ... 
+DELETE FROM users 
+
+verif 
+
+=> avec une API REst 
+
+POST => CREATE / INSERT 
+
+fetch("url", {
+    method : "POST",
+    body: JSON.stringify({ titre : "article" , date : new Date() }),
+    headers : { "content-type" : "application/json" }
+})
+    .then(  ) // 200 
+    .then()
+
+GET => READ / SELECT
+
+fetch("url"  )
+    .then( ) // 200  OK
+             // 301 vous l'avez déjà en cache 
+            // 404  Not Found
+            // 401  Autorisation Préalable 
+            // 400  Bad Request 
+            // 403  Forbidden
+    .then( ) // data 
+
+PUT => UPDATE => toute une ligne 
+
+fetch("url/id" , {
+    method : "PUT"
+    body : JSON.stringify({id : 1 , titre : "a" , date : new Date()})
+    headers : { "content-type" : "application/json" }
+})
+.then()
+.then()
+
+
+PATCH => UPDATE partiel 
+
+fetch("url/id" , {
+    method : "PATCH"
+    body : JSON.stringify({date : new Date()})
+    headers : { "content-type" : "application/json" }
+})
+.then()
+.then()
+
+
+DELETE => DELETE 
+
+fetch("url/id" , { method : "DELETE" })
+.then()
+.then()
