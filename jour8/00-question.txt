@@ -101,5 +101,6 @@ créer un dossier jour8-bdd => mettre dedans un fichier db.json qui contient les
 // à la droite du formulaire de tous les tâches 
 => Bonus supprimer une tâche
 => SUper Bonus => modifier 
-=> hyper Bonus => double clique que la nom d'une tâche => <p>apprendre React</p>  
+=> hyper Bonus => double clique sur la nom d'une tâche => <p>apprendre React</p>  
                                                           <del>apprendre React</del>
+=> super hyper Bonus => réorganiser l'ordre 
