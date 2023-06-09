@@ -81,3 +81,20 @@ function Composant(){
     return <></>
 
 }
+
+// créer un nouveau projet  jour9-exo 
+App 
+    Panier 
+    Accueil
+        Catalogue => 
+            [
+                {id : 1 , nom : "PS4" , prix : 500}
+                {id : 1 , nom : "Nintendo DS" , prix : 600}
+            ]
+            => afficher chaque produit dans le composant catalogue 
+            <article>
+                <h2>nom</h2>
+                <p>prix</p>
+                <button> Ajouter </button> => si je clique sur le bouton => ajouter le produit sélectionné dans le Panier
+            </article>
+
