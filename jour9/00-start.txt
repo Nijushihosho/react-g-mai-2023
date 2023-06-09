@@ -89,9 +89,9 @@ App
         Catalogue => 
             [
                 {id : 1 , nom : "PS4" , prix : 500}
-                {id : 1 , nom : "Nintendo DS" , prix : 600}
+                {id : 2 , nom : "Nintendo DS" , prix : 600}
             ]
-            => afficher chaque produit dans le composant catalogue 
+            => afficher pour chaque produit du catalogue 
             <article>
                 <h2>nom</h2>
                 <p>prix</p>
