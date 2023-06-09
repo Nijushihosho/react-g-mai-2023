@@ -36,7 +36,7 @@ function Panier() {
                         { getPanier().reduce(function(total, item){
                             return total + item.price * item.qte
                         }, 0) }
-                        efo,iezhnfiyg8756G87H
+                        
                     </td>
                 </tr>
             </tfoot>

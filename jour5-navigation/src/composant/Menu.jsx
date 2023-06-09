@@ -23,7 +23,9 @@ function Menu() {
           <li className='nav-item'>
             <Link to="/panier" className='nav-link'>
               Panier
-              <span className='badge bg-danger'>{ getPanier().length }</span>
+              <span className='badge bg-danger'>{ getPanier().reduce(function(total, item){
+                            return total + item.qte
+                        }, 0) }</span>
             </Link>
           </li>
         </ul>
