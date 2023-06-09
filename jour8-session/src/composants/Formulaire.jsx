@@ -1,7 +1,7 @@
 import React , {useRef , useContext} from 'react'
 import { ConnexionContext } from "../context/connexionContext"
 function Formulaire() {
-  const {user , setUser} = useContext(ConnexionContext)
+  const {login , isLogged} = useContext(ConnexionContext)
 
   const refLogin = useRef()
   const refPassword = useRef()
@@ -15,24 +15,12 @@ function Formulaire() {
       alert("formulaire invalid")
       return ; 
     }
-    // maintenant que l'on a récupérer les valeurs saisies
-    // il faut comparer les valeurs saisies dans  le formulaire par rapport aux données que l'on aurait dans une base de données
-    // si les données correspondent => l'utilisateur est connecté  
-    // sinon  => retourner un message les identifiants sont incorrectes
-    if(data.login == user.login && data.password == user.password){
-      setUser(function(prevUser){
-        const cloneUser = structuredClone(prevUser);
-        cloneUser.isLogged = true
-        return cloneUser; 
-      })
-    }
-
-    // console.log(data);  
+    login(data);  
   }
   return (
     <div>
       <h2>connexion</h2>
-      { user.isLogged 
+      { isLogged()
         ? 
         <p>Bienvenue</p>
         : 

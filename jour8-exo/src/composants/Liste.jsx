@@ -11,8 +11,8 @@ function Liste({update , setUpdate}) {
       })
   } , [update])
 
-  function supprimer (todo){
-    fetch(`http://localhost:4200/todo/${todo.id}`, {method : "DELETE"})
+  function supprimer (tache){ // { titre : "...", id : 1 }
+    fetch(`http://localhost:4200/todo/${tache.id}`, {method : "DELETE"})
     .then(function(reponse){ return reponse.json()})
     .then(function(){
       setUpdate(function(update){ return !update})

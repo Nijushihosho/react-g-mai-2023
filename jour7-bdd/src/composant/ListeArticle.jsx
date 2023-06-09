@@ -16,7 +16,7 @@ function ListeArticle({updateListe , setUpdateListe}) {
         
     } , [updateListe]) 
    
-    function supprimer(id){
+    function supprimer(id){ // 1
         const verif = confirm("être vous sur de vouloir supprimer l'article num " + id);
         if(!verif) return ;
         const option = {

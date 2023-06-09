@@ -1,0 +1,83 @@
+des questions ??? 
+
+partager des informations entre des composants sans utiliser useContext()
+
+
+App 
+    Menu  => la / action ici
+    Accueil
+        Formulaire => action ici / là 
+
+le fait d'utiliser createContext / useContext => ça permet d'utiliser 
+la fonction / les valeurs où on a besoin exactement 
+
+App  => 
+    useState({ isLogged : false  })
+    useState([])
+    useState({lang : "fr})
+    Menu  => isLogged / 
+    Accueil =>  isLogged => 
+        Section
+            Formulaire => => isLogged
+                Message 
+
+// déclarer la fonction 
+function calcul( chiffre1 , chiffre2 ){
+    return chiffre1 + chiffre2 ;
+}
+
+// exécuter 
+calcul(1,2)
+
+const chiffres = { largeur : 20 , hauteur : 30 }
+calcul(chiffres.largeur, chiffres.hauteur) 
+calcul(20, 30) 
+
+
+[1,2,3].map( function( prix ){} )
+
+// .map() exécute la fonction anonyme autant de fois qu'il a de chiffre dans le tableau
+// callback 
+
+document.querySelector("button")
+        .addEventListener("click" , function(evt){ 
+            // Evenement déclenché suite à l'action réalisé par l'utilisateur 
+        })
+
+fetch("www")
+    .then(function(toto){ return toto.json()})
+    .then(function(articles){})
+
+----------
+
+relancer le projet jour8-session 
+
+----------
+
+const [chiffre , setChiffre] = useState(0)
+
+
+chiffre = 10 // KO 
+setChiffre(10) // chiffre = 10 ET rerender le composant 
+
+setChiffre(function(prevChiffre ){
+    return 10 
+})
+
+
+
+function Composant(){
+
+    useState()
+    useEffect()
+    useRef()
+    useContext()
+
+    function traitement(){}
+    function traitement1(){}
+    function traitement2(){}
+    // stocker dans des fichiers à part 
+
+    return <></>
+
+}
