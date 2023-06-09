@@ -84,7 +84,7 @@ function Composant(){
 
 // créer un nouveau projet  jour9-exo 
 App 
-    Panier 
+    Panier => afficher la liste des produits sélectionnés 
     Accueil
         Catalogue => 
             [
