@@ -98,3 +98,22 @@ App
                 <button> Ajouter </button> => si je clique sur le bouton => ajouter le produit sélectionné dans le Panier
             </article>
 
+function App(){
+
+    return <div>
+        <Menu title="exo" largeur={20}/>
+        <Nav><img src="" alt="" /></Nav>
+    </div>
+}
+
+function Nav(props){
+    return <nav>
+        {props.children}
+    </na>
+} 
+
+function Nav({children}){
+    return <nav>
+        {children}
+    </na>
+} 

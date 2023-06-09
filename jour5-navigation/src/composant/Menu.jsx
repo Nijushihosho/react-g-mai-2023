@@ -1,7 +1,11 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import { Link } from "react-router-dom"
+import { PanierContext } from '../context/PanierContext'
+
 
 function Menu() {
+  const {getPanier} = useContext(PanierContext); 
+
   return (
     <div className='bg-primary'>
       <nav className='navbar navbar-expand container navbar-dark px-3'>
@@ -15,6 +19,12 @@ function Menu() {
           </li>
           <li className='nav-item'>
             <Link to="/contacter" className='nav-link'>Nous Contacter</Link>
+          </li>
+          <li className='nav-item'>
+            <Link to="/contacter" className='nav-link'>
+              Panier
+              <span className='badge bg-danger'>{ getPanier().length }</span>
+            </Link>
           </li>
         </ul>
         <ul className='navbar-nav ms-auto'>

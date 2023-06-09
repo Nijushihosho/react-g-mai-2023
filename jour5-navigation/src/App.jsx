@@ -1,12 +1,15 @@
 import React from 'react'
 import Menu from './composant/Menu'
 import { Outlet } from 'react-router-dom'
+import { PanierContextProvider } from './context/PanierContext'
 
 function App() { // Layout 
   return (
     <div>
-      <Menu />
-      <Outlet /> {/** c'est ce composant qui va devenir le composant <Accueil /> si vous cliquez sur le lien accueil dans <Menu /> */}
+      <PanierContextProvider>
+        <Menu />
+        <Outlet /> {/** c'est ce composant qui va devenir le composant <Accueil /> si vous cliquez sur le lien accueil dans <Menu /> */}
+      </PanierContextProvider>
     </div>
   )
 }
