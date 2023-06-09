@@ -21,7 +21,7 @@ function Menu() {
             <Link to="/contacter" className='nav-link'>Nous Contacter</Link>
           </li>
           <li className='nav-item'>
-            <Link to="/contacter" className='nav-link'>
+            <Link to="/panier" className='nav-link'>
               Panier
               <span className='badge bg-danger'>{ getPanier().length }</span>
             </Link>

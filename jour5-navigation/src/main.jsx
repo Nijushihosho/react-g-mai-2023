@@ -9,6 +9,7 @@ import Produits from './page/Produits'
 import ProduitSingle from './page/ProduitSingle'
 import Dashboard from './page/Dashboard'
 import AppDashboard from './composant/AppDashboard'
+import Panier from './page/Panier'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route index element={<Produits />} />
             <Route path=":id/:title" element={<ProduitSingle />} />
           </Route>
+          <Route path="panier" element={<Panier />} />
           <Route path="contacter" element={<NousContacter />} />
           <Route path="login" element={<Login />} />
           <Route path="admin" element={<AppDashboard />}>
