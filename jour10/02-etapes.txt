@@ -1,0 +1,58 @@
+1 découper le visuel en composant 
+2 coder chaque composant et les exécuter correctement 
+
+// ajouter des valeurs
+// supprimer des valeurs 
+// modifier certaines valeurs 
+// récupérer les valeurs 
+
+=> si tu es dans Context 
+const cloneEtat = structuredClone([])
+cloneEtat.push()
+cloneEtat.splice()
+cloneEtat.splice()
+return []
+setEtat(cloneEtat); 
+=> mettre à jour l'état ET => mettre à jour tous les composants 
+
+fetch("url" , { method : "POST" })
+.then(reponse => reponse.json())
+.then( function(){
+    // ici que j'ai fais le 
+    const cloneEtat = structuredClone(etat)
+    cloneEtat.push()
+    setEtat(cloneEtat)
+})
+
+fetch("url/id" , { method : "DELETE" })
+.then(reponse => reponse.json())
+.then( function(){
+    // ici que j'ai fais le 
+    const cloneEtat = structuredClone(etat)
+    const index = cloneEtat.findIndex()
+    cloneEtat.splice(index, 1)
+    setEtat(cloneEtat)
+})
+
+
+fetch("url/id" , { method : "PUT" })
+.then(reponse => reponse.json())
+.then( function(){
+    // ici que j'ai fais le 
+    const cloneEtat = structuredClone(etat)
+    const index = cloneEtat.findIndex()
+    cloneEtat.splice(index, 1 , body : JSON.stringify(valeur))
+    setEtat(cloneEtat)
+})
+
+
+useEffect( function(){ 
+    fetch("url")
+        .then(function(reponse){ return reponse.json()})
+        .then(function(data){  setEtat(data) })
+}, [])
+
+[
+    { },
+    { }
+]

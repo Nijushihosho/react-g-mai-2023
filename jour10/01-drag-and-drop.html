@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: repeat(2,300px);
+            gap : 60px;
+            width: 660px;
+            margin: 0 auto;
+        }
+        section{
+            border: 3px solid blue;
+            height: 150px;
+        }
+
+        p{
+            margin: 0;
+            border:2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <section>
+            <p draggable="true" id="element1">Element 1</p>
+            <p draggable="true" id="element2">Element 2</p>
+            <p draggable="true" id="element3">Element 3</p>
+            <p draggable="true" id="element4">Element 4</p>
+            <p draggable="true" id="element5">Element 5</p>
+            <p draggable="true" id="element6">Element 6</p>
+        </section>
+        <section></section>
+    </div>
+    <script>
+        document.querySelectorAll("p").forEach(function(p){
+               p.addEventListener("dragstart", function(e){
+                //e.target.classList.add("deplacer")
+                e.dataTransfer.setData('p', e.target.id); 
+               })
+               /* p.addEventListener("dragend", function(e){
+                e.target.classList.remove("deplacer")
+               }) */
+        } )
+        document.querySelectorAll("section").forEach(function(cible){
+            cible.addEventListener("dragover", function(e){
+                e.preventDefault(); 
+            })
+            cible.addEventListener("drop", function(e){
+                var id = e.dataTransfer.getData("p");
+                e.target.appendChild(document.querySelector("#"+id)); 
+                /* e.target.appendChild(document.querySelector(".deplacer"));  */
+            })
+        })
+    </script>
+</body>
+</html>

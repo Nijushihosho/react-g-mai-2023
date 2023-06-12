@@ -18,13 +18,29 @@ function Liste() {
         e.preventDefault();
 
         if(localOperation.nom.length < 3 || !isNumeric(localOperation.montant) ){
-        alert("formulaire invalide");
-        return ;
+            alert("formulaire invalide");
+            return ;
         } 
        
         update(localOperation);
         setId(0)
     }
+
+    function dragStart(e){
+        e.target.classList.add("deplacer")
+    }
+
+    function dragEnd(e){
+        e.target.classList.remove("deplacer")
+    }
+
+    function onDragOver(e){
+        e.preventDefault()
+        e.stopPropagation();
+        e.target.appendChild(document.querySelector(".deplacer"))
+    }
+
+    
   return (
     <div>
         <h2>Détail des opérations</h2>
@@ -37,14 +53,13 @@ function Liste() {
                     <th>#action</th>
                 </tr>
             </thead>
-            
+                <tbody onDragOver={onDragOver}>
                 { 
                     operations.map(function(item , key){
-                        return <tbody key={key}>
+                        return < tr key={key} onDragStart={dragStart} onDragEnd={dragEnd} draggable={true}>
                             { item.id === id 
-                            
                             ?
-                            <tr>
+                            <>
                                 <td colSpan={4}>
                                 <form className='form-modif' onSubmit={submit}>
                                     <input type="hidden" name="id" value={localOperation.id} />
@@ -53,9 +68,9 @@ function Liste() {
                                     <input type="submit" value="go" />
                                 </form>
                                 </td>
-                            </tr>
+                            </>
                             : 
-                            <tr>
+                            <>
                                 <td>{item.id}</td>
                                 <td>{item.nom}</td>
                                 <td>{item.montant}</td>
@@ -63,12 +78,12 @@ function Liste() {
                                     <button className='modifier me-3' onClick={function(){ setId(item.id) ; setLocalOperation(item) }}>modifier</button>
                                     <button className='supprimer' onClick={function(){ supprimer(item) }}>supprimer</button>
                                 </td>
-                            </tr>
-                            
+                            </>
                             }
-                         </tbody>
+                        </tr>
                     })
                 }
+                </tbody>
            
         </table>
     </div>
