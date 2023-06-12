@@ -1,9 +1,7 @@
 import React , {useContext} from 'react'
 import {OperationContext} from "../context/OperationContext"
-
 function Total() {
  const {operations} = useContext(OperationContext)
-
   return (
     <div>
         <h1>Total</h1>
@@ -13,5 +11,4 @@ function Total() {
     </div>
   )
 }
-
 export default Total
