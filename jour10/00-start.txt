@@ -1,0 +1,78 @@
+questions ???
+
+=> créer un tableau en javascript
+
+const fleurs = ["rose" , "tulipe", "lilas"];
+// fleurs est une variable de type tableau qui stocke 3 valeurs de type string 
+
+en javascript en + de stocker les valeurs dans la variable fleurs 
+automatiquement javascript va ajouter des fonctions directement sur la valeur de type array 
+
+fleurs.push()
+fleurs.pop()
+fleurs.map()
+fleurs.reduce()
+fleurs.find()
+
+=> mdn array => fr => https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+communiquer un composant avec un autre 
+
+ComposantParent
+
+    => props 
+
+ComposantEnfant 
+
+Context
+
+<ContextProvider>
+    App
+</ContextProvider>
+ => valeurs 
+    ComposantA
+    ComposantB
+        ComposantD 
+            ComposantF
+                ComposantE 
+    ComposantC
+
+
+function calcul (largeur, hauteur){
+    const unite = "km"
+    return unite
+}
+
+//console.log(unite )
+const unite = calcul(10,12)
+
+
+<div>{[1,2,3].map(function(element, key){
+    return <p key={key} onClick={ function(){ console.log(key) } }>{element}</p>
+})}</div>
+
+<div>{[<p key={0} onClick={ function(){ console.log(0) }>1</p>, <p key={1} onClick={ function(){ console.log(1) }>2</p>, <p key={2} onClick={ function(){ console.log(2) }>3</p>]}</div>
+
+<div>
+    <p key={0} onClick={ function(){ console.log(0) }>1</p>
+    <p key={1} onClick={ function(){ console.log(1) }>2</p>
+    <p key={2} onClick={ function(){ console.log(2) }>3</p>
+</div>
+
+
+  
+
+function App(){
+    function traitement(key){
+
+    }
+
+    return <B traitement={traitement}/>
+}
+
+function B({traitement}){
+    return <div>{[1,2,3].map(function(element, key){
+    return <p key={key} onClick={ function(){  traitement(key) } } }>{element}</p>
+})}</div>
+}
+

@@ -1,0 +1,6 @@
+{ 
+    "operations" : [
+        {"id" : 1 , "nom"  : "dépense 1" , "montant" : -50},
+        {"id" : 2 , "nom"  : "revenu 1" , "montant" : 75}
+    ]
+}

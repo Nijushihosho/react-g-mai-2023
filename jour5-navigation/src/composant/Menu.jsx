@@ -25,7 +25,7 @@ function Menu() {
               Panier
               <span className='badge bg-danger'>{ getPanier().reduce(function(total, item){
                             return total + item.qte
-                        }, 0) }</span>
+                  }, 0) }</span>
             </Link>
           </li>
         </ul>
