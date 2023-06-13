@@ -55,7 +55,23 @@ setTimeout( function(){
 console.log(a); 
 
 
+// cas pratique : 
+créer le fichier 05-exo.html
+ajouter une balise div 
+ajouter une balise script 
+vous allez réaliser une requête ajax vers l'API suivante : 
+https://dummyjson.com/users => [{},{} ... ]
 
+et injection dans la balise div le html suivant :
+<article>
+    <h2>firstName lastName</h2>
+    <ul>
+        <li>email</li>
+        <li>phone</li>
+        <li>bloodGroup</li>
+    </ul>
+</article> 
+vous devez utiliser await async pour attendre que la requête ajax soit finalisée avant l'injection dans le html 
 
 
 
