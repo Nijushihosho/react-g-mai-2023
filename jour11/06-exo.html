@@ -14,8 +14,6 @@
             const reponse2 = await fetch("https://dummyjson.com/posts");
             const {posts} = await reponse2.json();
 
-            //console.log(users, posts);
-
             const resultat = posts.map(function(post){
                 return { 
                     idAuteur : post.userId ,
@@ -32,7 +30,7 @@
                 <article>
                     <h2>${article.titre}</h2>
                     <p>${article.body}</p>
-                    ${ article.auteur ?  "<p>rédigé par "+ article.auteur.firstName + " " + article.auteur.lastName + "</p>" : "<p>auteur inconnu pour l'id "+ article.idAuteur +"</p>" }
+                    ${ article.auteur ? "<p>rédigé par "+ article.auteur.firstName + " " + article.auteur.lastName + "</p>" : "<p>auteur inconnu pour l'id "+ article.idAuteur +"</p>" }
                 </article>
                 `
             }

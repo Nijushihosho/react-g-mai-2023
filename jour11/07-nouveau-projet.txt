@@ -1,0 +1,10 @@
+npm create vite jour11-blog 
+React 
+Javascript 
+
+cd jour11-blog 
+npm i 
+npm i react-router-dom 
+npm i firebase 
+npm run dev
+
