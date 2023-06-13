@@ -1,0 +1,21 @@
+hier j'ai essayé de vous montrer comment trier un tableau via la technique du drag and drop 
+
+=> l'idée est de pouvoir reclasser une liste de ligne du tableau via la souris 
+
+=> un site internet permet de créer des sites internet via 
+le système de drag and drop => wix.com 
+
+
+trier une liste en drag and drop 
+
+const data = [ 
+    {id : 1 , nom : "dépense 1" , montant : -300}, key = 0
+    
+    {id : 3 , nom : "recette 1" , montant : 400 }, key = 1
+    {id : 2 , nom : "dépense 2" , montant : -50}, key= 2
+]
+
+
+const elementADeplacer = data.splice(1,1)[0] // supprimé l'élément avec l'id 2
+// déplacer élément à déplacer 
+data.splice(2, 0 , elementADeplacer) 

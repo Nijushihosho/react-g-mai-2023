@@ -1,10 +1,12 @@
-import React , {useContext , useState } from 'react'
+import React , {useContext , useState, useRef } from 'react'
 import {OperationContext} from "../context/OperationContext"
 import { isNumeric } from '../utils'
 
 function Liste() {
    
-    const {operations , supprimer , update} = useContext(OperationContext)
+    const dragItem = useRef(null)
+    const dragOverItem = useRef(null)
+    const {operations , supprimer , update , setOperations} = useContext(OperationContext)
     const [id, setId] = useState(0)
     const [localOperation, setLocalOperation] = useState({})
 
@@ -26,18 +28,19 @@ function Liste() {
         setId(0)
     }
 
-    function dragStart(e){
-        e.target.classList.add("deplacer")
-    }
+    function trier(){
+        const cloneOperations = structuredClone(operations);
+        // remove et save the dragged item
+        const dragItemContent = cloneOperations.splice(dragItem.current, 1)[0]
+        // switch
+        cloneOperations.splice(dragOverItem.current, 0, dragItemContent);
 
-    function dragEnd(e){
-        e.target.classList.remove("deplacer")
-    }
+        // reset 
+        dragItem.current = null ;
+        dragOverItem.current = null ;
 
-    function onDragOver(e){
-        e.preventDefault()
-        e.stopPropagation();
-        e.target.appendChild(document.querySelector(".deplacer"))
+        // update the array
+        setOperations(cloneOperations)
     }
 
     
@@ -53,10 +56,16 @@ function Liste() {
                     <th>#action</th>
                 </tr>
             </thead>
-                <tbody onDragOver={onDragOver}>
+                <tbody>
                 { 
                     operations.map(function(item , key){
-                        return < tr key={key} onDragStart={dragStart} onDragEnd={dragEnd} draggable={true}>
+                        return < tr key={key} 
+                            onDragStart={ () => {  dragItem.current = key}} 
+                            onDragEnter={ () => { dragOverItem.current = key}}
+                            onDragEnd={trier}
+                            onDragOver={(e) => {e.preventDefault()}}
+                            draggable={true} 
+                            dataitem={`item${key}`}>
                             { item.id === id 
                             ?
                             <>

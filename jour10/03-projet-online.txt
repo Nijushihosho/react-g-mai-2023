@@ -1,0 +1,65 @@
+vous avez tous les éléments pour créer des applications 
+fonctionnelles dans de nombreux domaines 
+=> vente
+=> location
+=> information
+
+=> la mise en ligne de notre projet sur internet 
+
+=> normalement vous devez prendre un hébergement pour pouvoir mettre en ligne votre projet 
+
+=> il existe des solutions (temporaires) et à 100% gratuite
+idéal pour faire une démo 
+
+il va falloir avoir 2 serveurs gratuits 
+
+serveur 1 => react => https://www.netlify.com/
+serveur 2 => base de données => firebase 
+
+créer un nouveau projet jour10-online
+
+cd jour10-online
+npm i
+npm i firebase => fetch spécial pour firebase 
+npm run dev
+
+
+aller vous connecté à votre boite mail gmail
+
+Firebase.com 
+get Started 
+
+=> créer un nouveau projet 
+=> demo-greta 
+=> google anlytics (désactive)
+
+
+{
+    "operations" : [
+        {id : 1 , nom : "bonjour" , montant : 200}
+    ]
+}
+
+
+
+stopper le serveur front (npm run dev) Ctrl + C Ctrl + C 
+npm run build 
+
+=> transformer tout votre code stocké dans le dossier src / dans le dossier node_modules 
+en javascript compréhensible par un navigateur web 
+traduire jsx => js (compiler / transpiler )
+
+dist (distribution)
+
+
+<Menu />
+<Menu >
+    <img src="" alt="" />
+</Menu>
+
+function Menu ({children}){
+
+    return <p>
+        {children}
+    </p>
+}
