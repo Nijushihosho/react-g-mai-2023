@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        async function getArticleAvecAuteur(){
+            const reponse1 = await fetch("https://dummyjson.com/users");
+            const {users} = await reponse1.json();
+            const reponse2 = await fetch("https://dummyjson.com/posts");
+            const {posts} = await reponse2.json();
+
+            //console.log(users, posts);
+
+            const resultat = posts.map(function(post){
+                return { 
+                    idAuteur : post.userId ,
+                    titre : post.title ,
+                    body : post.body ,
+                    auteur : users.find( function(user){
+                        return user.id === post.userId
+                    } )
+                }
+            })
+            let html = "";
+            for(let article of resultat){
+                html += `
+                <article>
+                    <h2>${article.titre}</h2>
+                    <p>${article.body}</p>
+                    ${ article.auteur ?  "<p>rédigé par "+ article.auteur.firstName + " " + article.auteur.lastName + "</p>" : "<p>auteur inconnu pour l'id "+ article.idAuteur +"</p>" }
+                </article>
+                `
+            }
+            document.querySelector("div").innerHTML = html
+        } 
+        getArticleAvecAuteur()
+    </script>
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap : 10px; 
+        }
+    </style>
+</body>
+</html>
