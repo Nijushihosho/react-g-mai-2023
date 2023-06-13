@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* let a = 2 ;
+        setTimeout( function(){  
+            a = a + 2
+        })
+        console.log(a); */
+
+        let a = 2 ;
+
+        function attendre () {
+            return new Promise(function(resolve){
+                setTimeout( function(){  
+                    a = a + 2
+                    resolve(a)
+                }) 
+            })
+        }
+
+        attendre()
+            .then(function(a){ console.log(a) })
+
+        /* fetch("url")
+            .then(function(reponse){ return reponse.json() })
+            .then(function(date){console.log(data)}) */
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* let a = 2 ;
+        setTimeout( function(){  
+            a = a + 2
+        })
+        console.log(a); */
+
+        let a = 2 ;
+
+        /* setTimeout( function(){  
+                a = a + 2
+                console.log(a);
+        })  */
+
+        function attendre(callback){
+            setTimeout( function(){  
+                a = a + 2
+                callback(a)
+            }) 
+        }
+
+        attendre(function(a){
+            console.log(a);
+        }) 
+
+    </script>
+    <button>action</button>
+    <script>
+        const action = function(){}
+
+        document.querySelector("button").addEventListener("click", function(){})
+        document.querySelector("button").addEventListener("click", action)
+
+    </script>
+</body>
+</html>

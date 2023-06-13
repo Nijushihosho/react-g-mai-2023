@@ -10,12 +10,54 @@ trier une liste en drag and drop
 
 const data = [ 
     {id : 1 , nom : "dépense 1" , montant : -300}, key = 0
-    
-    {id : 3 , nom : "recette 1" , montant : 400 }, key = 1
-    {id : 2 , nom : "dépense 2" , montant : -50}, key= 2
+    {id : 2 , nom : "dépense 2" , montant : -50}, key= 1
+    {id : 3 , nom : "recette 1" , montant : 400 }, key = 2
 ]
 
 
 const elementADeplacer = data.splice(1,1)[0] // supprimé l'élément avec l'id 2
 // déplacer élément à déplacer 
 data.splice(2, 0 , elementADeplacer) 
+
+Javascript de base et React 
+await async / programmation asynchrone 
+
+-------
+
+créer un nouveau projet react 
+useRef () => présentation 
+mise en ligne => CRUD avec Firebase 
+multicontext
+jsonwebtoken 
+
+
+---------------------
+
+programmation asynchrone ??? 
+
+programmation synchrone ?? 
+=> le fait que le code que vous avez écrit s'exécute dans cette ordre 
+
+const a = 2 ;
+const b = 3 ;
+console.log(a+b) ; 
+
+// le code s'exécute dans l'ordre dans lequel je l'ai écrit 
+
+
+// donc la programmation asynchrone => le code s'exécute dans un ordre DIFFERENT que celui dans lequel j'ai écrit 
+
+
+let a = 2 ;
+setTimeout( function(){ 
+    a = a + 2
+})
+console.log(a); 
+
+
+
+
+
+
+
+

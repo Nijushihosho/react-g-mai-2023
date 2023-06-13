@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = 2 ;
+        setTimeout( function(){  // exécuter APRES le console.log()
+            a = a + 2
+        })
+        // le setTimeout prendre un peu de temps à s'exécuter MAIS javascript ne va pas attendre que le setTimeout soit exécuté à 100% pour passer à la suite 
+        console.log(a);  // a = 2 et non 4 
+
+        // asychrone => le comportement par défaut de javascript 
+        // fetch 
+
+        // super MAIS comment dire à javascript ATTEND que l'opération asynchrone soit exécutée à 100% pour pouvoir faire le console.log()
+
+        // il existe 3 manières de dire à javascript d'attendre :
+        // - callback (dès la création de javascript en 1995)
+        // - Promise avec then() // 2013 
+        // - Promise et await et async // ES6 => 2015 
+    </script>
+</body>
+</html>
