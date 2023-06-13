@@ -73,7 +73,7 @@ et injection dans la balise div le html suivant :
 </article> 
 vous devez utiliser await async pour attendre que la requête ajax soit finalisée avant l'injection dans le html 
 
-
+document.addEventListener("DOMContentLoaded", function(){})
 
 
 

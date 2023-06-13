@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        async function getUsers(){
+            const reponse = await fetch("https://dummyjson.com/users");
+            const {users} = await reponse.json();
+            let html = "";
+            for(let user of users){
+                html += `
+                <article>
+                    <h2>${user.firstName} ${user.lastName}</h2>
+                    <ul>
+                        <li>email :  ${user.email}</li>
+                        <li>phone : ${user.phone}</li>
+                        <li>bloodGroup : ${user.bloodGroup}</li>
+                    </ul>
+                </article> 
+                `
+            }
+            document.querySelector("div").innerHTML = html ; 
+        }
+        getUsers();
+    </script>
+    <style>
+        div{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap : 10px; 
+        }
+    </style>
+</body>
+</html>
