@@ -1,11 +1,14 @@
-import React from 'react'
+import React , {useContext} from 'react'
 
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth, provider } from '../config/firebase'; 
+import { AuthContext } from '../context/AuthContext';
+import {useNavigate} from "react-router-dom"
 
 
 function Login() {
-
+    const {login} = useContext(AuthContext)
+    const navigate = useNavigate()
     const googleHandler = async () => {
         provider.setCustomParameters({ prompt: 'select_account' });
         signInWithPopup(auth, provider)
@@ -15,7 +18,17 @@ function Login() {
                 const token = credential.accessToken;
                 // The signed-in user info.
                 const user = result.user;
+                login(user); 
+                navigate("/");
+
                 // redux action? --> dispatch({ type: SET_USER, user });
+                // créer un context AuthContext 
+                // contenir const [user, setUser ] = useState({})
+                // au lieu de faire un console.log(user)
+                // setUser() du user 
+                // stocker user dans le localStorage du navigateur 
+
+                // veuillez déployer le projet en l'état sur Netlify 
             })
             .catch((error) => {
                 // Handle Errors here.
