@@ -1,8 +1,14 @@
-import React from 'react'
+import React , {useContext} from 'react'
+import { AuthContext } from '../context/AuthContext'
+import  Form  from './Form';
 
 function Accueil() {
+  const {isLogged} = useContext(AuthContext);
   return (
-    <div>Accueil</div>
+    <div>
+      <h1>Accueil</h1>
+      {isLogged() && <Form />}
+    </div>
   )
 }
 

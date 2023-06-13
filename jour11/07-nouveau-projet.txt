@@ -18,3 +18,5 @@ bouton de soumission
 ce formulaire n'est visible QUE site vous vous être authentifié correctement au préalable 
 
 une fois avoir vérifier que toutes les informations sont correctes => INSERT le données saisie dans une collection articles via l'instruction asynchrone addDoc
+
+
