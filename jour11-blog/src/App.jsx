@@ -3,15 +3,18 @@ import Menu from './composants/Menu'
 import { Outlet } from 'react-router-dom'
 import "./App.css"
 import { AuthContextProvider } from './context/AuthContext'
+import { LangContextProvider } from './context/LangContext'
 
 function App() {
   return (
-    <AuthContextProvider>
-      <div className='container'>
-        <Menu />
-        <Outlet />
-      </div>
-    </AuthContextProvider>
+    <LangContextProvider>
+      <AuthContextProvider>
+        <div className='container'>
+          <Menu />
+          <Outlet />
+        </div>
+      </AuthContextProvider>
+    </LangContextProvider>
   )
 }
 

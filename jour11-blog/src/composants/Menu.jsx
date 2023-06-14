@@ -26,8 +26,10 @@ function Menu() {
             <li>
                 <Link to="/">Accueil</Link>
             </li>
+            <li>
+                <Link to="/use-ref">Présentation useRef</Link>
+            </li>
             {isLogged() ? 
-            
             <li>
                 <button onClick={ logout }>déconnexion</button>
             </li> 
@@ -36,6 +38,10 @@ function Menu() {
                 <Link to="/login">Connexion</Link>
             </li>}
             
+        </ul>
+        <ul>
+            <li>fr</li>
+            <li>en</li>
         </ul>
     </div>
   )

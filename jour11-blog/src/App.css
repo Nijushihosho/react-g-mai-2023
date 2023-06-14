@@ -9,6 +9,8 @@
 .menu {
     border-bottom: 1px solid #aaa;
     padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .menu ul{
