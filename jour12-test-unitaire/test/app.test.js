@@ -20,7 +20,7 @@ it("addition should return 3" , function(){
     expect(resultat).toBe(3);
 })
 
-it("getData is notEmpty" , function(){
+it("getData n'est pas vide / contient 1 / contient que des chiffres" , function(){
     const resultat = getData();
     expect(resultat.length).toBeGreaterThan(0)
     expect(resultat).toContain(1)
