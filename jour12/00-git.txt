@@ -25,3 +25,27 @@ git add
 git commit 
 
 git push  => envoyer les informations sur github ET mettre à jour le projet sur Netlify 
+
+
+cd jour11-blog
+
+sudo apt install git 
+
+git config --global user.name "Malik H"
+git config --global user.email "malik.h@webdevpro.net"
+
+git init 
+// permet de créer un reposity local sur votre ordinateur
+git add --all 
+// faire la liste de tous les fichiers que vous voulez enregistrer dans votre repository local 
+git commit -m "first commit"
+// copier la liste des fichiers dans le repository local
+git branch -M main
+// changer le nom de la branch principal par main
+git remote add origin https://github.com/webdevproformation/greta-blog.git
+// etablir une connexion avec le repository sur github 
+
+git config http.sslVerify false
+
+git push -u origin main
+// permet de transférer les informations du répository local => repository sur github 

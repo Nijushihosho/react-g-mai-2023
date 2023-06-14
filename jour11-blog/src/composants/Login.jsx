@@ -48,6 +48,9 @@ function Login() {
   return (
     <div>
         <button onClick={googleHandler}>{data[lang].btnAuth}</button>
+        <br />
+        <br />
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://peaceful-gnome-e053c7.netlify.app/" alt="" />
     </div>
   )
 }
