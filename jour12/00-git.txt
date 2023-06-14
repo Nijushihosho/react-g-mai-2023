@@ -1,0 +1,27 @@
+etapes
+
+mettre en place la suppression dans notre projet 
+
+ajouter la bouton de modification 
+
+réaliser la modification avec Firebase 
+
+ajouter un context pour les langages
+
+mettre en place un fichier de traduction 
+
+modifier le formulaire pour qu'il prennne en compte les différentes langages 
+
+
+=> garder une trace de chaques étapes de notre travail 
+
+=> outil qui s'appelle git 
+=> outil en ligne de commande 4 commandes principales à connaitre 
+
+git init 
+
+git add  
+
+git commit 
+
+git push 
