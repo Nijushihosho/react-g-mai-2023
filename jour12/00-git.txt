@@ -49,3 +49,5 @@ git config http.sslVerify false
 
 git push -u origin main
 // permet de transférer les informations du répository local => repository sur github 
+
+

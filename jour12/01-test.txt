@@ -1,0 +1,21 @@
+lorsque vous codez bouton / la capacité de supprimer un enregistrement 
+
+coder l'opération / les traitements ET vous allez manuellement 
+vérifier que ce que vous avez codez fonctionne 
+
+garantir la qualité de votre code (ça fait ce que l'on veut)
+
+lorsque l'on crée des projets pro => il est conseillé de créer des test automatisé 
+
+créer code dont le rôle est de vérifier / tester votre code 
+
+test automatisé 
+
+=> il existe plusieurs types de test automatisés 
+
+=> test unitaire => tester des fonctions complètement isolée du reste des autres fonctionnalités 
+
+=> test d'intégration => test d'intégrations => fonctionnalité principale (création d'article / authentification) 
+
+=> test e2e (end to end) => je me mets dans les conditions de l'utilisateur du site et je vais manipuler l'interface pour voir si elle répond au attente du scénario 
+
