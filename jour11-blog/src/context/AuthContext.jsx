@@ -20,7 +20,7 @@ export function AuthContextProvider({children}){
         return Object.keys(user).length > 0 ; 
     }
 
-    return <AuthContext.Provider value={{ login , isLogged , setUser }}>
+    return <AuthContext.Provider value={{ login , isLogged , setUser , user }}>
         {children}
     </AuthContext.Provider>
 }
