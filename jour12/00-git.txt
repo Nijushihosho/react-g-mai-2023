@@ -24,4 +24,4 @@ git add
 
 git commit 
 
-git push 
+git push  => envoyer les informations sur github ET mettre à jour le projet sur Netlify 

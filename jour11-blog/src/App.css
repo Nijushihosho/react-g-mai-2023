@@ -58,4 +58,5 @@ input[type="submit"], input[type="text"], textarea , button{
 
 h2{
     font-size: 20px;
+    color: red;
 }
