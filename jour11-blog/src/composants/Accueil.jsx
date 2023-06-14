@@ -48,6 +48,7 @@ function Accueil({nom}) {
       return ;
     }
     const ref = doc(db, "articles", localArticle.id);
+    localArticle.dt_update = new Date(); 
     await updateDoc(ref, localArticle);
     setUpdate(!update);
     setId(0);
@@ -56,7 +57,6 @@ function Accueil({nom}) {
   return (
     <div>
       <h1>Bienvenue {nom}</h1>
-      
       {isLogged() ? <Form setUpdate={setUpdate} /> : <section className='g-2 mb-3'>
         <img src={mario} alt="" className='max-w'/>
         <img src="pikachu.jpg" alt="" className='max-w'/>

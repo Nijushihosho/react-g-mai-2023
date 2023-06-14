@@ -12,6 +12,7 @@ function Form({setUpdate}) {
             return ;
         }
         data.dt_creation = new Date(); // Date.now()
+        data.dt_update = new Date(); 
         data.status = true ; 
         await addDoc(collection(db , "articles"), data)
         
