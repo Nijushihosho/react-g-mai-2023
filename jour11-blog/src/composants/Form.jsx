@@ -2,7 +2,7 @@ import React from 'react'
 import {db} from "../config/firebase"
 import {addDoc , collection} from "firebase/firestore"
 
-function Form() {
+function Form({setUpdate}) {
 
     async function submit(e){
         e.preventDefault();
@@ -11,11 +11,12 @@ function Form() {
             alert("attention formulaire invalide")
             return ;
         }
-        data.dt_creation = Date.now();
+        data.dt_creation = new Date(); // Date.now()
         data.status = true ; 
-        const resultat = await addDoc(collection(db , "articles"), data)
-        console.log(resultat);
+        await addDoc(collection(db , "articles"), data)
+        
         e.target.reset();
+        setUpdate(function(prevState){ return !prevState})
     }
 
   return (
