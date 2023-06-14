@@ -11,7 +11,8 @@ function Form() {
             alert("attention formulaire invalide")
             return ;
         }
-        data.dt_creation = new Date();
+        data.dt_creation = Date.now();
+        data.status = true ; 
         const resultat = await addDoc(collection(db , "articles"), data)
         console.log(resultat);
         e.target.reset();

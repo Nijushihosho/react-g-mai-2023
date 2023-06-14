@@ -15,6 +15,7 @@
     list-style: none;
     padding: 0;
     display: flex;
+    align-items: center;
     margin: 0;
 }
 
@@ -31,6 +32,10 @@
     justify-self: flex-end;
 }
 
-input[type="submit"], input[type="text"], textarea{
+input[type="submit"], input[type="text"], textarea , button{
     padding: 5px;
+}
+
+.me-3{
+    margin-right: 20px;
 }
