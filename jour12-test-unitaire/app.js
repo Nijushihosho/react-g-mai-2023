@@ -22,3 +22,15 @@
 function hello(){
     return "hello" ; 
 }
+
+function addition(a , b){
+    return parseInt(a) + parseInt(b)
+}
+
+function getData(){
+    return [1,2,3]; 
+}
+
+module.exports.hello = hello
+module.exports.addition = addition
+module.exports.getData = getData
