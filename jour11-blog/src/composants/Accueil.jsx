@@ -16,9 +16,13 @@ function Accueil({nom}) {
 
   const getNotes = async () => {
       const notesSnapshot = await getDocs(collection(db, "articles"));
-      const notesList = notesSnapshot.docs.map((doc) => {
+      let  notesList = notesSnapshot.docs.map((doc) => {
         return {...doc.data(), id : doc.id }
       });
+      notesList.sort(function(a, b){
+        
+        return new Date(b.dt_creation.seconds *1000) - new Date(a.dt_creation.seconds *1000);
+      })
       setArticles(notesList);
   };
 
@@ -54,6 +58,16 @@ function Accueil({nom}) {
     setId(0);
   }
 
+  const optionsFormatDate = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    hour12: false,
+  };
+
   return (
     <div>
       <h1>Bienvenue {nom}</h1>
@@ -74,7 +88,7 @@ function Accueil({nom}) {
               <>
                 <h2>{item.titre}</h2>
                   <p>{item.body}</p>
-                  <p>{item?.dt_creation && "Publié le : "} {item?.dt_creation && new Intl.DateTimeFormat("fr-FR").format(new Date(item?.dt_creation?.seconds *1000))}</p>
+                  <p>{item?.dt_creation && "Publié le : "} {item?.dt_creation && new Intl.DateTimeFormat("fr-FR" , optionsFormatDate ).format(new Date(item?.dt_creation?.seconds *1000))}</p>
                   {isLogged() && <>
                     <button className='me-3' onClick={ function(){ modifier(item.id , item) }  }>update</button>
                     <button onClick={function(){ supprimer(item.id)  }}>delete</button>

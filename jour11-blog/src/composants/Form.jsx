@@ -1,8 +1,10 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import {db} from "../config/firebase"
 import {addDoc , collection} from "firebase/firestore"
+import { AuthContext } from '../context/AuthContext';
 
 function Form({setUpdate}) {
+    const {user} = useContext(AuthContext)
 
     async function submit(e){
         e.preventDefault();
@@ -14,6 +16,7 @@ function Form({setUpdate}) {
         data.dt_creation = new Date(); // Date.now()
         data.dt_update = new Date(); 
         data.status = true ; 
+        data.auteur = user.displayName ;
         await addDoc(collection(db , "articles"), data)
         
         e.target.reset();
