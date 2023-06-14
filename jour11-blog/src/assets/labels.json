@@ -1,0 +1,16 @@
+{ 
+    "fr" : {
+        "accueil" : "Accueil",
+        "useRef" : "Présentation useRef",
+        "connexion" : "Connexion",
+        "deconnexion" : "Déconnexion",
+        "btnAuth" : "authentification via votre compte GMail"
+    },
+    "en" : { 
+        "accueil" : "Home",
+        "useRef" : "What is useRef ?",
+        "connexion" : "Login",
+        "deconnexion" : "Logout",
+        "btnAuth" : "login with your Gmail account"
+    }
+}

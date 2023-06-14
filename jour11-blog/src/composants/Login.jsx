@@ -3,11 +3,14 @@ import React , {useContext} from 'react'
 import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth, provider } from '../config/firebase'; 
 import { AuthContext } from '../context/AuthContext';
-import {useNavigate} from "react-router-dom"
+import { LangContext } from '../context/LangContext';
+import { useNavigate} from "react-router-dom"
+import data from "../assets/labels.json"
 
 
 function Login() {
     const {login} = useContext(AuthContext)
+    const {lang} = useContext(LangContext)
     const navigate = useNavigate()
     const googleHandler = async () => {
         provider.setCustomParameters({ prompt: 'select_account' });
@@ -44,7 +47,7 @@ function Login() {
 
   return (
     <div>
-        <button onClick={googleHandler}>authentification via votre compte GMail</button>
+        <button onClick={googleHandler}>{data[lang].btnAuth}</button>
     </div>
   )
 }

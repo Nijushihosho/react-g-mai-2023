@@ -1,5 +1,6 @@
 import React , {useContext , useEffect, useState} from 'react'
 import { AuthContext } from '../context/AuthContext'
+import {LangContext } from "../context/LangContext"
 import  Form  from './Form';
 import {db} from "../config/firebase"
 import { collection, getDocs , doc , deleteDoc , updateDoc  } from "firebase/firestore";
@@ -8,6 +9,7 @@ import mario from "../assets/mario.jpg"
 
 function Accueil({nom}) {
   const {isLogged} = useContext(AuthContext);
+  const {lang} = useContext(LangContext);
 
   const [articles, setArticles] = useState([])
   const [update, setUpdate] = useState(true)
@@ -86,9 +88,9 @@ function Accueil({nom}) {
                 <input type='submit' value="mettre à jour" />
             </form> :
               <>
-                <h2>{item.titre}</h2>
-                  <p>{item.body}</p>
-                  <p>{item?.dt_creation && "Publié le : "} {item?.dt_creation && new Intl.DateTimeFormat("fr-FR" , optionsFormatDate ).format(new Date(item?.dt_creation?.seconds *1000))}</p>
+                <h2>{item["titre-"+lang] ? item["titre-"+lang] : item["titre"] }</h2>
+                  <p>{item["body-"+lang ] ? item["body-"+lang] : item["body"]}</p>
+                  <p>{item?.dt_creation && "Publié le : "} {item?.dt_creation && new Intl.DateTimeFormat(lang+"-"+lang.toUpperCase() , optionsFormatDate ).format(new Date(item?.dt_creation?.seconds *1000))}</p>
                   {isLogged() && <>
                     <button className='me-3' onClick={ function(){ modifier(item.id , item) }  }>update</button>
                     <button onClick={function(){ supprimer(item.id)  }}>delete</button>
