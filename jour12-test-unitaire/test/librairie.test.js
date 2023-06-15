@@ -1,5 +1,8 @@
-const {genererTitre , fizzBuzz , getArticle} = require("../librairie")
-
+const { genererTitre , 
+        fizzBuzz , 
+        getArticle , 
+        valeurAbsolue ,
+        prixTTC } = require("../librairie")
 
 test("la fonction genererTitre qui doit retourner <h1>article publié le jj/dd/aaaa</h1> pour aujourd'hui et hier" , function(){
    
@@ -58,7 +61,6 @@ test("la fonction genererTitre doit contenir le texte suivant 'article publié l
     // .toHaveProperty("id", 1); 
 })
 
-
 // cas pratique 
 // créer une fonction qui s'appelle FizzBuzz()
 // retourne fizz si le chiffre est multiple de 3
@@ -66,7 +68,6 @@ test("la fonction genererTitre doit contenir le texte suivant 'article publié l
 // retourne fizzbuzz si le chiffre est multiple de 5 et 3 
 
 // créer les tests unitaires qui permettent de vérifier que la fonction est bien implémentée 
-
 
 test("la fonction fizzBuzz retourne des valeurs correctes" , function(){
 
@@ -103,8 +104,6 @@ test("la fonction fizzBuzz retourne des valeurs correctes" , function(){
 // le but de la fonction c'est de retourner un objet {   } 
 // qui contient 2 propriétés id et titre 
 
-
-
 /* [
     {id : 1 , titre : "", contenu : ""}, // 0
     {id : 1 , titre : "", contenu : ""},
@@ -121,7 +120,6 @@ test("getArticle doit retourner un objet avec deux props id et titre", function(
     ];
 
     const resultat = getArticle( articles , 1);
-
     expect(resultat).toHaveProperty("id")
     expect(resultat).toHaveProperty("titre")
     expect(typeof resultat).toBe("object")
@@ -129,3 +127,38 @@ test("getArticle doit retourner un objet avec deux props id et titre", function(
 }); 
 
 // jsonwebtoken => fin des test unitaires / test intégration 
+
+
+describe("tester la fonction valeurAbsolue" , function(){
+
+    test("si chiffre negatif retourne chiffre positif", function(){
+        const resultat = valeurAbsolue(-1);
+        expect(resultat).toBe(1)
+    })
+
+    test("si chiffre positif retourne chiffre positif", function(){
+        const resultat = valeurAbsolue(1);
+        expect(resultat).toBe(1)
+    })
+    
+    test("si 0 retourne 0", function(){
+        const resultat = valeurAbsolue(0);
+        expect(resultat).toBe(0)
+    })
+})
+
+describe("prixTTC" , function(){
+    test("retourne un prix * tva" , function(){
+        const prix = prixTTC(1,1.2);
+        expect(prix).toBe(1.2);
+    })
+    test("retourne un valeur de types invalides" , function(){
+        
+        expect(function(){ prixTTC([],1.2) }).toThrow();
+        expect(function(){ prixTTC("","") }).toThrow();
+        expect(function(){ prixTTC("",true) }).toThrow();
+        expect(function(){ prixTTC(false,"") }).toThrow();
+        expect(function(){ prixTTC(true,0) }).toThrow(); 
+    })
+})
+
