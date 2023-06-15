@@ -52,3 +52,12 @@ cette fonction retourne le texte suivante
 si elle est exécutée hier 
 <h1>article publié le 14/06/2023</h1>
 
+
+
+créer un dernier projet 
+
+npm create vite 
+
+npx create-react-app jour13-test-integration-2
+cd jour13-test-integration-2
+npm start 
