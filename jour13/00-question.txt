@@ -1,0 +1,54 @@
+Non 
+
+=> les tests 
+=> le fait écrire du code qui va vérifier le votre 
+
+=> codage (ajouter quelquechose) => verif (test)
+
+pour React (projet en javascript) utiliser une librairie de test => jest 
+
+=> npm i -D jest 
+=> librairie de Développement (qui ne doit être disponible que lors de la phase de développement)
+
+écrire votre code dans des fichiers .js / .jsx 
+
+jest => créer .test.js / .spec.js 
+jest --watchAll => il va chercher tous les fichiers sont les exécuter 
+et il est conseillé de mettre tous les fichiers de test.js 
+
+-------------------------------
+
+it("description du test effectué" , function(){
+
+    // récupérer la fonction et l'exécuter 
+
+    expect(....) .toBe( valeur attendue )
+    expect(....) .toMatch( valeur attendue )
+    expect(....) .toContain( valeur attendue )
+
+    assertion      . matcher 
+})
+
+// écrire votre code => ecriver vos test 
+// Code Driven Development => CDD 
+
+// Test Driven Development => TDD 
+
+// cas pratique reprendre le projet d'hier 
+jour12-test-unitaire 
+
+créer un nouveau fichier librairie.js (à côté du fichier app.js)
+
+ce fichier contient une fonction qui s'appelle 
+genererTitre 
+elle prend 1 paramètre $date
+
+cette fonction retourne le texte suivante
+
+<h1>article publié le 15/06/2023</h1>
+
+// vous devez réaliser les tests qui permettent de vérifier que si la fonction est exécuté aujourd'hui 
+<h1>article publié le 15/06/2023</h1>
+si elle est exécutée hier 
+<h1>article publié le 14/06/2023</h1>
+
