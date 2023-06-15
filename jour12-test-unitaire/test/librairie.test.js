@@ -94,3 +94,12 @@ test("la fonction fizzBuzz retourne des valeurs correctes" , function(){
         expect(resultat).toBe("fizzBuzz")
     }
 })
+
+// créer une fonction qui permet de filtrer un tableau 
+// function getArticle( tableau, id  ) qui contient 2 paramètres 
+// tableau [{},{},{}]
+// id qui est un chiffre 
+
+// le but de la fonction c'est de retourner un objet {   } 
+// qui contient 2 propriétés id et titre 
+
