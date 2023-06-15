@@ -19,6 +19,19 @@ function fizzBuzz( chiffre ){
     }
 }
 
+function getArticle( data , id ){
+    const dataMapped = data.map(function(item){
+        return {
+            id : item.id, 
+            titre : item.titre
+         }
+    })
+    return dataMapped.find(function(item){
+        return item.id === id
+    })
+}
+
 
 module.exports.genererTitre = genererTitre
 module.exports.fizzBuzz = fizzBuzz
+module.exports.getArticle = getArticle

@@ -1,4 +1,4 @@
-const {genererTitre , fizzBuzz} = require("../librairie")
+const {genererTitre , fizzBuzz , getArticle} = require("../librairie")
 
 
 test("la fonction genererTitre qui doit retourner <h1>article publié le jj/dd/aaaa</h1> pour aujourd'hui et hier" , function(){
@@ -103,3 +103,27 @@ test("la fonction fizzBuzz retourne des valeurs correctes" , function(){
 // le but de la fonction c'est de retourner un objet {   } 
 // qui contient 2 propriétés id et titre 
 
+
+
+/* [
+    {id : 1 , titre : "", contenu : ""}, // 0
+    {id : 1 , titre : "", contenu : ""},
+    {id : 1 , titre : "", contenu : ""},
+].map(function(item, key){
+    re ...
+}).find(function(){}) */
+
+test("getArticle doit retourner un objet avec deux props id et titre", function(){
+
+    const articles = [
+        {id : 1 , titre : "a" , dte : new Date()}, 
+        {id : 2 , titre : "b" , dte : new Date()}, 
+    ]
+
+    const resultat = getArticle( articles , 1);
+
+    expect(resultat).toHaveProperty("id")
+    expect(resultat).toHaveProperty("titre")
+    expect(typeof resultat).toBe("object")
+
+})
