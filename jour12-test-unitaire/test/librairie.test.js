@@ -57,3 +57,12 @@ test("la fonction genererTitre doit contenir le texte suivant 'article publié l
     // .toHaveProperty("id"); // contient la propriété
     // .toHaveProperty("id", 1); 
 })
+
+
+// cas pratique 
+// créer une fonction qui s'appelle FizzBuzz()
+// retourne fizz si le chiffre est multiple de 3
+// retourne buzz si le chiffre est multiple de 5
+// retourne fizzbuzz si le chiffre est multiple de 5 et 3 
+
+// créer les tests unitaires qui permettent de vérifier que la fonction est bien implémentée 
