@@ -19,3 +19,5 @@ test automatisé
 
 => test e2e (end to end) => je me mets dans les conditions de l'utilisateur du site et je vais manipuler l'interface pour voir si elle répond au attente du scénario 
 
+
+npm init --yes
