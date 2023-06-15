@@ -6,4 +6,19 @@ function genererTitre( date ){
 // npx jest --watchAll
 // npm run test
 
+
+function fizzBuzz( chiffre ){
+    if(chiffre % 3 === 0 && chiffre % 5 === 0){
+        return "fizzBuzz"
+    }else if(chiffre % 3 === 0){
+        return "fizz";
+    }else if(chiffre % 5 === 0){
+        return "buzz"
+    }else {
+        return chiffre ;
+    }
+}
+
+
 module.exports.genererTitre = genererTitre
+module.exports.fizzBuzz = fizzBuzz

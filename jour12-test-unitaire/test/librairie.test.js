@@ -1,4 +1,4 @@
-const {genererTitre} = require("../librairie")
+const {genererTitre , fizzBuzz} = require("../librairie")
 
 
 test("la fonction genererTitre qui doit retourner <h1>article publié le jj/dd/aaaa</h1> pour aujourd'hui et hier" , function(){
@@ -66,3 +66,31 @@ test("la fonction genererTitre doit contenir le texte suivant 'article publié l
 // retourne fizzbuzz si le chiffre est multiple de 5 et 3 
 
 // créer les tests unitaires qui permettent de vérifier que la fonction est bien implémentée 
+
+
+test("la fonction fizzBuzz retourne des valeurs correctes" , function(){
+
+    const multipleDeTrois = [3,6,9,12];
+
+    for(let chiffre of multipleDeTrois){
+        const resultat = fizzBuzz(chiffre)
+        expect(resultat).toBe("fizz")
+    }
+
+    const multipleDeCinq = [5,10];
+    for(let chiffre of multipleDeCinq){
+        const resultat = fizzBuzz(chiffre)
+        expect(resultat).toBe("buzz")
+    }
+
+    const multipleDeCinqETTrois = [15,30, 45, 60];
+    for(let chiffre of multipleDeCinqETTrois){
+        const resultat = fizzBuzz(chiffre)
+        expect(resultat).toBe("fizzBuzz")
+    }
+
+    for(let i = 15 ; i <= 1000 ; i += 15){
+        const resultat = fizzBuzz(i)
+        expect(resultat).toBe("fizzBuzz")
+    }
+})
