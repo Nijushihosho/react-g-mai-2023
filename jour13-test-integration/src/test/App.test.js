@@ -7,7 +7,6 @@ describe("App", function(){
     test("tester que le composant contient le texte App dans une div" , function(){
         render(<App /> )
         const div = screen.getByText(/App/, {selector : "div"})
-       
         expect(div).toBeInTheDocument();
     })
 
