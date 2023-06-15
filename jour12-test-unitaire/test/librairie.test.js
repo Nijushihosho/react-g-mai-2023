@@ -2,7 +2,10 @@ const { genererTitre ,
         fizzBuzz , 
         getArticle , 
         valeurAbsolue ,
-        prixTTC } = require("../librairie")
+        prixTTC ,
+        anagram ,
+        getLargeur ,
+        getArticleAvecAuteur} = require("../librairie")
 
 test("la fonction genererTitre qui doit retourner <h1>article publié le jj/dd/aaaa</h1> pour aujourd'hui et hier" , function(){
    
@@ -162,3 +165,60 @@ describe("prixTTC" , function(){
     })
 })
 
+
+describe("anagram" , function(){
+
+    test("type invalide", function(){
+        expect(function(){  anagram("a" , 1) }).toThrow()
+    })
+
+    test("mot avec longueurs différentes", function(){
+        expect(anagram("a" , "ab") ).toBeFalsy()
+    })
+
+    test("mots correctes", function(){
+        const listes = [
+            {
+                mot1 : "finder",
+                mot2 : "Friend",
+            },
+            {
+                mot1 : 'Mary',
+                mot2 : 'Army',
+            }, 
+            {
+                mot1 : 'nectar',
+                mot2 : 'carnet',
+            }, 
+            {
+                mot1 : 'parisien',
+                mot2 : 'aspirine',
+            }
+        ]
+        for(let {mot1, mot2} of listes){
+            expect(anagram(mot1 , mot2) ).toBeTruthy()
+        }
+
+    })
+
+
+})
+
+
+test("getLargeur", function(){
+    return expect(getLargeur()).resolves.toBe(10)
+})
+
+test("getArticleAvecAuteur", function(){
+
+    const getUserSimule = jest.fn().mockReturnValue({ id : 123 , nom : "azerty" })
+
+    const resultat = getArticleAvecAuteur(getUserSimule)
+     
+    expect(resultat).toHaveProperty("id")
+    expect(resultat).toHaveProperty("titre")
+    expect(resultat).toHaveProperty("auteur")
+    expect(resultat.auteur).toHaveProperty("id")
+    expect(resultat.auteur).toHaveProperty("nom")
+
+})

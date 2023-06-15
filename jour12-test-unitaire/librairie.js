@@ -54,7 +54,7 @@ function prixTTC(prixHT , tva){
     return prixHT * tva ; 
 }
 
-console.log(prixTTC([] , 1.2)); 
+// console.log(prixTTC([] , 1.2)); 
 
 
 // créer une nouvelle fonction qui s'appelle anagram
@@ -76,10 +76,45 @@ anagram("bonjour", 'ciao') => false
 verifier que les deux textes sont de types string 
  */
 
+function anagram(mot1, mot2){
 
+    if(typeof mot1 !== 'string') throw new Error("mot 1 doit être de type string")
+    if(typeof mot2 !== 'string') throw new Error("mot 2 doit être de type string")
+
+    if(mot1.length !== mot2.length) return false ;
+
+    const mot1Trie = mot1.toLowerCase().split("").sort().join("")
+    const mot2Trie = mot2.toLowerCase().split("").sort().join("")
+
+    return mot1Trie === mot2Trie ; 
+}
+
+
+function getLargeur(){
+    return new Promise(function(resolve){
+        setTimeout( function(){
+            resolve(10)
+        } , 4000)
+    })
+}
+
+function getUser(){
+    return { id : 1 , nom : "Alain" }
+}
+
+function getArticleAvecAuteur(getUser){
+    return {
+        id : 1 ,
+        titre : "article1", 
+        auteur : getUser()
+    }
+}
 
 module.exports.genererTitre = genererTitre
 module.exports.fizzBuzz = fizzBuzz
 module.exports.getArticle = getArticle
 module.exports.valeurAbsolue = valeurAbsolue
 module.exports.prixTTC = prixTTC
+module.exports.anagram = anagram
+module.exports.getLargeur = getLargeur
+module.exports.getArticleAvecAuteur = getArticleAvecAuteur
