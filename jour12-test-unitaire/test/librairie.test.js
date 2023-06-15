@@ -118,7 +118,7 @@ test("getArticle doit retourner un objet avec deux props id et titre", function(
     const articles = [
         {id : 1 , titre : "a" , dte : new Date()}, 
         {id : 2 , titre : "b" , dte : new Date()}, 
-    ]
+    ];
 
     const resultat = getArticle( articles , 1);
 
@@ -126,4 +126,6 @@ test("getArticle doit retourner un objet avec deux props id et titre", function(
     expect(resultat).toHaveProperty("titre")
     expect(typeof resultat).toBe("object")
 
-})
+}); 
+
+// jsonwebtoken => fin des test unitaires / test intégration 
