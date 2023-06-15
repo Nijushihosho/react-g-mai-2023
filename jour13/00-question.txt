@@ -47,7 +47,7 @@ cette fonction retourne le texte suivante
 
 <h1>article publié le 15/06/2023</h1>
 
-// vous devez réaliser les tests qui permettent de vérifier que si la fonction est exécuté aujourd'hui 
+// vous devez réaliser les tests qui permettent de vérifier que si la fonction est exécutée aujourd'hui 
 <h1>article publié le 15/06/2023</h1>
 si elle est exécutée hier 
 <h1>article publié le 14/06/2023</h1>
