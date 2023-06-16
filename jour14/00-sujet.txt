@@ -1,0 +1,15 @@
+le sujet est disponible sur github.com
+
+https://github.com/webdevproformation/react-g-mai-2023
+
+vous gérer votre temps comme vous voulez 
+pause quand vous voulez / déjeuner quand vous voulez 
+
+comment s'organiser :
+1 lire le sujet 
+2 lister les pages à faire 
+3 bout de papier et modéliser chaque page 
+4 voila la liste de composant à créer 
+5 voila la liste de module à installer 
+5 ' film => liste des films à utiliser / récupérer le contenu textuel / images 
+6 coder 
